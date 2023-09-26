@@ -28,7 +28,7 @@
     "lint": "concurrently -n lint: 'yarn:lint:*'",
     "lint:eslint": "yarn build && eslint .",
     "lint:prettier": "prettier --check .",
-    "publish": "yarn clean && yarn build && yarn npm publish"
+    "publish": "yarn build && yarn npm publish"
   },
   "dependencies": {
     "@emotion/eslint-plugin": "11.11.0",
