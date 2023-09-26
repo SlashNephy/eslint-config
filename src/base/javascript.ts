@@ -12,7 +12,7 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:xss/recommended',
   ],
-  plugins: ['import', 'promise', 'n', 'unused-imports', 'deprecation'],
+  plugins: ['import', 'promise', 'n', 'unused-imports'],
   env: {
     node: true,
     es2022: true,
@@ -172,8 +172,6 @@ module.exports = {
         exceptRange: true,
       },
     ],
-    // Deprecated されたコードの使用を禁止
-    'deprecation/deprecation': 'error',
     // 不要な変数を禁止
     'unused-imports/no-unused-vars': [
       'warn',

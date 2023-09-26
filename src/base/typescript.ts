@@ -11,7 +11,7 @@ module.exports = {
     'plugin:no-void-return-type/recommended',
     'plugin:storybook/recommended',
   ],
-  plugins: ['@typescript-eslint', 'tsdoc'],
+  plugins: ['@typescript-eslint', 'tsdoc', 'deprecation'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     sourceType: 'module',
@@ -194,5 +194,7 @@ module.exports = {
         allowBitwiseExpressions: true,
       },
     ],
+    // Deprecated されたコードの使用を禁止
+    'deprecation/deprecation': 'error',
   },
 } satisfies Linter.Config
