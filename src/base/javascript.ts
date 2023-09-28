@@ -183,7 +183,5 @@ module.exports = {
         argsIgnorePattern: '^_',
       },
     ],
-    // anonymous な export default を許可
-    'import/no-anonymous-default-export': 'off',
   },
 } satisfies Linter.Config

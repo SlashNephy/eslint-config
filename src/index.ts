@@ -106,7 +106,7 @@ module.exports = {
     // ビルドツールの構成ファイル
     {
       files: [
-        '**/{webpack,rollup,vite}.config.{js,mjs,cjs,ts,mts,cts}',
+        '**/{webpack,rollup,vite,postcss}.config.{js,mjs,cjs,ts,mts,cts}',
         '**/codegen.{js,mjs,cjs,ts,mts,cts}',
       ],
       extends: [
