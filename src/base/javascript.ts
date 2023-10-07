@@ -183,7 +183,5 @@ module.exports = {
         argsIgnorePattern: '^_',
       },
     ],
-    // '1' + 2 を禁止
-    'no-implicit-coercion': 'error',
   },
 } satisfies Linter.Config
