@@ -162,7 +162,6 @@ module.exports = {
     '@typescript-eslint/prefer-regexp-exec': 'error',
     // Promise<T> を返す関数では async のマークを強制
     '@typescript-eslint/promise-function-async': 'error',
-    '@typescript-eslint/require-array-sort-compare': 'off',
     '@typescript-eslint/switch-exhaustiveness-check': 'error',
     '@typescript-eslint/type-annotation-spacing': 'error',
     '@typescript-eslint/unbound-method': 'off',
@@ -196,5 +195,14 @@ module.exports = {
     ],
     // Deprecated されたコードの使用を禁止
     'deprecation/deprecation': 'error',
+    // '1' + 2 を禁止
+    '@typescript-eslint/restrict-plus-operands': 'error',
+    // 数値型の配列の sort() を禁止
+    '@typescript-eslint/require-array-sort-compare': [
+      'error',
+      {
+        ignoreStringArrays: true,
+      },
+    ],
   },
 } satisfies Linter.Config

@@ -80,6 +80,16 @@ module.exports = {
     'react/jsx-no-useless-fragment': 'off',
     // defaultProps を使わない
     'react/require-default-props': 'off',
+    // useCallback でコールバックを宣言させる
+    'react/jsx-no-bind': 'error',
+    // コンポーネントの宣言を function Component() {} に強制
+    'react/function-component-definition': [
+      'error',
+      {
+        namedComponents: 'function-declaration',
+        unnamedComponents: 'arrow-function',
+      },
+    ],
   },
   overrides: [
     {

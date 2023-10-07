@@ -33,7 +33,7 @@ module.exports = {
     'import/no-default-export': 'error',
     // アロー関数を優先
     'prefer-arrow-callback': 'error',
-    // const a = function () { ... } を禁止
+    // 関数宣言は function xxx() {} にする
     'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
     // 中括弧の省略を禁止
     curly: 'error',
@@ -183,5 +183,7 @@ module.exports = {
         argsIgnorePattern: '^_',
       },
     ],
+    // '1' + 2 を禁止
+    'no-implicit-coercion': 'error',
   },
 } satisfies Linter.Config
