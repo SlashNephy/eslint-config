@@ -81,7 +81,7 @@ module.exports = {
     // defaultProps を使わない
     'react/require-default-props': 'off',
     // useCallback でコールバックを宣言させる
-    'react/jsx-no-bind': 'error',
+    'react/jsx-no-bind': 'warn',
     // コンポーネントの宣言を function Component() {} に強制
     'react/function-component-definition': [
       'error',
