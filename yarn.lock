@@ -206,7 +206,7 @@ __metadata:
     "@emotion/eslint-plugin": 11.11.0
     "@next/eslint-plugin-next": 13.5.6
     "@rushstack/eslint-patch": 1.6.0
-    "@slashnephy/prettier-config": 1.0.59
+    "@slashnephy/prettier-config": 1.0.60
     "@types/eslint": 8.44.8
     "@types/node": 20.10.4
     "@typescript-eslint/eslint-plugin": 6.13.2
@@ -255,12 +255,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@slashnephy/prettier-config@npm:1.0.59":
-  version: 1.0.59
-  resolution: "@slashnephy/prettier-config@npm:1.0.59"
+"@slashnephy/prettier-config@npm:1.0.60":
+  version: 1.0.60
+  resolution: "@slashnephy/prettier-config@npm:1.0.60"
   peerDependencies:
     prettier: ^3
-  checksum: ef5e9aa02821c5cac2c527576451ad820de5a8c04e2890850f161996b1b2650b1a6c1bcc2bbcdc2e62fcf33c4612d5cdfa349d51c7924d81a6de0915794c0723
+  checksum: fff8ddd7171d19e70565d98ae0bc71e260e23f805ed9b9603a0d3e4e64b6da8519b688ce064501b45319c72a797ed6a53d9d583c5f56df83059d382eb266cae9
   languageName: node
   linkType: hard
 
