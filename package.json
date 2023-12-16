@@ -68,7 +68,7 @@
     "eslint-plugin-userscripts": "0.4.0",
     "eslint-plugin-vitest": "0.3.17",
     "eslint-plugin-xss": "0.1.12",
-    "eslint-plugin-yml": "1.10.0",
+    "eslint-plugin-yml": "1.11.0",
     "typescript": "5.3.3",
     "yaml-eslint-parser": "1.2.2"
   },
