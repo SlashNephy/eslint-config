@@ -243,7 +243,7 @@ __metadata:
     eslint-plugin-tsdoc: 0.2.17
     eslint-plugin-unused-imports: 3.0.0
     eslint-plugin-userscripts: 0.4.0
-    eslint-plugin-vitest: 0.3.10
+    eslint-plugin-vitest: 0.3.17
     eslint-plugin-xss: 0.1.12
     eslint-plugin-yml: 1.10.0
     prettier: 3.1.1
@@ -531,7 +531,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:6.14.0":
+"@typescript-eslint/utils@npm:6.14.0, @typescript-eslint/utils@npm:^6.13.2":
   version: 6.14.0
   resolution: "@typescript-eslint/utils@npm:6.14.0"
   dependencies:
@@ -566,7 +566,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:^6.0.0, @typescript-eslint/utils@npm:^6.11.0":
+"@typescript-eslint/utils@npm:^6.0.0":
   version: 6.13.2
   resolution: "@typescript-eslint/utils@npm:6.13.2"
   dependencies:
@@ -1765,11 +1765,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-vitest@npm:0.3.10":
-  version: 0.3.10
-  resolution: "eslint-plugin-vitest@npm:0.3.10"
+"eslint-plugin-vitest@npm:0.3.17":
+  version: 0.3.17
+  resolution: "eslint-plugin-vitest@npm:0.3.17"
   dependencies:
-    "@typescript-eslint/utils": ^6.11.0
+    "@typescript-eslint/utils": ^6.13.2
   peerDependencies:
     eslint: ">=8.0.0"
     vitest: "*"
@@ -1778,7 +1778,7 @@ __metadata:
       optional: true
     vitest:
       optional: true
-  checksum: c9ac9e669a74225c00d1af7e63634c5518d98d2e8e0a06d0f85aac462f5402389a872e84c2c581693b32a3ec7946a1b9ffd65174c598d854a85ccb3f8b7b2c02
+  checksum: f5093aee41348468b6a979baa22cf54eee1d62e62985b3fc4d1920476c9df2268ffa5c1c8abf62dc3bb54da094709c2b06e266a7a9f6a0d8072b6649dbdf418a
   languageName: node
   linkType: hard
 
