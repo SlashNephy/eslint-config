@@ -7,11 +7,17 @@ module.exports = {
   extends: [
     'plugin:@typescript-eslint/strict-type-checked',
     'plugin:@typescript-eslint/stylistic-type-checked',
+    'plugin:@susisu/safe-typescript/recommended',
     'plugin:import/typescript',
     'plugin:no-void-return-type/recommended',
     'plugin:storybook/recommended',
   ],
-  plugins: ['@typescript-eslint', 'tsdoc', 'deprecation'],
+  plugins: [
+    '@typescript-eslint',
+    '@susisu/safe-typescript',
+    'tsdoc',
+    'deprecation',
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     sourceType: 'module',
