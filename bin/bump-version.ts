@@ -5,7 +5,7 @@ import { cwd } from 'process'
 async function bumpVersion(): Promise<void> {
   const path = join(cwd(), 'package.json')
   const content = await readFile(path, 'utf-8')
-  const packageJson = JSON.parse(content) as { version: string }
+  const packageJson = JSON.parse(content) satisfies { version: string }
 
   const [major, minor, patch] = packageJson.version.split('.')
   if (!major || !minor || !patch) {
