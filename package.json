@@ -1,6 +1,6 @@
 {
   "name": "@slashnephy/eslint-config",
-  "version": "2.0.99",
+  "version": "2.0.100",
   "type": "commonjs",
   "main": "./src/index.js",
   "author": "SlashNephy <spica@starry.blue> (https://spica.starry.blue/)",
@@ -32,13 +32,13 @@
   },
   "dependencies": {
     "@emotion/eslint-plugin": "11.11.0",
-    "@next/eslint-plugin-next": "13.5.6",
+    "@next/eslint-plugin-next": "14.0.4",
     "@rushstack/eslint-patch": "1.6.1",
     "@susisu/eslint-plugin-safe-typescript": "0.5.2",
     "@typescript-eslint/eslint-plugin": "6.17.0",
     "@typescript-eslint/parser": "6.17.0",
     "eslint-config-airbnb": "19.0.4",
-    "eslint-config-next": "13.5.6",
+    "eslint-config-next": "14.0.4",
     "eslint-config-prettier": "9.1.0",
     "eslint-config-standard": "17.1.0",
     "eslint-gitignore": "0.1.0",
