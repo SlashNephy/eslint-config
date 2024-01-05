@@ -80,6 +80,11 @@ module.exports = {
         format: ['strictCamelCase', 'StrictPascalCase'],
         leadingUnderscore: 'allow',
       },
+      // インポート名は camelCase / PascalCase
+      {
+        selector: ['import'],
+        format: ['camelCase', 'PascalCase'],
+      },
       // export された定数は UPPER_CASE を許容
       {
         selector: ['variable'],
