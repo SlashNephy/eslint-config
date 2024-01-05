@@ -9,29 +9,9 @@ module.exports = {
   rules: {
     'package-json/order-properties': [
       'error',
-      [
-        'name',
-        'version',
-        'type',
-        'main',
-        'private',
-        'author',
-        'description',
-        'repository',
-        'license',
-        'files',
-        'exports',
-        'publishConfig',
-        'scripts',
-        'dependencies',
-        'peerDependencies',
-        'optionalDependencies',
-        'bundledDependencies',
-        'devDependencies',
-        'packageManager',
-        'engines',
-        'eslintConfig',
-      ],
+      {
+        order: 'sort-package-json',
+      },
     ],
   },
 } satisfies Linter.Config
