@@ -243,7 +243,7 @@ __metadata:
     eslint-plugin-storybook: "npm:0.6.15"
     eslint-plugin-tsdoc: "npm:0.2.17"
     eslint-plugin-unused-imports: "npm:3.0.0"
-    eslint-plugin-userscripts: "npm:0.4.0"
+    eslint-plugin-userscripts: "npm:0.5.0"
     eslint-plugin-vitest: "npm:0.3.20"
     eslint-plugin-xss: "npm:0.1.12"
     eslint-plugin-yml: "npm:1.11.0"
@@ -1801,15 +1801,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-userscripts@npm:0.4.0":
-  version: 0.4.0
-  resolution: "eslint-plugin-userscripts@npm:0.4.0"
+"eslint-plugin-userscripts@npm:0.5.0":
+  version: 0.5.0
+  resolution: "eslint-plugin-userscripts@npm:0.5.0"
   dependencies:
-    requireindex: "npm:~1.2.0"
     semver: "npm:^7.3.8"
   peerDependencies:
-    eslint: ">=8.0.0 <9"
-  checksum: 0ebfb35ad1573f9dc4a5635ff2f4e9252e57f50cbf73e6c1ca309d379c56d66b97ccbdaf0273b4a06d38dc6daffe740d11f1ef3eccd76cd65b5b67cea2b38ffc
+    eslint: ">=8.40.0 <10"
+  checksum: 3e85a3825f146a4378e539c140b7487cc3d84e0bbce0d311076a1e96478e0b3d2b0d762e7b9d7ce43445919209cb08760ede95a16665034dfdfb9d4c1aa8a577
   languageName: node
   linkType: hard
 
@@ -3251,7 +3250,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"requireindex@npm:^1.1.0, requireindex@npm:^1.2.0, requireindex@npm:~1.2.0":
+"requireindex@npm:^1.1.0, requireindex@npm:^1.2.0":
   version: 1.2.0
   resolution: "requireindex@npm:1.2.0"
   checksum: 266d1cb31f6cbc4b6cf2e898f5bbc45581f7919bcf61bba5c45d0adb69b722b9ff5a13727be3350cde4520d7cd37f39df45d58a29854baaa4552cd6b05ae4a1a
