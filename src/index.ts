@@ -31,10 +31,11 @@ module.exports = {
       extends: [resolve(__dirname, 'base/typescript.js')],
     },
     // GraphQL
-    {
-      files: '**/*.{graphql,graphqls,gql}',
-      extends: [resolve(__dirname, 'base/graphql.js')],
-    },
+    // XXX: 上手く動いていないので一時的に無効化
+    // {
+    //   files: '**/*.{graphql,graphqls,gql}',
+    //   extends: [resolve(__dirname, 'base/graphql.js')],
+    // },
     // JSON
     {
       files: '**/*.json',
@@ -59,6 +60,11 @@ module.exports = {
       files: '**/*.{js,jsx,ts,tsx}',
       extends: resolve(__dirname, 'framework/relay.js'),
     },
+    // Vite
+    {
+      files: '**/src/**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
+      extends: resolve(__dirname, 'framework/vite.js'),
+    },
     // Next.js
     {
       files: [
@@ -68,11 +74,6 @@ module.exports = {
         '**/app/**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
       ],
       extends: resolve(__dirname, 'framework/next.js.js'),
-    },
-    // Vite
-    {
-      files: '**/src/**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
-      extends: resolve(__dirname, 'framework/vite.js'),
     },
     // Emotion
     {
