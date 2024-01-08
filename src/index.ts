@@ -133,7 +133,7 @@ module.exports = {
     },
     // コーディングスタイル
     {
-      files: '**/*',
+      files: '**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
       extends: resolve(__dirname, 'presets/style.js'),
     },
   ],

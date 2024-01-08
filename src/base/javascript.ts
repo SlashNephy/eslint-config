@@ -84,7 +84,7 @@ module.exports = {
       // https://qiita.com/printf_moriken/items/da03f55cb626617c1958
       {
         selector:
-          // eslint-disable-next-line quotes
+          // eslint-disable-next-line @stylistic/quotes -- prettier と競合している
           "CallExpression[callee.property.name='at']:not([arguments.0.type='Literal'],[arguments.0.type='UnaryExpression'][arguments.0.argument.type='Literal'])",
         message: 'at method accepts only a literal argument',
       },
