@@ -8,5 +8,6 @@ module.exports = {
   rules: {
     ...next.rules,
     'import/no-default-export': 'off',
+    'react-refresh/only-export-components': 'off',
   },
 } satisfies Linter.Config

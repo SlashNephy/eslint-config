@@ -62,10 +62,10 @@ module.exports = {
     // Next.js
     {
       files: [
-        // <= 12
+        // Pages Router
         '**/pages/**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
-        // >= 13
-        '**/src/app/**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
+        // App Router
+        '**/app/**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
       ],
       extends: resolve(__dirname, 'framework/next.js.js'),
     },
@@ -112,7 +112,7 @@ module.exports = {
     // ビルドツールの構成ファイル
     {
       files: [
-        '**/{webpack,rollup,vite,postcss}.config.{js,mjs,cjs,ts,mts,cts}',
+        '**/{webpack,rollup,vite,postcss,next}.config.{js,mjs,cjs,ts,mts,cts}',
         '**/codegen.{js,mjs,cjs,ts,mts,cts}',
       ],
       extends: [
