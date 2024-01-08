@@ -23,11 +23,17 @@ module.exports = {
     {
       files: '**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
       extends: resolve(__dirname, 'base/javascript.js'),
+      processor: '@graphql-eslint/graphql',
     },
     // TypeScript
     {
       files: '**/*.{ts,mts,cts,tsx}',
       extends: [resolve(__dirname, 'base/typescript.js')],
+    },
+    // GraphQL
+    {
+      files: '**/*.{graphql,graphqls,gql}',
+      extends: [resolve(__dirname, 'base/graphql.js')],
     },
     // JSON
     {

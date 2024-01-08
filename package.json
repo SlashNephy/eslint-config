@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "@emotion/eslint-plugin": "11.11.0",
+    "@graphql-eslint/eslint-plugin": "3.20.1",
     "@next/eslint-plugin-next": "14.0.4",
     "@rushstack/eslint-patch": "1.6.1",
     "@susisu/eslint-plugin-safe-typescript": "0.5.2",
@@ -74,6 +75,7 @@
     "eslint-plugin-vitest": "0.3.20",
     "eslint-plugin-xss": "0.1.12",
     "eslint-plugin-yml": "1.11.0",
+    "graphql": "16.8.1",
     "typescript": "5.3.3",
     "yaml-eslint-parser": "1.2.2"
   },
