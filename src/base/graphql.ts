@@ -3,7 +3,7 @@ import type { Linter } from 'eslint'
 module.exports = {
   plugins: ['@graphql-eslint'],
   extends: [
-    'plugin:@graphql-eslint/schema-all',
+    'plugin:@graphql-eslint/schema-recommended',
     'plugin:@graphql-eslint/operations-all',
     'plugin:@graphql-eslint/relay',
   ],
