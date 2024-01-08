@@ -31,11 +31,10 @@ module.exports = {
       extends: [resolve(__dirname, 'base/typescript.js')],
     },
     // GraphQL
-    // XXX: 上手く動いていないので一時的に無効化
-    // {
-    //   files: '**/*.{graphql,graphqls,gql}',
-    //   extends: [resolve(__dirname, 'base/graphql.js')],
-    // },
+    {
+      files: '**/*.{graphql,graphqls,gql}',
+      extends: [resolve(__dirname, 'base/graphql.js')],
+    },
     // JSON
     {
       files: '**/*.json',
