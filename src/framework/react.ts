@@ -4,12 +4,8 @@ import type { Linter } from 'eslint'
  * React 関連の eslint プリセット
  */
 module.exports = {
-  extends: [
-    'plugin:react/recommended',
-    'plugin:react/jsx-runtime',
-    'plugin:css-import-order/recommended',
-  ],
-  plugins: ['react-hooks', 'css-import-order'],
+  extends: ['plugin:react/recommended', 'plugin:react/jsx-runtime'],
+  plugins: ['react-hooks'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
