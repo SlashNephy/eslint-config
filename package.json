@@ -38,7 +38,7 @@
     "@emotion/eslint-plugin": "11.11.0",
     "@graphql-eslint/eslint-plugin": "3.20.1",
     "@next/eslint-plugin-next": "14.0.4",
-    "@rushstack/eslint-patch": "1.6.1",
+    "@rushstack/eslint-patch": "1.7.0",
     "@stylistic/eslint-plugin": "1.5.3",
     "@susisu/eslint-plugin-safe-typescript": "0.5.2",
     "@typescript-eslint/eslint-plugin": "6.19.0",
