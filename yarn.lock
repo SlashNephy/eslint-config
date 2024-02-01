@@ -788,7 +788,7 @@ __metadata:
     eslint-plugin-tsdoc: "npm:0.2.17"
     eslint-plugin-unused-imports: "npm:3.0.0"
     eslint-plugin-userscripts: "npm:0.5.1"
-    eslint-plugin-vitest: "npm:0.3.20"
+    eslint-plugin-vitest: "npm:0.3.21"
     eslint-plugin-xss: "npm:0.1.12"
     eslint-plugin-yml: "npm:1.12.2"
     graphql: "npm:16.8.1"
@@ -1189,7 +1189,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:6.20.0":
+"@typescript-eslint/utils@npm:6.20.0, @typescript-eslint/utils@npm:^6.20.0":
   version: 6.20.0
   resolution: "@typescript-eslint/utils@npm:6.20.0"
   dependencies:
@@ -1224,7 +1224,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:^6.0.0, @typescript-eslint/utils@npm:^6.13.1, @typescript-eslint/utils@npm:^6.15.0, @typescript-eslint/utils@npm:^6.19.0":
+"@typescript-eslint/utils@npm:^6.0.0, @typescript-eslint/utils@npm:^6.13.1, @typescript-eslint/utils@npm:^6.19.0":
   version: 6.19.1
   resolution: "@typescript-eslint/utils@npm:6.19.1"
   dependencies:
@@ -2592,11 +2592,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-vitest@npm:0.3.20":
-  version: 0.3.20
-  resolution: "eslint-plugin-vitest@npm:0.3.20"
+"eslint-plugin-vitest@npm:0.3.21":
+  version: 0.3.21
+  resolution: "eslint-plugin-vitest@npm:0.3.21"
   dependencies:
-    "@typescript-eslint/utils": "npm:^6.15.0"
+    "@typescript-eslint/utils": "npm:^6.20.0"
   peerDependencies:
     eslint: ">=8.0.0"
     vitest: "*"
@@ -2605,7 +2605,7 @@ __metadata:
       optional: true
     vitest:
       optional: true
-  checksum: 970077a0ecda3b08634ecb66d23e535aeb4f0836b34edef4b4f2cc1dc03513ca898a798d7549dd28fed7a7dcb623408fb3d6bc099316220d9ae5977cd1083d45
+  checksum: b6b4d24960e24f56a15fba8b07c8ea74911883fdb07bb090901d841f364c099f437f5a275ee3e3d60a4396e9586a0c760af58e88a46fe163efc41b37f0f3af0a
   languageName: node
   linkType: hard
 
