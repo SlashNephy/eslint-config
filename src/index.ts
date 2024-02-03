@@ -35,11 +35,6 @@ module.exports = {
       files: '**/*.{graphql,graphqls,gql}',
       extends: [resolve(__dirname, 'base/graphql.js')],
     },
-    // JSON
-    {
-      files: '**/*.json',
-      extends: resolve(__dirname, 'base/json.js'),
-    },
     // YAML
     {
       files: '**/*.{yml,yaml}',
