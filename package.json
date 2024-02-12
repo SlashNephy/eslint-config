@@ -40,7 +40,7 @@
     "@next/eslint-plugin-next": "14.1.0",
     "@rushstack/eslint-patch": "1.7.2",
     "@stylistic/eslint-plugin": "1.6.1",
-    "@susisu/eslint-plugin-safe-typescript": "0.5.2",
+    "@susisu/eslint-plugin-safe-typescript": "0.5.3",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
     "eslint-config-airbnb": "19.0.4",
