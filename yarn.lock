@@ -752,7 +752,7 @@ __metadata:
     "@rushstack/eslint-patch": "npm:1.7.2"
     "@slashnephy/prettier-config": "npm:1.0.73"
     "@stylistic/eslint-plugin": "npm:1.6.2"
-    "@susisu/eslint-plugin-safe-typescript": "npm:0.6.1"
+    "@susisu/eslint-plugin-safe-typescript": "npm:0.7.0"
     "@types/eslint": "npm:8.56.2"
     "@types/node": "npm:20.11.17"
     "@typescript-eslint/eslint-plugin": "npm:7.0.1"
@@ -887,16 +887,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@susisu/eslint-plugin-safe-typescript@npm:0.6.1":
-  version: 0.6.1
-  resolution: "@susisu/eslint-plugin-safe-typescript@npm:0.6.1"
+"@susisu/eslint-plugin-safe-typescript@npm:0.7.0":
+  version: 0.7.0
+  resolution: "@susisu/eslint-plugin-safe-typescript@npm:0.7.0"
   dependencies:
-    "@typescript-eslint/utils": "npm:^6.21.0"
+    "@typescript-eslint/utils": "npm:^7.0.1"
     eslint-define-config: "npm:^2.1.0"
   peerDependencies:
-    "@typescript-eslint/parser": ">=6.0.0"
+    "@typescript-eslint/parser": ^7.0.0
     typescript: "*"
-  checksum: 10/9e7e5a2d27193b336ad8c6d34a98d3f9e7d987e5ba99d5a41521bd15a3112c8e6615326ae11575d952b9e81cc08b3161c12b3adf24a50b0bc5c1918557580309
+    typescript-eslint: ^7.0.0
+  peerDependenciesMeta:
+    "@typescript-eslint/parser":
+      optional: true
+    typescript-eslint:
+      optional: true
+  checksum: 10/a13033d22ee279b254cb769cd032ac1bd218d3bb3fd45aebac68df37e2aa67c2b49fbaea4045f3ee96289101837683fd2d26107d66b47ac529c24fd6595147de
   languageName: node
   linkType: hard
 
@@ -1186,7 +1192,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:7.0.1":
+"@typescript-eslint/utils@npm:7.0.1, @typescript-eslint/utils@npm:^7.0.1":
   version: 7.0.1
   resolution: "@typescript-eslint/utils@npm:7.0.1"
   dependencies:
