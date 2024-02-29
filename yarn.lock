@@ -753,7 +753,7 @@ __metadata:
     "@slashnephy/prettier-config": "npm:1.0.73"
     "@stylistic/eslint-plugin": "npm:1.6.2"
     "@susisu/eslint-plugin-safe-typescript": "npm:0.7.0"
-    "@types/eslint": "npm:8.56.3"
+    "@types/eslint": "npm:8.56.5"
     "@types/node": "npm:20.11.20"
     "@typescript-eslint/eslint-plugin": "npm:7.1.0"
     "@typescript-eslint/parser": "npm:7.1.0"
@@ -934,7 +934,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/eslint@npm:8.56.3, @types/eslint@npm:^8.56.2":
+"@types/eslint@npm:8.56.5":
+  version: 8.56.5
+  resolution: "@types/eslint@npm:8.56.5"
+  dependencies:
+    "@types/estree": "npm:*"
+    "@types/json-schema": "npm:*"
+  checksum: 10/548aab6ea34ca14452bf6e9212c76bb22cdf3b725d47e25591c20651af3f47fb62c59c4e80ed8ea3f7d1d7374d907cbba980af910e4c0f0cb29f73b9a6a9226f
+  languageName: node
+  linkType: hard
+
+"@types/eslint@npm:^8.56.2":
   version: 8.56.3
   resolution: "@types/eslint@npm:8.56.3"
   dependencies:
