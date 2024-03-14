@@ -787,7 +787,7 @@ __metadata:
     eslint-plugin-tsdoc: "npm:0.2.17"
     eslint-plugin-unused-imports: "npm:3.1.0"
     eslint-plugin-userscripts: "npm:0.5.2"
-    eslint-plugin-vitest: "npm:0.3.22"
+    eslint-plugin-vitest: "npm:0.3.26"
     eslint-plugin-xss: "npm:0.1.12"
     eslint-plugin-yml: "npm:1.12.2"
     graphql: "npm:16.8.1"
@@ -1228,7 +1228,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:7.2.0":
+"@typescript-eslint/utils@npm:7.2.0, @typescript-eslint/utils@npm:^7.1.1":
   version: 7.2.0
   resolution: "@typescript-eslint/utils@npm:7.2.0"
   dependencies:
@@ -2763,11 +2763,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-vitest@npm:0.3.22":
-  version: 0.3.22
-  resolution: "eslint-plugin-vitest@npm:0.3.22"
+"eslint-plugin-vitest@npm:0.3.26":
+  version: 0.3.26
+  resolution: "eslint-plugin-vitest@npm:0.3.26"
   dependencies:
-    "@typescript-eslint/utils": "npm:^6.21.0"
+    "@typescript-eslint/utils": "npm:^7.1.1"
   peerDependencies:
     eslint: ">=8.0.0"
     vitest: "*"
@@ -2776,7 +2776,7 @@ __metadata:
       optional: true
     vitest:
       optional: true
-  checksum: 10/3f051fe3d50bc8c9c1f18f3e9a4ba2c26ca484ea4fcf4ca0805492776954a19357507721c7e7f5db99c09e807b77a256f557a3619575d0ca64d2c79f9c024a7d
+  checksum: 10/9371c088f529f3f91b82162c4be4b080bcbdc088cb1edbaf437d990b218e44b638939f9676430a9f6f88fb0c3ade32918d296cb41c60a9bd5f40a3be40e1eb20
   languageName: node
   linkType: hard
 
