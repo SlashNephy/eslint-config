@@ -73,7 +73,7 @@
     "eslint-plugin-userscripts": "0.5.2",
     "eslint-plugin-vitest": "0.3.26",
     "eslint-plugin-xss": "0.1.12",
-    "eslint-plugin-yml": "1.12.2",
+    "eslint-plugin-yml": "1.13.2",
     "graphql": "16.8.1",
     "typescript": "5.4.3",
     "yaml-eslint-parser": "1.2.2"
