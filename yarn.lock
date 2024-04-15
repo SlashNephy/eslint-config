@@ -788,7 +788,7 @@ __metadata:
     eslint-plugin-tsdoc: "npm:0.2.17"
     eslint-plugin-unused-imports: "npm:3.1.0"
     eslint-plugin-userscripts: "npm:0.5.2"
-    eslint-plugin-vitest: "npm:0.5.1"
+    eslint-plugin-vitest: "npm:0.5.3"
     eslint-plugin-xss: "npm:0.1.12"
     eslint-plugin-yml: "npm:1.14.0"
     graphql: "npm:16.8.1"
@@ -2701,9 +2701,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-vitest@npm:0.5.1":
-  version: 0.5.1
-  resolution: "eslint-plugin-vitest@npm:0.5.1"
+"eslint-plugin-vitest@npm:0.5.3":
+  version: 0.5.3
+  resolution: "eslint-plugin-vitest@npm:0.5.3"
   dependencies:
     "@typescript-eslint/utils": "npm:^7.6.0"
   peerDependencies:
@@ -2714,7 +2714,7 @@ __metadata:
       optional: true
     vitest:
       optional: true
-  checksum: 10/4f1ec7829fc642e31b7f838fa86e867397d9404a22012f61aba7d1924e9da41b4591d7eb5842892f676a24b4aa554d6ace4e59ab51b33f614349d4fcc7bfe53f
+  checksum: 10/fe2d91bcbd0bfdff5c1c845bd56beab5d9234db823f1ad44fbe5e31b7d4b08ba63a6171bf916cd7444091f8c91c4421f33e3973c7a2e3ceff1fa229fb2561667
   languageName: node
   linkType: hard
 
