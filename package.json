@@ -83,12 +83,12 @@
     "@types/eslint": "8.56.10",
     "@types/node": "20.12.8",
     "concurrently": "8.2.2",
-    "eslint": "8.57.0",
+    "eslint": "9.2.0",
     "prettier": "3.2.5",
     "ts-node": "10.9.2"
   },
   "peerDependencies": {
-    "eslint": "^8"
+    "eslint": "^8 || ^9.0.0"
   },
   "packageManager": "yarn@4.2.1",
   "publishConfig": {
