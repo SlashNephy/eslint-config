@@ -39,7 +39,7 @@
     "@graphql-eslint/eslint-plugin": "3.20.1",
     "@next/eslint-plugin-next": "14.2.3",
     "@rushstack/eslint-patch": "1.10.2",
-    "@stylistic/eslint-plugin": "1.8.0",
+    "@stylistic/eslint-plugin": "1.8.1",
     "@susisu/eslint-plugin-safe-typescript": "0.7.0",
     "@typescript-eslint/eslint-plugin": "7.2.0",
     "@typescript-eslint/parser": "7.2.0",
