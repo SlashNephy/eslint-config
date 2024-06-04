@@ -84,7 +84,7 @@
     "@types/node": "20.12.14",
     "concurrently": "8.2.2",
     "eslint": "8.57.0",
-    "prettier": "3.2.5",
+    "prettier": "3.3.0",
     "ts-node": "10.9.2"
   },
   "peerDependencies": {
