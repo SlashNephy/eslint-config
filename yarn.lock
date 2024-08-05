@@ -746,7 +746,7 @@ __metadata:
     eslint-plugin-storybook: "npm:0.8.0"
     eslint-plugin-tsdoc: "npm:0.3.0"
     eslint-plugin-unused-imports: "npm:4.0.1"
-    eslint-plugin-userscripts: "npm:0.5.3"
+    eslint-plugin-userscripts: "npm:0.5.4"
     eslint-plugin-vitest: "npm:0.5.4"
     eslint-plugin-xss: "npm:0.1.12"
     eslint-plugin-yml: "npm:1.14.0"
@@ -2692,14 +2692,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-userscripts@npm:0.5.3":
-  version: 0.5.3
-  resolution: "eslint-plugin-userscripts@npm:0.5.3"
+"eslint-plugin-userscripts@npm:0.5.4":
+  version: 0.5.4
+  resolution: "eslint-plugin-userscripts@npm:0.5.4"
   dependencies:
     semver: "npm:^7.3.8"
   peerDependencies:
     eslint: ">=8.40.0 <11"
-  checksum: 10/f11ab7428b14803f41dff96803cd2cf499c8eec6219f1924effc893eff74e2d3e539d7f3fef53038487f15b141ba78bc86e02db0d9c9aefcb39b6c14b09bcb6b
+  checksum: 10/8a72b2b47406487744fb8ebe6c22f0af79eea85299697c2ebf4a740b05f6344375a10a1e1e7bcfa0c273b80cbcb3f838c5a2111b21b5bcf6a2499e9a8e3903ec
   languageName: node
   linkType: hard
 
