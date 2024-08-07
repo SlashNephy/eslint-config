@@ -712,7 +712,7 @@ __metadata:
     "@rushstack/eslint-patch": "npm:1.10.4"
     "@slashnephy/prettier-config": "npm:1.0.73"
     "@stylistic/eslint-plugin": "npm:2.6.1"
-    "@susisu/eslint-plugin-safe-typescript": "npm:0.8.3"
+    "@susisu/eslint-plugin-safe-typescript": "npm:0.9.0"
     "@types/eslint": "npm:8.56.11"
     "@types/node": "npm:20.14.14"
     "@typescript-eslint/eslint-plugin": "npm:7.2.0"
@@ -846,22 +846,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@susisu/eslint-plugin-safe-typescript@npm:0.8.3":
-  version: 0.8.3
-  resolution: "@susisu/eslint-plugin-safe-typescript@npm:0.8.3"
+"@susisu/eslint-plugin-safe-typescript@npm:0.9.0":
+  version: 0.9.0
+  resolution: "@susisu/eslint-plugin-safe-typescript@npm:0.9.0"
   dependencies:
-    "@types/eslint": "npm:^8.56.10"
-    "@typescript-eslint/utils": "npm:^7.15.0"
+    "@types/eslint": "npm:^9.6.0"
+    "@typescript-eslint/utils": "npm:^8.0.0"
   peerDependencies:
-    "@typescript-eslint/parser": ^7.0.0
+    "@typescript-eslint/parser": ^8.0.0
     typescript: "*"
-    typescript-eslint: ^7.0.0
+    typescript-eslint: ^8.0.0
   peerDependenciesMeta:
     "@typescript-eslint/parser":
       optional: true
     typescript-eslint:
       optional: true
-  checksum: 10/760bf72ffbbcf8c92959158f42d57c46ed54b6f433748f95480705b808b27e0f3b0bf441b1565f25767a2b5bc2ab336c8020a807dbb977aaa8d84fe9a8898145
+  checksum: 10/6faebf9697cb13d14b9d28ab9c5f287908b9230e7b36dc55c22d69416c741b4c1151138177e2bffa2c0d90345cd15ef53ceffca27e75484f7fee339a311050d3
   languageName: node
   linkType: hard
 
@@ -893,7 +893,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/eslint@npm:8.56.11, @types/eslint@npm:^8.56.10":
+"@types/eslint@npm:8.56.11":
   version: 8.56.11
   resolution: "@types/eslint@npm:8.56.11"
   dependencies:
@@ -1273,7 +1273,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:^7.0.0, @typescript-eslint/utils@npm:^7.15.0, @typescript-eslint/utils@npm:^7.7.1":
+"@typescript-eslint/utils@npm:^7.0.0, @typescript-eslint/utils@npm:^7.7.1":
   version: 7.18.0
   resolution: "@typescript-eslint/utils@npm:7.18.0"
   dependencies:
