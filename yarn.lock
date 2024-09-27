@@ -722,7 +722,7 @@ __metadata:
     "@types/node": "npm:20.16.5"
     "@typescript-eslint/eslint-plugin": "npm:7.2.0"
     "@typescript-eslint/parser": "npm:7.2.0"
-    "@vitest/eslint-plugin": "npm:1.0.5"
+    "@vitest/eslint-plugin": "npm:1.1.4"
     concurrently: "npm:9.0.1"
     eslint: "npm:8.57.1"
     eslint-config-airbnb: "npm:19.0.4"
@@ -1306,9 +1306,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitest/eslint-plugin@npm:1.0.5":
-  version: 1.0.5
-  resolution: "@vitest/eslint-plugin@npm:1.0.5"
+"@vitest/eslint-plugin@npm:1.1.4":
+  version: 1.1.4
+  resolution: "@vitest/eslint-plugin@npm:1.1.4"
   peerDependencies:
     "@typescript-eslint/utils": ">= 8.0"
     eslint: ">= 8.57.0"
@@ -1321,7 +1321,7 @@ __metadata:
       optional: true
     vitest:
       optional: true
-  checksum: 10/70cde158947aae3cc74a29ba4c55ebeb8d229778faed0a21df373170b3cf6b8c3f41d92f9b919611b5fe4da456d924834c27e8be5cd957670420f80ef6bd6beb
+  checksum: 10/becfa0d0c67c06f19f77e409e067e38499e4ceb0c19a4e3a928c727a95372c3918056edddf11632d0e20773d0aa9ea27b68ff8692daf22f115f4e065812be09c
   languageName: node
   linkType: hard
 
