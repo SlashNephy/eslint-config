@@ -55,7 +55,7 @@
     "eslint-plugin-deprecation": "3.0.0",
     "eslint-plugin-editorconfig": "4.0.3",
     "eslint-plugin-eslint-comments": "3.2.0",
-    "eslint-plugin-import": "2.30.0",
+    "eslint-plugin-import": "2.31.0",
     "eslint-plugin-jest": "28.8.3",
     "eslint-plugin-jest-formatting": "3.1.0",
     "eslint-plugin-jsx-a11y": "6.10.0",
