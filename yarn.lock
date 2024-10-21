@@ -5,6 +5,13 @@ __metadata:
   version: 8
   cacheKey: 10
 
+"@altano/repository-tools@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "@altano/repository-tools@npm:0.1.1"
+  checksum: 10/a89c427c4b1f241d2c65c03adaf890b8bb80eeea6b71963f5b9a1bd1b8c752a0d7e8acb894e359991deb5edb3cd03d0c96cab87a3de2a11c7a87b862c1625d22
+  languageName: node
+  linkType: hard
+
 "@ardatan/sync-fetch@npm:^0.0.1":
   version: 0.0.1
   resolution: "@ardatan/sync-fetch@npm:0.0.1"
@@ -743,7 +750,7 @@ __metadata:
     eslint-plugin-n: "npm:17.11.1"
     eslint-plugin-no-void-return-type: "npm:1.0.2"
     eslint-plugin-node: "npm:11.1.0"
-    eslint-plugin-package-json: "npm:0.2.0"
+    eslint-plugin-package-json: "npm:0.15.4"
     eslint-plugin-promise: "npm:7.1.0"
     eslint-plugin-react: "npm:7.37.1"
     eslint-plugin-react-hooks: "npm:5.0.0"
@@ -1430,7 +1437,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ansi-styles@npm:^4.0.0, ansi-styles@npm:^4.1.0, ansi-styles@npm:^4.2.1":
+"ansi-styles@npm:^4.0.0, ansi-styles@npm:^4.1.0":
   version: 4.3.0
   resolution: "ansi-styles@npm:4.3.0"
   dependencies:
@@ -1949,7 +1956,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"detect-indent@npm:^6.0.0":
+"detect-indent@npm:6.1.0, detect-indent@npm:^6.0.0":
   version: 6.1.0
   resolution: "detect-indent@npm:6.1.0"
   checksum: 10/ab953a73c72dbd4e8fc68e4ed4bfd92c97eb6c43734af3900add963fd3a9316f3bc0578b018b24198d4c31a358571eff5f0656e81a1f3b9ad5c547d58b2d093d
@@ -1963,7 +1970,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"diff@npm:^4.0.1, diff@npm:^4.0.2":
+"diff@npm:^4.0.1":
   version: 4.0.2
   resolution: "diff@npm:4.0.2"
   checksum: 10/ec09ec2101934ca5966355a229d77afcad5911c92e2a77413efda5455636c4cf2ce84057e2d7715227a2eeeda04255b849bd3ae3a4dd22eb22e86e76456df069
@@ -1976,18 +1983,6 @@ __metadata:
   dependencies:
     path-type: "npm:^4.0.0"
   checksum: 10/fa05e18324510d7283f55862f3161c6759a3f2f8dbce491a2fc14c8324c498286c54282c1f0e933cb930da8419b30679389499b919122952a4f8592362ef4615
-  languageName: node
-  linkType: hard
-
-"disparity@npm:^3.2.0":
-  version: 3.2.0
-  resolution: "disparity@npm:3.2.0"
-  dependencies:
-    ansi-styles: "npm:^4.2.1"
-    diff: "npm:^4.0.2"
-  bin:
-    disparity: bin/disparity
-  checksum: 10/cffdeda838c4d94d9fb4813c7209182c81ea128761f144952f9d590b99504a35aaa7dcfa3da8cb73b37e38833a6445815dd675944ca3e5248176a1f5446880c5
   languageName: node
   linkType: hard
 
@@ -2588,17 +2583,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-package-json@npm:0.2.0":
-  version: 0.2.0
-  resolution: "eslint-plugin-package-json@npm:0.2.0"
+"eslint-plugin-package-json@npm:0.15.4":
+  version: 0.15.4
+  resolution: "eslint-plugin-package-json@npm:0.15.4"
   dependencies:
-    disparity: "npm:^3.2.0"
-    package-json-validator: "npm:^0.6.3"
-    requireindex: "npm:^1.2.0"
+    "@altano/repository-tools": "npm:^0.1.1"
+    detect-indent: "npm:6.1.0"
+    detect-newline: "npm:3.1.0"
+    package-json-validator: "npm:^0.7.0"
+    semver: "npm:^7.5.4"
+    sort-object-keys: "npm:^1.1.3"
     sort-package-json: "npm:^1.57.0"
+    validate-npm-package-name: "npm:^6.0.0"
   peerDependencies:
-    eslint: ">=4.7.0"
-  checksum: 10/cec4ef48805c5ab855e75cc09b9c7fe31ba5da30ae781afb344183392c011f819dec0ba951cdaaa1d3c14d23865a8d940133af8e8eb0dcec37b53780ea6a1591
+    eslint: ">=8.0.0"
+    jsonc-eslint-parser: ^2.0.0
+  checksum: 10/0edc87865e8db1b9533451365bad6c5172dcc97bbe385ab974151b64e8cfcd343b62bebe072c905d2721f9f2faf171734cfb895406ea709853585c4db1e3fc51
   languageName: node
   linkType: hard
 
@@ -4029,13 +4029,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimist@npm:~0.0.1":
-  version: 0.0.10
-  resolution: "minimist@npm:0.0.10"
-  checksum: 10/eb87d49c637be2a17c39f29331d6fb0d1a394077b320a994b7c42e9459a55720e66474e0a375ab8ddcbfb2b154e57dfb5133b8baac66e8b0f31fd9bdef91f5c7
-  languageName: node
-  linkType: hard
-
 "minipass@npm:^5.0.0 || ^6.0.2 || ^7.0.0":
   version: 7.1.2
   resolution: "minipass@npm:7.1.2"
@@ -4186,16 +4179,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"optimist@npm:~0.6.1":
-  version: 0.6.1
-  resolution: "optimist@npm:0.6.1"
-  dependencies:
-    minimist: "npm:~0.0.1"
-    wordwrap: "npm:~0.0.2"
-  checksum: 10/0f8ef98caedd634088542a771e855a7b6c89eda0bfcade8bf3bc6e8a8955e4435a078e915cec507b3778c3567e4d6524ffc1b230eea0c6a89988247d76a7863d
-  languageName: node
-  linkType: hard
-
 "optionator@npm:^0.9.3":
   version: 0.9.4
   resolution: "optionator@npm:0.9.4"
@@ -4228,12 +4211,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"package-json-validator@npm:^0.6.3":
-  version: 0.6.8
-  resolution: "package-json-validator@npm:0.6.8"
+"package-json-validator@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "package-json-validator@npm:0.7.0"
   dependencies:
-    optimist: "npm:~0.6.1"
-  checksum: 10/1d0c2df7e79821ac1d437d90e7bbcd480e5dd10773dfdf54bd5697030b24ec4328bd2471dc93c3b7792a7e7e9666737c60233ad15c8fa8725743302698797669
+    yargs: "npm:~17.7.2"
+  checksum: 10/e9d7b144d06dabf5c80ea1e8604c147134d5635cfabddaa658ac20d7acd866a9242257ca909b469e3c240269a0201a097fda4d2850f8b7213af88533801c24ed
   languageName: node
   linkType: hard
 
@@ -5208,6 +5191,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"validate-npm-package-name@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "validate-npm-package-name@npm:6.0.0"
+  checksum: 10/4d018c4fa07f95534a5fea667adc653b1ef52f08bf56aff066c28394499d0a6949c0b00edbd7077c4dc1e041da9220af7c742ced67d7d2d6a1b07d10cbe91b29
+  languageName: node
+  linkType: hard
+
 "value-or-promise@npm:^1.0.11, value-or-promise@npm:^1.0.12":
   version: 1.0.12
   resolution: "value-or-promise@npm:1.0.12"
@@ -5328,13 +5318,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wordwrap@npm:~0.0.2":
-  version: 0.0.3
-  resolution: "wordwrap@npm:0.0.3"
-  checksum: 10/73d2f1136868a952af5b6b7ef1bc841453bfdb2424946a72502dd207a2cb40335da77366d3e8822aa538dc205e0ad0b391da03828227926df273f78bb08a4395
-  languageName: node
-  linkType: hard
-
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0, wrap-ansi@npm:^7.0.0":
   version: 7.0.0
   resolution: "wrap-ansi@npm:7.0.0"
@@ -5428,7 +5411,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yargs@npm:^17.7.2":
+"yargs@npm:^17.7.2, yargs@npm:~17.7.2":
   version: 17.7.2
   resolution: "yargs@npm:17.7.2"
   dependencies:
