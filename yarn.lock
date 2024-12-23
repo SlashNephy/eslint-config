@@ -706,7 +706,7 @@ __metadata:
     "@rushstack/eslint-patch": "npm:1.10.4"
     "@slashnephy/prettier-config": "npm:1.0.73"
     "@stylistic/eslint-plugin": "npm:2.12.1"
-    "@susisu/eslint-plugin-safe-typescript": "npm:0.9.0"
+    "@susisu/eslint-plugin-safe-typescript": "npm:0.9.2"
     "@types/eslint": "npm:8.56.12"
     "@types/node": "npm:22.10.2"
     "@typescript-eslint/eslint-plugin": "npm:8.18.1"
@@ -787,12 +787,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@susisu/eslint-plugin-safe-typescript@npm:0.9.0":
-  version: 0.9.0
-  resolution: "@susisu/eslint-plugin-safe-typescript@npm:0.9.0"
+"@susisu/eslint-plugin-safe-typescript@npm:0.9.2":
+  version: 0.9.2
+  resolution: "@susisu/eslint-plugin-safe-typescript@npm:0.9.2"
   dependencies:
-    "@types/eslint": "npm:^9.6.0"
-    "@typescript-eslint/utils": "npm:^8.0.0"
+    "@types/eslint": "npm:^9.6.1"
+    "@typescript-eslint/utils": "npm:^8.15.0"
   peerDependencies:
     "@typescript-eslint/parser": ^8.0.0
     typescript: "*"
@@ -802,7 +802,7 @@ __metadata:
       optional: true
     typescript-eslint:
       optional: true
-  checksum: 10/6faebf9697cb13d14b9d28ab9c5f287908b9230e7b36dc55c22d69416c741b4c1151138177e2bffa2c0d90345cd15ef53ceffca27e75484f7fee339a311050d3
+  checksum: 10/2d923e667cde40cf33f5a78e7aa538a73bc68022dbf4c58133883cfdb26ba3f057f6067cab71112ba34c74a3b95934d066d548bb5485e67749359ff5446ce2a8
   languageName: node
   linkType: hard
 
@@ -844,7 +844,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/eslint@npm:^9.6.0":
+"@types/eslint@npm:^9.6.1":
   version: 9.6.1
   resolution: "@types/eslint@npm:9.6.1"
   dependencies:
@@ -1075,7 +1075,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:8.18.1, @typescript-eslint/utils@npm:^6.0.0 || ^7.0.0 || ^8.0.0, @typescript-eslint/utils@npm:^8.0.0, @typescript-eslint/utils@npm:^8.13.0, @typescript-eslint/utils@npm:^8.8.1":
+"@typescript-eslint/utils@npm:8.18.1, @typescript-eslint/utils@npm:^6.0.0 || ^7.0.0 || ^8.0.0, @typescript-eslint/utils@npm:^8.13.0, @typescript-eslint/utils@npm:^8.15.0, @typescript-eslint/utils@npm:^8.8.1":
   version: 8.18.1
   resolution: "@typescript-eslint/utils@npm:8.18.1"
   dependencies:
