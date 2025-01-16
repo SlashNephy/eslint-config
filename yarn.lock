@@ -705,7 +705,7 @@ __metadata:
     "@next/eslint-plugin-next": "npm:14.2.23"
     "@rushstack/eslint-patch": "npm:1.10.5"
     "@slashnephy/prettier-config": "npm:1.0.73"
-    "@stylistic/eslint-plugin": "npm:2.12.1"
+    "@stylistic/eslint-plugin": "npm:2.13.0"
     "@susisu/eslint-plugin-safe-typescript": "npm:0.9.0"
     "@types/eslint": "npm:8.56.12"
     "@types/node": "npm:22.10.5"
@@ -772,9 +772,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@stylistic/eslint-plugin@npm:2.12.1":
-  version: 2.12.1
-  resolution: "@stylistic/eslint-plugin@npm:2.12.1"
+"@stylistic/eslint-plugin@npm:2.13.0":
+  version: 2.13.0
+  resolution: "@stylistic/eslint-plugin@npm:2.13.0"
   dependencies:
     "@typescript-eslint/utils": "npm:^8.13.0"
     eslint-visitor-keys: "npm:^4.2.0"
@@ -783,7 +783,7 @@ __metadata:
     picomatch: "npm:^4.0.2"
   peerDependencies:
     eslint: ">=8.40.0"
-  checksum: 10/acc6a7b7cddbd7b26a32b9aded5a49193b6e7df61169845a4130d60ce38a171b8a25365b2e500d8560d29d040d5850ddaa26150a65c22213891696652f0b8d91
+  checksum: 10/6e65fb96a18e8e691d051c7e121d63376199178e31cd69505d02bd84a4afd6032786fef29873c5c7d41d2412d84c360b4318b2cb9cb969adb0acb1215ada0e62
   languageName: node
   linkType: hard
 
