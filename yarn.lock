@@ -689,7 +689,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rushstack/eslint-patch@npm:1.10.5, @rushstack/eslint-patch@npm:^1.3.3":
+"@rushstack/eslint-patch@npm:1.11.0":
+  version: 1.11.0
+  resolution: "@rushstack/eslint-patch@npm:1.11.0"
+  checksum: 10/9bb3eb4a48a9a55e31d302b8b99f405e0f3e436fc3cda8c869fdd3fefd3ac398f5a353cceaa6c8cc5e5baf03ccd88d7965fbd25eb111f1f334415f95fa0f996d
+  languageName: node
+  linkType: hard
+
+"@rushstack/eslint-patch@npm:^1.3.3":
   version: 1.10.5
   resolution: "@rushstack/eslint-patch@npm:1.10.5"
   checksum: 10/769d130dfb088c21e7ce72b552ea58c0d6d790cfe9fcadc4cd66e1282a0213a2c6b570d679723e0d3792a6b6ebfcbdeb5e785261d196017840853b8a5c57dfea
@@ -703,7 +710,7 @@ __metadata:
     "@emotion/eslint-plugin": "npm:11.12.0"
     "@graphql-eslint/eslint-plugin": "npm:3.20.1"
     "@next/eslint-plugin-next": "npm:14.2.24"
-    "@rushstack/eslint-patch": "npm:1.10.5"
+    "@rushstack/eslint-patch": "npm:1.11.0"
     "@slashnephy/prettier-config": "npm:1.0.73"
     "@stylistic/eslint-plugin": "npm:3.1.0"
     "@susisu/eslint-plugin-safe-typescript": "npm:0.9.0"
