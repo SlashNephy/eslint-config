@@ -11,7 +11,7 @@
   },
   "license": "MIT",
   "author": "SlashNephy <spica@starry.blue> (https://spica.starry.blue/)",
-  "type": "commonjs",
+  "type": "module",
   "main": "./src/index.js",
   "files": [
     "./package.json",
