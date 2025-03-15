@@ -1,11 +1,24 @@
 import type { Linter } from 'eslint'
+import react from 'eslint-plugin-react'
+import reactHooks from 'eslint-plugin-react-hooks'
+import globals from 'globals'
 
 /**
  * React 関連の eslint プリセット
  */
-module.exports = {
-  extends: ['plugin:react/recommended', 'plugin:react/jsx-runtime'],
-  plugins: ['react-hooks'],
+export const reactConfig: Linter.Config = {
+  ...react.configs.flat.recommended,
+  ...react.configs.flat['jsx-runtime'],
+  ...reactHooks.configs['recommended-latest'],
+  languageOptions: {
+    ...react.configs.flat.recommended?.languageOptions,
+    ...react.configs.flat['jsx-runtime']?.languageOptions,
+    globals: {
+      ...globals.browser,
+      ...globals.serviceworker,
+      ...globals.node,
+    }
+  }
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -95,4 +108,4 @@ module.exports = {
       },
     },
   ],
-} satisfies Linter.Config
+}
