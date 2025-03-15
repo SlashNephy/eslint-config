@@ -1,8 +1,6 @@
 import type { Linter } from 'eslint'
+import reactRefresh from 'eslint-plugin-react-refresh'
 
-module.exports = {
-  plugins: ['react-refresh'],
-  rules: {
-    'react-refresh/only-export-components': 'warn',
-  },
-} satisfies Linter.Config
+export const viteConfig: Linter.Config = {
+  ...reactRefresh.configs.vite,
+}
