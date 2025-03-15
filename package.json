@@ -31,9 +31,6 @@
     "lint:prettier": "prettier --check .",
     "publish": "yarn build && yarn npm publish"
   },
-  "eslintConfig": {
-    "extends": "./src"
-  },
   "dependencies": {
     "@graphql-eslint/eslint-plugin": "4.3.0",
     "@next/eslint-plugin-next": "15.2.2",
