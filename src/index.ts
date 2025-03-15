@@ -69,11 +69,6 @@ module.exports = {
       ],
       extends: resolve(__dirname, 'framework/next.js.js'),
     },
-    // Emotion
-    {
-      files: '**/*.{jsx,tsx}',
-      extends: resolve(__dirname, 'framework/emotion.js'),
-    },
     // jest / vitest
     {
       files: [
