@@ -1,17 +1,13 @@
 import type { Linter } from 'eslint'
+import jest from 'eslint-plugin-jest'
 
 /**
  * jest 関連の eslint プリセット
  */
-module.exports = {
-  plugins: ['jest'],
-  extends: [
-    'plugin:jest/recommended',
-    'plugin:jest/style',
-    'plugin:jest-formatting/recommended',
+export const jestConfig: Linter.Config = {
+  files: [
+    '**/*.test.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
+    '**/test/**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
   ],
-  env: {
-    'jest/globals': true,
-  },
-  rules: {},
-} satisfies Linter.Config
+  ...jest.configs['flat/all'],
+}
