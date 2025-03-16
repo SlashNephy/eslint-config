@@ -1,18 +1,13 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "ESNext",
     "module": "NodeNext",
     "moduleResolution": "nodenext",
-    "allowJs": false,
-    "removeComments": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "skipLibCheck": true,
-    "useUnknownInCatchVariables": true,
-    "noUncheckedIndexedAccess": true,
     "strictNullChecks": true,
-    "typeRoots": ["./node_modules/@types", "./types"]
+    "skipLibCheck": true,
   },
   "include": ["./src/**/*.ts"]
 }
