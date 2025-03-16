@@ -1,130 +1,64 @@
-import { resolve } from 'path'
+import { config } from 'typescript-eslint'
 
-// https://github.com/microsoft/rushstack/tree/main/eslint/eslint-patch
-import '@rushstack/eslint-patch/modern-module-resolution.js'
-import { readGitignoreFiles } from 'eslint-gitignore'
+import { common } from './base/common.js'
+import { graphql } from './base/graphql.js'
+import { javaScript } from './base/javascript.js'
+import { packageJson } from './base/package.json.js'
+import { typeScript } from './base/typescript.js'
+import { yaml } from './base/yaml.js'
+import { cloudflareWorkers } from './environments/cloudflareWorkers.js'
+import { node } from './environments/node.js'
+import { userScript } from './environments/userscript.js'
+import { jest } from './frameworks/jest.js'
+import { nextJs } from './frameworks/next.js.js'
+import { react } from './frameworks/react.js'
+import { relay } from './frameworks/relay.js'
+import { storybook } from './frameworks/storybook.js'
+import { vite } from './frameworks/vite.js'
+import { vitest } from './frameworks/vitest.js'
 
-import type { Linter } from 'eslint'
-
-module.exports = {
-  root: true,
-  extends: ['eslint:recommended'],
-  ignorePatterns: [
-    '**/node_modules/**',
-    '**/.yarn/**',
-    '**/dist/**',
-    ...readGitignoreFiles(),
-  ],
-  overrides: [
-    /*
-     * 言語固有ルール
-     */
-    // JavaScript / TypeScript
-    {
-      files: '**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
-      extends: resolve(__dirname, 'base/javascript.js'),
-      processor: '@graphql-eslint/graphql',
-    },
+// eslint-disable-next-line import/no-default-export
+export default config(
+  // ベース
+  [
+    common,
+    // JavaScript
+    javaScript,
     // TypeScript
-    {
-      files: '**/*.{ts,mts,cts,tsx}',
-      extends: [resolve(__dirname, 'base/typescript.js')],
-    },
+    typeScript,
     // GraphQL
-    {
-      files: '**/*.{graphql,graphqls,gql}',
-      extends: [resolve(__dirname, 'base/graphql.js')],
-    },
+    graphql,
     // YAML
-    {
-      files: '**/*.{yml,yaml}',
-      extends: resolve(__dirname, 'base/yaml.js'),
-    },
-
-    /*
-     * フレームワーク固有ルール
-     */
-    // React
-    {
-      files: '**/*.{jsx,tsx}',
-      extends: resolve(__dirname, 'framework/react.js'),
-    },
-    // Relay
-    {
-      files: '**/*.{js,jsx,ts,tsx}',
-      extends: resolve(__dirname, 'framework/relay.js'),
-    },
-    // Vite
-    {
-      files: '**/src/**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
-      extends: resolve(__dirname, 'framework/vite.js'),
-    },
-    // Next.js
-    {
-      files: [
-        // Pages Router
-        '**/pages/**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
-        // App Router
-        '**/app/**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
-      ],
-      extends: resolve(__dirname, 'framework/next.js.js'),
-    },
-    // jest / vitest
-    {
-      files: [
-        '**/*.test.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
-        '**/test/**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
-      ],
-      extends: [
-        resolve(__dirname, 'framework/jest.js'),
-        resolve(__dirname, 'framework/vitest.js'),
-      ],
-    },
-
-    /*
-     * 個別のプリセットルール
-     */
-    // React向け a11y
-    {
-      files: '**/*.{jsx,tsx}',
-      extends: resolve(__dirname, 'presets/a11y.js'),
-    },
-    // Node.js
-    {
-      files: '**/bin/**/*.{js,mjs,cjs,ts,mts,cts}',
-      extends: resolve(__dirname, 'presets/node.js'),
-    },
-    // Cloudflare Worker
-    {
-      files: ['**/src/worker.{js,ts}', '**/functions/**/*.{js,ts}'],
-      extends: resolve(__dirname, 'presets/allow-default-export.js'),
-    },
-    // ビルドツールの構成ファイル
-    {
-      files: [
-        '**/{webpack,rollup,vite,postcss,next}.config.{js,mjs,cjs,ts,mts,cts}',
-        '**/codegen.{js,mjs,cjs,ts,mts,cts}',
-      ],
-      extends: [
-        resolve(__dirname, 'presets/allow-default-export.js'),
-        resolve(__dirname, 'presets/build-configuration.js'),
-        resolve(__dirname, 'presets/node.js'),
-      ],
-    },
+    yaml,
     // package.json
-    {
-      files: '**/package.json',
-      extends: resolve(__dirname, 'presets/package.json.js'),
-    },
-    // UserScript
-    {
-      files: '**/*.user.js',
-      extends: resolve(__dirname, 'presets/userscript.js'),
-    },
-    // コーディングスタイル
-    {
-      files: '**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}',
-      extends: resolve(__dirname, 'presets/style.js'),
-    },
+    packageJson,
   ],
-} satisfies Linter.Config
+
+  // フレームワーク
+  [
+    // React
+    react,
+    // Next.js
+    nextJs,
+    // Vite
+    vite,
+    // Relay
+    relay,
+    // Storybook
+    storybook,
+    // Jest
+    jest,
+    // Vitest
+    vitest,
+  ],
+
+  // 環境
+  [
+    // Node.js
+    node,
+    // Cloudflare Worker
+    cloudflareWorkers,
+    // UserScript
+    userScript,
+  ],
+)
