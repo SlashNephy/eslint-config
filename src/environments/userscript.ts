@@ -1,11 +1,14 @@
-import type { Linter } from 'eslint'
+import userScriptsPlugin from 'eslint-plugin-userscripts'
+import { config } from 'typescript-eslint'
 
-/**
- * UserScript 開発用の eslint プリセット
- */
-module.exports = {
-  extends: ['plugin:userscripts/recommended'],
+export const userScript = config({
+  name: 'eslint-plugin-userscripts',
+  files: ['**/*.user.js'],
+  plugins: {
+    userScripts: userScriptsPlugin,
+  },
   rules: {
+    ...userScriptsPlugin.configs.recommended.rules,
     'no-undef': 'off',
     'xss/no-mixed-html': 'off',
     'xss/no-location-href-assign': 'off',
@@ -22,4 +25,4 @@ module.exports = {
       },
     ],
   },
-} satisfies Linter.Config
+})

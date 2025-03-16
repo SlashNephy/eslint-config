@@ -9,12 +9,17 @@
 $ yarn add @slashnephy/eslint-config
 ```
 
-## Usage
+## Usage (for Flat Configs)
 
-`.eslintrc.json`
+`eslint.config.js` or `eslint.config.mjs`
 
-```json
-{
-  "extends": ["@slashnephy/eslint-config"]
-}
+```javascript
+import config from '@slashnephy/eslint-config'
+
+export default [
+  config,
+  {
+    // your custom config
+  },
+]
 ```
