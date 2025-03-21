@@ -617,12 +617,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:14.2.24":
-  version: 14.2.24
-  resolution: "@next/eslint-plugin-next@npm:14.2.24"
+"@next/eslint-plugin-next@npm:14.2.25":
+  version: 14.2.25
+  resolution: "@next/eslint-plugin-next@npm:14.2.25"
   dependencies:
     glob: "npm:10.3.10"
-  checksum: 10/cbf32c1a695c79bd79e8255dcd8d0002e61f26832dcba9398afcafee480ef260f09d61f9d7af845c5f3abf09799bb84f06a5d5ffd21a40f10431fb3580d17ee3
+  checksum: 10/d0e80a105002c33b93c77d756da799e3b703e8325be1cc7a16aa17d9d87714972aa77c65a2122bc2264cbc78ef07bcbee424a87fa051c59cf63b76825fa4dc5b
   languageName: node
   linkType: hard
 
@@ -741,7 +741,7 @@ __metadata:
   dependencies:
     "@emotion/eslint-plugin": "npm:11.12.0"
     "@graphql-eslint/eslint-plugin": "npm:3.20.1"
-    "@next/eslint-plugin-next": "npm:14.2.24"
+    "@next/eslint-plugin-next": "npm:14.2.25"
     "@rushstack/eslint-patch": "npm:1.11.0"
     "@slashnephy/prettier-config": "npm:1.0.73"
     "@stylistic/eslint-plugin": "npm:4.2.0"
@@ -754,7 +754,7 @@ __metadata:
     concurrently: "npm:9.1.2"
     eslint: "npm:8.57.1"
     eslint-config-airbnb: "npm:19.0.4"
-    eslint-config-next: "npm:14.2.24"
+    eslint-config-next: "npm:14.2.25"
     eslint-config-prettier: "npm:10.1.1"
     eslint-config-standard: "npm:17.1.0"
     eslint-gitignore: "npm:0.1.0"
@@ -2236,11 +2236,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:14.2.24":
-  version: 14.2.24
-  resolution: "eslint-config-next@npm:14.2.24"
+"eslint-config-next@npm:14.2.25":
+  version: 14.2.25
+  resolution: "eslint-config-next@npm:14.2.25"
   dependencies:
-    "@next/eslint-plugin-next": "npm:14.2.24"
+    "@next/eslint-plugin-next": "npm:14.2.25"
     "@rushstack/eslint-patch": "npm:^1.3.3"
     "@typescript-eslint/eslint-plugin": "npm:^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0"
     "@typescript-eslint/parser": "npm:^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0"
@@ -2256,7 +2256,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10/526cbcfa51e5c6b34d3cdb75c0cc51452aae0617c13106f87e029be3300e5c422b77448106d00a3eefd4910f4aa6d5853010858cec7873d72fa27f8f9afd994d
+  checksum: 10/486f1b7e6910aeaf0c8d387b1282e20d64fc1b9c0b550772b9b28d6bac06cfb01800637975b6192b23b57575dfc1c2e9d4707a1b56c8960b18221bd91d9de365
   languageName: node
   linkType: hard
 
