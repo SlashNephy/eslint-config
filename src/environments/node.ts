@@ -15,6 +15,7 @@ export const node = config(
       'import-x/no-default-export': 'off',
       'import-x/no-anonymous-default-export': 'off',
       // import で devDependencies を許可
+      'n/no-unpublished-import': 'off',
       'import-x/no-extraneous-dependencies': [
         'error',
         {
@@ -29,7 +30,6 @@ export const node = config(
       // 不正確な import チェックを無効化
       'n/no-missing-import': 'off',
       'n/no-extraneous-import': 'off',
-      'n/no-unpublished-import': 'off',
     },
   },
   {
