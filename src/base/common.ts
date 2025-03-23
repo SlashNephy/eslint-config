@@ -1,8 +1,7 @@
-import gitignore from 'eslint-config-flat-gitignore'
-
-import { config } from 'typescript-eslint'
 import stylisticPlugin from '@stylistic/eslint-plugin'
 import { globalIgnores } from 'eslint/config'
+import gitignore from 'eslint-config-flat-gitignore'
+import { config } from 'typescript-eslint'
 
 export const common = config(
   globalIgnores([
@@ -12,10 +11,7 @@ export const common = config(
     '**/dist/**',
     '**/.idea/**',
   ]),
-  {
-    name: 'eslint-config-flat-gitignore',
-    extends: [gitignore()],
-  },
+  gitignore({ name: 'eslint-config-flat-gitignore', strict: false }),
   {
     name: '@stylistic/eslint-plugin',
     extends: [
@@ -37,5 +33,5 @@ export const common = config(
       // e.g. const foo: string = 'bar'
       '@stylistic/type-annotation-spacing': 'error',
     },
-  }
+  },
 )

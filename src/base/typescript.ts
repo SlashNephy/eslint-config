@@ -1,10 +1,23 @@
-import tseslint, { config } from 'typescript-eslint'
+import safeTypeScriptPlugin from '@susisu/eslint-plugin-safe-typescript'
 // @ts-expect-error 型定義ファイルがない
 import importPlugin from 'eslint-plugin-import'
-import safeTypeScriptPlugin from '@susisu/eslint-plugin-safe-typescript'
 import tsdocPlugin from 'eslint-plugin-tsdoc'
+import tseslint, { config } from 'typescript-eslint'
 
 export const typeScript = config(
+  {
+    files: ['**/*.cts'],
+    languageOptions: {
+      sourceType: 'commonjs',
+    },
+  },
+  {
+    files: ['**/*.{ts,mts,tsx}'],
+    languageOptions: {
+      sourceType: 'module',
+    },
+  },
+
   {
     name: 'typescript-eslint',
     files: ['**/*.{ts,cts,mts,tsx}'],
@@ -14,10 +27,11 @@ export const typeScript = config(
     ],
     languageOptions: {
       ecmaVersion: 'latest',
-      sourceType: 'module',
+      parser: tseslint.parser,
       parserOptions: {
         projectService: true,
-        tsconfigRootDir: import.meta.dirname,
+        // tsconfigRootDir は利用側で定義する必要がある
+        // tsconfigRootDir: import.meta.dirname,
       },
     },
     rules: {
@@ -190,16 +204,6 @@ export const typeScript = config(
     name: 'eslint-plugin-import',
     files: ['**/*.{ts,cts,mts,tsx}'],
     extends: [importPlugin.flatConfigs.typescript],
-    settings: {
-      'import/resolver': {
-        node: {
-          extensions: ['.js', '.jsx', '.ts', '.tsx'],
-        },
-        typescript: {
-          alwaysTryTypes: true,
-        },
-      },
-    },
     rules: {
       // import に拡張子を推奨
       'import/extensions': [
@@ -221,6 +225,7 @@ export const typeScript = config(
   },
   {
     name: 'eslint-plugin-tsdoc',
+    files: ['**/*.{ts,cts,mts,tsx}'],
     plugins: {
       tsdoc: tsdocPlugin,
     },
@@ -228,5 +233,5 @@ export const typeScript = config(
       // TSDoc
       'tsdoc/syntax': 'warn',
     },
-  }
+  },
 )

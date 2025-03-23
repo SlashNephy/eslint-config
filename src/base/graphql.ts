@@ -44,5 +44,5 @@ export const graphql = config(
       '**/frontend/**/*.{graphql,graphqls,gql}',
     ],
     extends: [graphqlPlugin.configs['flat/operations-recommended']],
-  }
+  },
 )

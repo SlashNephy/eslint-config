@@ -1,32 +1,48 @@
-import { config } from 'typescript-eslint'
-// @ts-expect-error 型定義ファイルがない
-import importPlugin from 'eslint-plugin-import'
-import unusedImportsPlugin from 'eslint-plugin-unused-imports'
-// @ts-expect-error 型定義ファイルがない
-import promisePlugin from 'eslint-plugin-promise'
+import eslint from '@eslint/js'
 // @ts-expect-error 型定義ファイルがない
 import eslintCommentsConfig from '@eslint-community/eslint-plugin-eslint-comments/configs'
-
-import eslint from '@eslint/js'
+// @ts-expect-error 型定義ファイルがない
+import importPlugin from 'eslint-plugin-import'
+// @ts-expect-error 型定義ファイルがない
+import promisePlugin from 'eslint-plugin-promise'
+import unusedImportsPlugin from 'eslint-plugin-unused-imports'
+import tseslint, { config } from 'typescript-eslint'
 
 export const javaScript = config(
+  {
+    files: ['**/*.cjs'],
+    languageOptions: {
+      sourceType: 'commonjs',
+    },
+  },
+  {
+    files: ['**/*.{js,mjs,jsx}'],
+    languageOptions: {
+      sourceType: 'module',
+    },
+  },
+
   {
     name: '@eslint/js',
     files: ['**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}'],
     extends: [eslint.configs.recommended],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      parser: tseslint.parser,
+    },
     rules: {
       // アロー関数を優先
       'prefer-arrow-callback': 'error',
       // 関数宣言は function xxx() {} にする
       'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
       // 中括弧の省略を禁止
-      curly: 'error',
+      'curly': 'error',
       // テンプレート文字列を優先
       'prefer-template': 'error',
       // == 比較 👉 === 比較
-      eqeqeq: 'error',
+      'eqeqeq': 'error',
       // *.js で 'use strict'; を強制
-      strict: ['error', 'global'],
+      'strict': ['error', 'global'],
       // 特定の構文を禁止
       'no-restricted-syntax': [
         'error',
@@ -71,7 +87,7 @@ export const javaScript = config(
       // ペアになっていない setter を禁止
       'accessor-pairs': 'error',
       // キャメルケースに強制しない
-      camelcase: 'off',
+      'camelcase': 'off',
       // switch 文で default を強制しない
       'default-case': 'off',
       // continue 文を許可
@@ -100,7 +116,7 @@ export const javaScript = config(
       // void Promise を許可
       'no-void': 'off',
       // 1 <= x < 10 を許可
-      yoda: [
+      'yoda': [
         'error',
         'never',
         {
@@ -117,6 +133,16 @@ export const javaScript = config(
     name: 'eslint-plugin-import',
     files: ['**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}'],
     extends: [importPlugin.flatConfigs.recommended],
+    settings: {
+      'import/resolver': {
+        node: {
+          extensions: ['.js', '.cjs', '.mjs', '.jsx', '.ts', '.cts', '.mts', '.tsx', '.json'],
+        },
+        typescript: {
+          alwaysTryTypes: true,
+        },
+      },
+    },
     rules: {
       'import/no-import-module-exports': 'off',
       'import/no-extraneous-dependencies': 'off',
@@ -131,7 +157,7 @@ export const javaScript = config(
         'warn',
         {
           // 組み込み → 外部依存 → 内部依存 → object → type の順にする
-          groups: [
+          'groups': [
             'builtin',
             'external',
             ['parent', 'sibling', 'index'],
@@ -142,11 +168,11 @@ export const javaScript = config(
           // カテゴリー間に改行を入れる
           'newlines-between': 'always',
           // 大文字小文字区別なしで ABC 順にする
-          alphabetize: {
+          'alphabetize': {
             order: 'asc',
             caseInsensitive: true,
           },
-          pathGroups: [
+          'pathGroups': [
             // **.css は最後に配置する
             {
               pattern: '**.css',
@@ -155,7 +181,7 @@ export const javaScript = config(
             },
           ],
           // **.css が import 順最後ではないときに警告
-          warnOnUnassignedImports: true,
+          'warnOnUnassignedImports': true,
         },
       ],
     },
@@ -196,5 +222,5 @@ export const javaScript = config(
     // https://github.com/Rantanen/eslint-plugin-xss/issues/15
     // extends: ['plugin:xss/recommended'],
     extends: [],
-  }
+  },
 )

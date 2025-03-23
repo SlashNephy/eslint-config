@@ -23,5 +23,5 @@ export const yaml = config(
       // workflow_dispatch: のような空のマップを許可する
       'yml/no-empty-mapping-value': 'off',
     },
-  }
+  },
 )

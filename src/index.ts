@@ -17,7 +17,6 @@ import { storybook } from './frameworks/storybook.js'
 import { vite } from './frameworks/vite.js'
 import { vitest } from './frameworks/vitest.js'
 
-// eslint-disable-next-line import/no-default-export
 export default config(
   // ベース
   [
