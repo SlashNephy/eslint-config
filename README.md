@@ -14,12 +14,21 @@ $ yarn add @slashnephy/eslint-config
 `eslint.config.js` or `eslint.config.mjs`
 
 ```javascript
+import { defineConfig } from 'eslint/config'
 import config from '@slashnephy/eslint-config'
 
-export default [
-  config,
+export default defineConfig([
+  ...config,
+  {
+    languageOptions: {
+      parserOptions: {
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  },
   {
     // your custom config
   },
-]
+])
+
 ```

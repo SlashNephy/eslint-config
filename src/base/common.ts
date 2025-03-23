@@ -14,12 +14,17 @@ export const common = config(
   gitignore({ name: 'eslint-config-flat-gitignore', strict: false }),
   {
     name: '@stylistic/eslint-plugin',
+    files: ['**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}'],
     extends: [
       stylisticPlugin.configs.customize({
         indent: 2,
         quotes: 'single',
         semi: false,
         jsx: true,
+        arrowParens: true,
+        blockSpacing: true,
+        quoteProps: 'consistent-as-needed',
+        commaDangle: 'always-multiline',
       }),
     ],
     rules: {
