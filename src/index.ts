@@ -1,4 +1,4 @@
-import { config } from 'typescript-eslint'
+import tseslint from 'typescript-eslint'
 
 import { common } from './base/common.js'
 import { graphql } from './base/graphql.js'
@@ -17,47 +17,54 @@ import { storybook } from './frameworks/storybook.js'
 import { vite } from './frameworks/vite.js'
 import { vitest } from './frameworks/vitest.js'
 
-export default config(
-  // ベース
-  [
-    common,
-    // JavaScript
-    javaScript,
-    // TypeScript
-    typeScript,
-    // GraphQL
-    graphql,
-    // YAML
-    yaml,
-    // package.json
-    packageJson,
-  ],
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type -- 将来のために予約してある
+type Options = {}
 
-  // フレームワーク
-  [
-    // React
-    react,
-    // Next.js
-    nextJs,
-    // Vite
-    vite,
-    // Relay
-    relay,
-    // Storybook
-    storybook,
-    // Jest
-    jest,
-    // Vitest
-    vitest,
-  ],
+export function config(_options?: Options, ...overrides: tseslint.ConfigWithExtends[]): tseslint.ConfigArray {
+  return tseslint.config(
+    // ベース
+    [
+      common,
+      // JavaScript
+      javaScript,
+      // TypeScript
+      typeScript,
+      // GraphQL
+      graphql,
+      // YAML
+      yaml,
+      // package.json
+      packageJson,
+    ],
 
-  // 環境
-  [
-    // Node.js
-    node,
-    // Cloudflare Worker
-    cloudflareWorkers,
-    // UserScript
-    userScript,
-  ],
-)
+    // フレームワーク
+    [
+      // React
+      react,
+      // Next.js
+      nextJs,
+      // Vite
+      vite,
+      // Relay
+      relay,
+      // Storybook
+      storybook,
+      // Jest
+      jest,
+      // Vitest
+      vitest,
+    ],
+
+    // 環境
+    [
+      // Node.js
+      node,
+      // Cloudflare Worker
+      cloudflareWorkers,
+      // UserScript
+      userScript,
+    ],
+
+    ...overrides,
+  )
+}
