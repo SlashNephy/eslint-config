@@ -12,10 +12,10 @@ export const node = config(
     extends: [nPlugin.configs['flat/recommended']],
     rules: {
       // default export を許可
-      'import/no-default-export': 'off',
-      'import/no-anonymous-default-export': 'off',
+      'import-x/no-default-export': 'off',
+      'import-x/no-anonymous-default-export': 'off',
       // import で devDependencies を許可
-      'import/no-extraneous-dependencies': [
+      'import-x/no-extraneous-dependencies': [
         'error',
         {
           devDependencies: true,

@@ -1,6 +1,5 @@
 import safeTypeScriptPlugin from '@susisu/eslint-plugin-safe-typescript'
-// @ts-expect-error 型定義ファイルがない
-import importPlugin from 'eslint-plugin-import'
+import importXPlugin from 'eslint-plugin-import-x'
 import tsdocPlugin from 'eslint-plugin-tsdoc'
 import tseslint, { config } from 'typescript-eslint'
 
@@ -201,12 +200,12 @@ export const typeScript = config(
     },
   },
   {
-    name: 'eslint-plugin-import',
+    name: 'eslint-plugin-import-x',
     files: ['**/*.{ts,cts,mts,tsx}'],
-    extends: [importPlugin.flatConfigs.typescript],
+    extends: [importXPlugin.flatConfigs.typescript],
     rules: {
       // import に拡張子を推奨
-      'import/extensions': [
+      'import-x/extensions': [
         'warn',
         'always',
         {

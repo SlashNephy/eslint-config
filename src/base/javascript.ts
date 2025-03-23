@@ -1,8 +1,7 @@
 import eslint from '@eslint/js'
 // @ts-expect-error 型定義ファイルがない
 import eslintCommentsConfig from '@eslint-community/eslint-plugin-eslint-comments/configs'
-// @ts-expect-error 型定義ファイルがない
-import importPlugin from 'eslint-plugin-import'
+import importXPlugin from 'eslint-plugin-import-x'
 // @ts-expect-error 型定義ファイルがない
 import promisePlugin from 'eslint-plugin-promise'
 import unusedImportsPlugin from 'eslint-plugin-unused-imports'
@@ -130,11 +129,11 @@ export const javaScript = config(
     extends: [eslintCommentsConfig.recommended],
   },
   {
-    name: 'eslint-plugin-import',
+    name: 'eslint-plugin-import-x',
     files: ['**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}'],
-    extends: [importPlugin.flatConfigs.recommended],
+    extends: [importXPlugin.flatConfigs.recommended],
     settings: {
-      'import/resolver': {
+      'import-x/resolver': {
         node: {
           extensions: ['.js', '.cjs', '.mjs', '.jsx', '.ts', '.cts', '.mts', '.tsx', '.json'],
         },
@@ -144,16 +143,16 @@ export const javaScript = config(
       },
     },
     rules: {
-      'import/no-import-module-exports': 'off',
-      'import/no-extraneous-dependencies': 'off',
+      'import-x/no-import-module-exports': 'off',
+      'import-x/no-extraneous-dependencies': 'off',
       // 循環 import を禁止
-      'import/no-cycle': 'error',
+      'import-x/no-cycle': 'error',
       // default export を優先しない
-      'import/prefer-default-export': 'off',
+      'import-x/prefer-default-export': 'off',
       // default export を禁止
-      'import/no-default-export': 'error',
+      'import-x/no-default-export': 'error',
       // import 順を並び替える
-      'import/order': [
+      'import-x/order': [
         'warn',
         {
           // 組み込み → 外部依存 → 内部依存 → object → type の順にする

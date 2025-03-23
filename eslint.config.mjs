@@ -13,8 +13,8 @@ export default defineConfig([
   },
   {
     rules: {
-      'import/no-default-export': 'off',
-      'import/no-named-as-default-member': 'off',
+      'import-x/no-default-export': 'off',
+      'import-x/no-named-as-default-member': 'off',
     },
   },
 ])

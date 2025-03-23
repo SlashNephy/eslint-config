@@ -18,7 +18,7 @@ export const nextJs = config({
     nextPlugin.configs['core-web-vitals'],
   ],
   rules: {
-    'import/no-default-export': 'off',
+    'import-x/no-default-export': 'off',
     'react-refresh/only-export-components': 'off',
   },
   ignores: ['**/.next/**'],
