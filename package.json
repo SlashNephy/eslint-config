@@ -21,7 +21,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "bump-version": "ts-node bin/bump-version.ts",
+    "bump-version": "tsx bin/bump-version.ts",
     "clean": "rm -rf src/**/*.js",
     "format": "eslint --fix",
     "lint": "eslint",
@@ -69,7 +69,7 @@
     "concurrently": "9.1.2",
     "eslint": "9.23.0",
     "jiti": "2.4.2",
-    "ts-node": "10.9.2"
+    "tsx": "4.19.3"
   },
   "peerDependencies": {
     "eslint": "^9"
