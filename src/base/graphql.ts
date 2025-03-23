@@ -1,15 +1,48 @@
-import type { Linter } from 'eslint'
+import graphqlPlugin from '@graphql-eslint/eslint-plugin'
+import { config } from 'typescript-eslint'
 
-module.exports = {
-  plugins: ['@graphql-eslint'],
-  // XXX: 上手く動いていないので一時的に無効化
-  // extends: [
-  //   'plugin:@graphql-eslint/schema-recommended',
-  //   'plugin:@graphql-eslint/operations-all',
-  //   'plugin:@graphql-eslint/relay',
-  // ],
-  parser: '@graphql-eslint/eslint-plugin',
-  parserOptions: {
-    schema: '**/schema.graphql',
+export const graphql = config(
+  // GraphQL を解釈できるようにする
+  {
+    name: '@graphql-eslint/eslint-plugin (parser)',
+    files: ['**/*.{graphql,graphqls,gql}'],
+    languageOptions: {
+      parser: graphqlPlugin.parser,
+    },
+    plugins: {
+      '@graphql-eslint': graphqlPlugin,
+    },
   },
-} satisfies Linter.Config
+
+  // コード中に含まれる GraphQL を解釈して lint できるようにする
+  {
+    name: '@graphql-eslint/eslint-plugin (code)',
+    files: ['**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}'],
+    processor: graphqlPlugin.processor,
+  },
+
+  // GraphQL schema
+  {
+    name: '@graphql-eslint/eslint-plugin (GraphQL schema)',
+    files: [
+      '**/schema.{graphql,graphqls,gql}',
+
+      // gqlgen
+      '**/graph/*.{graphql,graphqls,gql}',
+    ],
+    extends: [
+      graphqlPlugin.configs['flat/schema-recommended'],
+      graphqlPlugin.configs['flat/schema-relay'],
+    ],
+  },
+
+  // GraphQL operations
+  {
+    name: '@graphql-eslint/eslint-plugin (GraphQL operations)',
+    files: [
+      '**/documents/*.{graphql,graphqls,gql}',
+      '**/frontend/**/*.{graphql,graphqls,gql}',
+    ],
+    extends: [graphqlPlugin.configs['flat/operations-recommended']],
+  },
+)

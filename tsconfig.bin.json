@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": true
+  },
+  "include": [
+    "./bin/*.ts",
+    "./eslint.config.mts"
+  ],
+}

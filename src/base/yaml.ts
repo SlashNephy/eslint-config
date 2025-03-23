@@ -1,19 +1,27 @@
-import type { Linter } from 'eslint'
+import ymlPlugin from 'eslint-plugin-yml'
+import { config } from 'typescript-eslint'
 
-module.exports = {
-  extends: ['plugin:yml/standard', 'plugin:yml/prettier'],
-  parser: 'yaml-eslint-parser',
-  rules: {
-    'yml/quotes': ['error', { prefer: 'double' }],
-  },
-  overrides: [
-    // GitHub Workflow でダブルクォートが使えない場合があるのでシングルに統一
-    // https://github.com/actions/runner/issues/866
-    {
-      files: '.github/workflows/*.{yml,yaml}',
-      rules: {
-        'yml/quotes': ['error', { prefer: 'single' }],
-      },
+export const yaml = config(
+  {
+    name: 'eslint-plugin-yml',
+    files: ['**/*.{yml,yaml}'],
+    extends: [
+      ymlPlugin.configs['flat/standard'],
+      ymlPlugin.configs['flat/prettier'],
+    ],
+    rules: {
+      'yml/quotes': ['error', { prefer: 'double' }],
     },
-  ],
-} satisfies Linter.Config
+  },
+  {
+    name: 'eslint-plugin-yml (GitHub Workflow)',
+    files: ['.github/workflows/*.{yml,yaml}'],
+    rules: {
+      // ダブルクォートが使えない場合があるのでシングルに統一
+      // https://github.com/actions/runner/issues/866
+      'yml/quotes': ['error', { prefer: 'single' }],
+      // workflow_dispatch: のような空のマップを許可する
+      'yml/no-empty-mapping-value': 'off',
+    },
+  },
+)

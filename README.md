@@ -9,12 +9,26 @@
 $ yarn add @slashnephy/eslint-config
 ```
 
-## Usage
+## Usage (for Flat Configs)
 
-`.eslintrc.json`
+`eslint.config.js` or `eslint.config.mjs`
 
-```json
-{
-  "extends": ["@slashnephy/eslint-config"]
-}
+```javascript
+import { defineConfig } from 'eslint/config'
+import config from '@slashnephy/eslint-config'
+
+export default defineConfig([
+  ...config,
+  {
+    languageOptions: {
+      parserOptions: {
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  },
+  {
+    // your custom config
+  },
+])
+
 ```
