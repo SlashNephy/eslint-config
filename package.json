@@ -23,8 +23,8 @@
     "build": "tsc",
     "bump-version": "ts-node bin/bump-version.ts",
     "clean": "rm -rf src/**/*.js",
-    "format": "yarn build && eslint --fix",
-    "lint": "yarn build && eslint",
+    "format": "eslint --fix",
+    "lint": "eslint",
     "publish": "yarn build && yarn npm publish"
   },
   "dependencies": {
@@ -68,6 +68,7 @@
     "@types/node": "22.13.11",
     "concurrently": "9.1.2",
     "eslint": "9.23.0",
+    "jiti": "2.4.2",
     "ts-node": "10.9.2"
   },
   "peerDependencies": {

@@ -3,5 +3,8 @@
   "compilerOptions": {
     "composite": true
   },
-  "include": ["./bin/*.ts"],
+  "include": [
+    "./bin/*.ts",
+    "./eslint.config.mts"
+  ],
 }
