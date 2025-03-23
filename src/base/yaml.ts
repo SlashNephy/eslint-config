@@ -7,7 +7,6 @@ export const yaml = config(
     files: ['**/*.{yml,yaml}'],
     extends: [
       ymlPlugin.configs['flat/standard'],
-      ymlPlugin.configs['flat/prettier'],
     ],
     rules: {
       'yml/quotes': ['error', { prefer: 'double' }],
