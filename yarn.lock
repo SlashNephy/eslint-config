@@ -581,9 +581,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-eslint/eslint-plugin@npm:4.3.0":
-  version: 4.3.0
-  resolution: "@graphql-eslint/eslint-plugin@npm:4.3.0"
+"@graphql-eslint/eslint-plugin@npm:4.4.0":
+  version: 4.4.0
+  resolution: "@graphql-eslint/eslint-plugin@npm:4.4.0"
   dependencies:
     "@graphql-tools/code-file-loader": "npm:^8.0.0"
     "@graphql-tools/graphql-tag-pluck": "npm:^8.3.4"
@@ -603,7 +603,7 @@ __metadata:
       optional: true
     json-schema-to-ts:
       optional: true
-  checksum: 10/d855db0953e0da5716042e8dadcbee666586c017541691a9a4f918f9f82cb64fee5e64a851a08547aaaf86bf796973cf265c154e70a92627cfcf96dca037c5c7
+  checksum: 10/37c16d0690cd345562a8896da3511883c5811e44d1eec0230a01d59682e7231687c685c7c713cd9c9f5ef4181e576bcb645844a3e49328d70aaffeb49a29e327
   languageName: node
   linkType: hard
 
@@ -1131,7 +1131,7 @@ __metadata:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:4.4.1"
     "@eslint/config-inspector": "npm:1.0.2"
     "@eslint/js": "npm:9.23.0"
-    "@graphql-eslint/eslint-plugin": "npm:4.3.0"
+    "@graphql-eslint/eslint-plugin": "npm:4.4.0"
     "@next/eslint-plugin-next": "npm:15.2.4"
     "@stylistic/eslint-plugin": "npm:4.2.0"
     "@susisu/eslint-plugin-safe-typescript": "npm:0.9.3"
