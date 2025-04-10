@@ -1042,12 +1042,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:15.2.4":
-  version: 15.2.4
-  resolution: "@next/eslint-plugin-next@npm:15.2.4"
+"@next/eslint-plugin-next@npm:15.2.5":
+  version: 15.2.5
+  resolution: "@next/eslint-plugin-next@npm:15.2.5"
   dependencies:
     fast-glob: "npm:3.3.1"
-  checksum: 10/366590ea51436ae71f0cb4b0864d3189326d4ea710dc3634fcccf4585ce04d095f1477301635ddea6f11383828411ab5980bc2ad345538b3502670425e6cbb30
+  checksum: 10/42744957c62ccb8814ad8009db20c2c13fbfd93df42f1af753757dab66660a47173786897597f2d097e266c7b2154b542088a522107e1b5e0cc6f5a643c2b1ee
   languageName: node
   linkType: hard
 
@@ -1156,7 +1156,7 @@ __metadata:
     "@eslint/config-inspector": "npm:1.0.2"
     "@eslint/js": "npm:9.24.0"
     "@graphql-eslint/eslint-plugin": "npm:4.4.0"
-    "@next/eslint-plugin-next": "npm:15.2.4"
+    "@next/eslint-plugin-next": "npm:15.2.5"
     "@stylistic/eslint-plugin": "npm:4.2.0"
     "@susisu/eslint-plugin-safe-typescript": "npm:0.9.3"
     "@types/eslint": "npm:9.6.1"
