@@ -28,7 +28,7 @@
     "publish": "yarn build && yarn npm publish"
   },
   "dependencies": {
-    "@eslint-community/eslint-plugin-eslint-comments": "4.4.1",
+    "@eslint-community/eslint-plugin-eslint-comments": "4.5.0",
     "@eslint/js": "9.24.0",
     "@graphql-eslint/eslint-plugin": "4.4.0",
     "@next/eslint-plugin-next": "15.3.0",
