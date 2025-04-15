@@ -443,15 +443,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint-community/eslint-plugin-eslint-comments@npm:4.4.1":
-  version: 4.4.1
-  resolution: "@eslint-community/eslint-plugin-eslint-comments@npm:4.4.1"
+"@eslint-community/eslint-plugin-eslint-comments@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@eslint-community/eslint-plugin-eslint-comments@npm:4.5.0"
   dependencies:
     escape-string-regexp: "npm:^4.0.0"
     ignore: "npm:^5.2.4"
   peerDependencies:
     eslint: ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
-  checksum: 10/9d1923fa5489b3d2353ba9fed0fe80a6bfd30d14b91522b606154dc77a5e09dba47703bb07ea483d759550b2d72d4e1340a0b6e99f2811bdd0e35a87e8fd133c
+  checksum: 10/0e4349041612256917a128dec61e1e92b421227e1d87f3caa828e1ad5eefdf13a03d052cf0744aff956317ff2742fc84139aff1132415632fb75f39d13c255ac
   languageName: node
   linkType: hard
 
@@ -1152,7 +1152,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@slashnephy/eslint-config@workspace:."
   dependencies:
-    "@eslint-community/eslint-plugin-eslint-comments": "npm:4.4.1"
+    "@eslint-community/eslint-plugin-eslint-comments": "npm:4.5.0"
     "@eslint/config-inspector": "npm:1.0.2"
     "@eslint/js": "npm:9.24.0"
     "@graphql-eslint/eslint-plugin": "npm:4.4.0"
