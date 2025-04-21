@@ -46,7 +46,7 @@
     "eslint-plugin-package-json": "0.29.1",
     "eslint-plugin-promise": "7.2.1",
     "eslint-plugin-react": "7.37.5",
-    "eslint-plugin-react-hooks": "5.2.0",
+    "eslint-plugin-react-hooks": "6.0.0",
     "eslint-plugin-react-refresh": "0.4.19",
     "eslint-plugin-relay": "1.8.3",
     "eslint-plugin-storybook": "0.12.0",
