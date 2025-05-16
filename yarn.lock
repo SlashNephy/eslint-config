@@ -1186,7 +1186,7 @@ __metadata:
     eslint-plugin-react: "npm:7.37.5"
     eslint-plugin-react-hooks: "npm:5.2.0"
     eslint-plugin-react-refresh: "npm:0.4.20"
-    eslint-plugin-relay: "npm:1.8.3"
+    eslint-plugin-relay: "npm:2.0.0"
     eslint-plugin-storybook: "npm:0.12.0"
     eslint-plugin-tsdoc: "npm:0.4.0"
     eslint-plugin-unused-imports: "npm:4.1.4"
@@ -3061,12 +3061,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-relay@npm:1.8.3":
-  version: 1.8.3
-  resolution: "eslint-plugin-relay@npm:1.8.3"
+"eslint-plugin-relay@npm:2.0.0":
+  version: 2.0.0
+  resolution: "eslint-plugin-relay@npm:2.0.0"
   dependencies:
-    graphql: "npm:^14.0.0 || ^15.0.0"
-  checksum: 10/29b97bab8b99a13f4c5c84ad54bc65ea084cc685c93ec5c87984dc7b6690b293cfa81d881f681167a5b21e26a805bf2aa7f41a326f0f52457aaf99604e509b4b
+    graphql: "npm:^14.0.0 || ^15.0.0 || ^16.0.0"
+  checksum: 10/47d9f5637e22065b96c75ed2c30af12ff794152251d94bbace190d7f4a66a42cb48e1ad76d6d5add1967a90c9574d2a05b8867cf8b9dd564382395d1e302e569
   languageName: node
   linkType: hard
 
@@ -3829,17 +3829,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql@npm:16.11.0":
+"graphql@npm:16.11.0, graphql@npm:^14.0.0 || ^15.0.0 || ^16.0.0":
   version: 16.11.0
   resolution: "graphql@npm:16.11.0"
   checksum: 10/e3e1633d0b464bbb3fa41283fae938bd3bac801c350555b3f1a129d99fb3cfe157fa69c1389229dba902731942eb08bdea4b29f1271965feee8779576b26ef01
-  languageName: node
-  linkType: hard
-
-"graphql@npm:^14.0.0 || ^15.0.0":
-  version: 15.10.1
-  resolution: "graphql@npm:15.10.1"
-  checksum: 10/49177f52c1fbac022866d39bb15040122da4c3ccd12644233b20edfcb1f76aa92aa92f2a82af4668101d8f726112fda111cb11a12feb05635cd689443a7aafb8
   languageName: node
   linkType: hard
 
