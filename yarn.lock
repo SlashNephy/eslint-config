@@ -1181,7 +1181,7 @@ __metadata:
     eslint-plugin-jest: "npm:28.11.0"
     eslint-plugin-jsx-a11y: "npm:6.10.2"
     eslint-plugin-n: "npm:17.16.2"
-    eslint-plugin-package-json: "npm:0.30.0"
+    eslint-plugin-package-json: "npm:0.31.0"
     eslint-plugin-promise: "npm:7.2.1"
     eslint-plugin-react: "npm:7.37.5"
     eslint-plugin-react-hooks: "npm:5.2.0"
@@ -2993,9 +2993,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-package-json@npm:0.30.0":
-  version: 0.30.0
-  resolution: "eslint-plugin-package-json@npm:0.30.0"
+"eslint-plugin-package-json@npm:0.31.0":
+  version: 0.31.0
+  resolution: "eslint-plugin-package-json@npm:0.31.0"
   dependencies:
     "@altano/repository-tools": "npm:^0.1.1"
     detect-indent: "npm:6.1.0"
@@ -3009,7 +3009,7 @@ __metadata:
   peerDependencies:
     eslint: ">=8.0.0"
     jsonc-eslint-parser: ^2.0.0
-  checksum: 10/c3875ee8e0d04f9a9eb4c44dd8352b2de51e55e4047192614d672994155a86303752d4b99df6490977aa5c2e00d2519647242342fa62792fc54ac88a97750e3b
+  checksum: 10/0ee0356cf0eaae74cec9d3ab5c1e8b78dbe27d5a934292aea13f926cd5c63bc0a2f6661c9e527964131f7fde4b1959722f16822225f770802717a48e87475988
   languageName: node
   linkType: hard
 
