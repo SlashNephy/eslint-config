@@ -1148,7 +1148,7 @@ __metadata:
     "@eslint/js": "npm:9.27.0"
     "@graphql-eslint/eslint-plugin": "npm:4.4.0"
     "@next/eslint-plugin-next": "npm:15.3.2"
-    "@stylistic/eslint-plugin": "npm:4.2.0"
+    "@stylistic/eslint-plugin": "npm:4.4.0"
     "@susisu/eslint-plugin-safe-typescript": "npm:0.9.4"
     "@types/eslint": "npm:9.6.1"
     "@types/node": "npm:22.15.21"
@@ -1197,18 +1197,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@stylistic/eslint-plugin@npm:4.2.0":
-  version: 4.2.0
-  resolution: "@stylistic/eslint-plugin@npm:4.2.0"
+"@stylistic/eslint-plugin@npm:4.4.0":
+  version: 4.4.0
+  resolution: "@stylistic/eslint-plugin@npm:4.4.0"
   dependencies:
-    "@typescript-eslint/utils": "npm:^8.23.0"
+    "@typescript-eslint/utils": "npm:^8.32.1"
     eslint-visitor-keys: "npm:^4.2.0"
     espree: "npm:^10.3.0"
     estraverse: "npm:^5.3.0"
     picomatch: "npm:^4.0.2"
   peerDependencies:
     eslint: ">=9.0.0"
-  checksum: 10/e7913327038f3eac31f10859d3c407b06949bc9660d6a9ee4c132536587af93aca1ddfde5ee152ce5ef75690ecca515c0abf07a1192d62bc14b7d8d8d6430b83
+  checksum: 10/d6e90d59e88e666623f5203b65dd072dec092e93478f2216f8b6206b644ccba20fb2bf9fd8ba996f87b55976a55daf2d56d70179f1211d0ad45d89a2ab6237ca
   languageName: node
   linkType: hard
 
@@ -1419,7 +1419,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:^6.0.0 || ^7.0.0 || ^8.0.0, @typescript-eslint/utils@npm:^8.23.0, @typescript-eslint/utils@npm:^8.24.0, @typescript-eslint/utils@npm:^8.31.0, @typescript-eslint/utils@npm:^8.31.1, @typescript-eslint/utils@npm:^8.8.1":
+"@typescript-eslint/utils@npm:^6.0.0 || ^7.0.0 || ^8.0.0, @typescript-eslint/utils@npm:^8.24.0, @typescript-eslint/utils@npm:^8.31.0, @typescript-eslint/utils@npm:^8.31.1, @typescript-eslint/utils@npm:^8.32.1, @typescript-eslint/utils@npm:^8.8.1":
   version: 8.32.1
   resolution: "@typescript-eslint/utils@npm:8.32.1"
   dependencies:
