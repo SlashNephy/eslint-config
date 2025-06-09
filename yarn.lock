@@ -503,31 +503,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/config-inspector@npm:1.0.2":
-  version: 1.0.2
-  resolution: "@eslint/config-inspector@npm:1.0.2"
+"@eslint/config-inspector@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@eslint/config-inspector@npm:1.1.0"
   dependencies:
     "@nodelib/fs.walk": "npm:^3.0.1"
-    ansis: "npm:^3.17.0"
+    ansis: "npm:^4.1.0"
     bundle-require: "npm:^5.1.0"
     cac: "npm:^6.7.14"
     chokidar: "npm:^4.0.3"
-    debug: "npm:^4.4.0"
-    esbuild: "npm:^0.25.0"
+    debug: "npm:^4.4.1"
+    esbuild: "npm:^0.25.5"
     find-up: "npm:^7.0.0"
     get-port-please: "npm:^3.1.2"
-    h3: "npm:^1.15.1"
+    h3: "npm:^1.15.3"
     mlly: "npm:^1.7.4"
     mrmime: "npm:^2.0.1"
-    open: "npm:^10.1.0"
-    tinyglobby: "npm:^0.2.12"
-    ws: "npm:^8.18.1"
+    open: "npm:^10.1.2"
+    tinyglobby: "npm:^0.2.14"
+    ws: "npm:^8.18.2"
   peerDependencies:
     eslint: ^8.50.0 || ^9.0.0
   bin:
     config-inspector: bin.mjs
     eslint-config-inspector: bin.mjs
-  checksum: 10/4ca4157d6d8ec79b2b40e720ccb07a3269d618d7fb36811667fe19084a4e2e5944618e61eb40bac97dcedf1da8340eb07530739beadff5ab87579106c616a672
+  checksum: 10/78e5dbfbb9b59c369d6b3e187da25acd9ea29173bf74ebab864e73469678d4c4464eaa04541c122a23e5681751e7f1820606339cc9f2ad14773ded95c178a3e4
   languageName: node
   linkType: hard
 
@@ -1144,7 +1144,7 @@ __metadata:
   resolution: "@slashnephy/eslint-config@workspace:."
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:4.5.0"
-    "@eslint/config-inspector": "npm:1.0.2"
+    "@eslint/config-inspector": "npm:1.1.0"
     "@eslint/js": "npm:9.28.0"
     "@graphql-eslint/eslint-plugin": "npm:4.4.0"
     "@next/eslint-plugin-next": "npm:15.3.3"
@@ -1744,10 +1744,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ansis@npm:^3.17.0":
-  version: 3.17.0
-  resolution: "ansis@npm:3.17.0"
-  checksum: 10/6fd6bc4d1187b894d9706f4c141c81b788e90766426617385486dae38f8b2f5a1726d8cc754939e44265f92a9db4647d5136cb1425435c39ac42b35e3acf4f3d
+"ansis@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "ansis@npm:4.1.0"
+  checksum: 10/e2658367807edb461a4c772bdba50cef85c7b3e5f19d4d67d7a406e97b9ba222cfd4dc300fee1b05619207d4e17c809f32e97ac47429f8b4b1a6709dc6ac35ac
   languageName: node
   linkType: hard
 
@@ -2256,7 +2256,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4, debug@npm:^4.1.0, debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.3.4, debug@npm:^4.4.0, debug@npm:^4.4.1":
+"debug@npm:4, debug@npm:^4.1.0, debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.3.4, debug@npm:^4.4.1":
   version: 4.4.1
   resolution: "debug@npm:4.4.1"
   dependencies:
@@ -2619,7 +2619,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.25.0, esbuild@npm:~0.25.0":
+"esbuild@npm:^0.25.5, esbuild@npm:~0.25.0":
   version: 0.25.5
   resolution: "esbuild@npm:0.25.5"
   dependencies:
@@ -3673,7 +3673,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"h3@npm:^1.15.1":
+"h3@npm:^1.15.3":
   version: 1.15.3
   resolution: "h3@npm:1.15.3"
   dependencies:
@@ -4775,7 +4775,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"open@npm:^10.1.0":
+"open@npm:^10.1.2":
   version: 10.1.2
   resolution: "open@npm:10.1.2"
   dependencies:
@@ -6150,7 +6150,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ws@npm:^8.17.1, ws@npm:^8.18.1":
+"ws@npm:^8.17.1, ws@npm:^8.18.2":
   version: 8.18.2
   resolution: "ws@npm:8.18.2"
   peerDependencies:
