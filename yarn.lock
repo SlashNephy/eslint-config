@@ -1169,7 +1169,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:5.2.0"
     eslint-plugin-react-refresh: "npm:0.4.20"
     eslint-plugin-relay: "npm:2.0.0"
-    eslint-plugin-storybook: "npm:0.12.0"
+    eslint-plugin-storybook: "npm:9.0.7"
     eslint-plugin-tsdoc: "npm:0.4.0"
     eslint-plugin-unused-imports: "npm:4.1.4"
     eslint-plugin-userscripts: "npm:0.5.6"
@@ -3085,16 +3085,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-storybook@npm:0.12.0":
-  version: 0.12.0
-  resolution: "eslint-plugin-storybook@npm:0.12.0"
+"eslint-plugin-storybook@npm:9.0.7":
+  version: 9.0.7
+  resolution: "eslint-plugin-storybook@npm:9.0.7"
   dependencies:
     "@storybook/csf": "npm:^0.1.11"
     "@typescript-eslint/utils": "npm:^8.8.1"
     ts-dedent: "npm:^2.2.0"
   peerDependencies:
     eslint: ">=8"
-  checksum: 10/278ea59565e30b74ee1d57f0a8f704906eaf40973b13999ec2c44872bb90c7505dfb12777b264940e2b480e81ace85c0532af69666e76a783b8ffa898a1d49ad
+  checksum: 10/af553cee12c6f30b1ccb44de9365a04ff26c64aab9c8587a857573a0eccc31f1559527248312447ccd781aa6df57381a9814a2354bd402807cf21147673afe8c
   languageName: node
   linkType: hard
 

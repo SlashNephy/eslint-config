@@ -49,7 +49,7 @@
     "eslint-plugin-react-hooks": "5.2.0",
     "eslint-plugin-react-refresh": "0.4.20",
     "eslint-plugin-relay": "2.0.0",
-    "eslint-plugin-storybook": "0.12.0",
+    "eslint-plugin-storybook": "9.0.7",
     "eslint-plugin-tsdoc": "0.4.0",
     "eslint-plugin-unused-imports": "4.1.4",
     "eslint-plugin-userscripts": "0.5.6",
