@@ -1153,7 +1153,7 @@ __metadata:
     "@types/eslint": "npm:9.6.1"
     "@types/node": "npm:22.15.31"
     "@typescript-eslint/utils": "npm:8.30.1"
-    "@vitest/eslint-plugin": "npm:1.2.1"
+    "@vitest/eslint-plugin": "npm:1.2.5"
     concurrently: "npm:9.1.2"
     eslint: "npm:9.28.0"
     eslint-config-flat-gitignore: "npm:2.1.0"
@@ -1827,9 +1827,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitest/eslint-plugin@npm:1.2.1":
-  version: 1.2.1
-  resolution: "@vitest/eslint-plugin@npm:1.2.1"
+"@vitest/eslint-plugin@npm:1.2.5":
+  version: 1.2.5
+  resolution: "@vitest/eslint-plugin@npm:1.2.5"
   dependencies:
     "@typescript-eslint/utils": "npm:^8.24.0"
   peerDependencies:
@@ -1841,7 +1841,7 @@ __metadata:
       optional: true
     vitest:
       optional: true
-  checksum: 10/56dccf2154df3b15c36326c4a30cd933152d5192253e9f924f5c345a5777d4e9b9ef89d9135c059ed227b93916c499897532328c4539289b79dbcb43cfc32968
+  checksum: 10/19d76615ba4d965ee7b37d439dde232f4ab559434db4e58b8f1b50087f5f60b06f4701a5d3b3d40d69e6b128c1bf6ecab4af94c716bbe2099f7623d8ba8ce092
   languageName: node
   linkType: hard
 
