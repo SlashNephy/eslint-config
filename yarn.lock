@@ -5,10 +5,10 @@ __metadata:
   version: 8
   cacheKey: 10
 
-"@altano/repository-tools@npm:^0.1.1":
-  version: 0.1.1
-  resolution: "@altano/repository-tools@npm:0.1.1"
-  checksum: 10/a89c427c4b1f241d2c65c03adaf890b8bb80eeea6b71963f5b9a1bd1b8c752a0d7e8acb894e359991deb5edb3cd03d0c96cab87a3de2a11c7a87b862c1625d22
+"@altano/repository-tools@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@altano/repository-tools@npm:2.0.1"
+  checksum: 10/0cba0832d230e4a953fd3cffddb7b4c7bcf87aed3dd7e67f39379caadffe276f58573fc4d3dbbf52107dea4416a5bcc57569038aaf0f782c65ed2f552b58a34c
   languageName: node
   linkType: hard
 
@@ -1207,7 +1207,7 @@ __metadata:
     eslint-plugin-jest: "npm:29.0.1"
     eslint-plugin-jsx-a11y: "npm:6.10.2"
     eslint-plugin-n: "npm:17.16.2"
-    eslint-plugin-package-json: "npm:0.30.0"
+    eslint-plugin-package-json: "npm:0.56.0"
     eslint-plugin-promise: "npm:7.2.1"
     eslint-plugin-react: "npm:7.37.5"
     eslint-plugin-react-hooks: "npm:5.2.0"
@@ -1819,7 +1819,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ansi-styles@npm:^6.1.0":
+"ansi-styles@npm:^6.1.0, ansi-styles@npm:^6.2.1":
   version: 6.2.1
   resolution: "ansi-styles@npm:6.2.1"
   checksum: 10/70fdf883b704d17a5dfc9cde206e698c16bcd74e7f196ab821511651aee4f9f76c9514bdfa6ca3a27b5e49138b89cb222a28caf3afe4567570139577f991df32
@@ -2142,6 +2142,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"change-case@npm:^5.4.4":
+  version: 5.4.4
+  resolution: "change-case@npm:5.4.4"
+  checksum: 10/446e5573f3c854290a91292afef92b957d2e43a928260c91989b482aa860caaa29711b6725fc40c200af68061cbab357b033446d16a17bc5c553636994074e92
+  languageName: node
+  linkType: hard
+
 "chokidar@npm:^4.0.3":
   version: 4.0.3
   resolution: "chokidar@npm:4.0.3"
@@ -2166,6 +2173,17 @@ __metadata:
     strip-ansi: "npm:^6.0.1"
     wrap-ansi: "npm:^7.0.0"
   checksum: 10/eaa5561aeb3135c2cddf7a3b3f562fc4238ff3b3fc666869ef2adf264be0f372136702f16add9299087fb1907c2e4ec5dbfe83bd24bce815c70a80c6c1a2e950
+  languageName: node
+  linkType: hard
+
+"cliui@npm:^9.0.1":
+  version: 9.0.1
+  resolution: "cliui@npm:9.0.1"
+  dependencies:
+    string-width: "npm:^7.2.0"
+    strip-ansi: "npm:^7.1.0"
+    wrap-ansi: "npm:^9.0.0"
+  checksum: 10/df43d8d1c6e3254cbb64b1905310d5f6672c595496a3cbe76946c6d24777136886470686f2772ac9edfe547a74bb70e8017530b3554715aee119efd7752fc0d9
   languageName: node
   linkType: hard
 
@@ -2437,24 +2455,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"detect-indent@npm:6.1.0":
-  version: 6.1.0
-  resolution: "detect-indent@npm:6.1.0"
-  checksum: 10/ab953a73c72dbd4e8fc68e4ed4bfd92c97eb6c43734af3900add963fd3a9316f3bc0578b018b24198d4c31a358571eff5f0656e81a1f3b9ad5c547d58b2d093d
-  languageName: node
-  linkType: hard
-
 "detect-indent@npm:^7.0.1":
   version: 7.0.1
   resolution: "detect-indent@npm:7.0.1"
   checksum: 10/cbf3f0b1c3c881934ca94428e1179b26ab2a587e0d719031d37a67fb506d49d067de54ff057cb1e772e75975fed5155c01cd4518306fee60988b1486e3fc7768
-  languageName: node
-  linkType: hard
-
-"detect-newline@npm:3.1.0":
-  version: 3.1.0
-  resolution: "detect-newline@npm:3.1.0"
-  checksum: 10/ae6cd429c41ad01b164c59ea36f264a2c479598e61cba7c99da24175a7ab80ddf066420f2bec9a1c57a6bead411b4655ff15ad7d281c000a89791f48cbe939e7
   languageName: node
   linkType: hard
 
@@ -2512,6 +2516,13 @@ __metadata:
   version: 1.5.208
   resolution: "electron-to-chromium@npm:1.5.208"
   checksum: 10/7805cc96f352b7da29cff91d731d580bc8118a91f6de4c3ca07b5a989d2488a846c99d26d5b249789915de67bdfdd2148fa666c7fdb8f9bea04beb31183b9767
+  languageName: node
+  linkType: hard
+
+"emoji-regex@npm:^10.3.0":
+  version: 10.4.0
+  resolution: "emoji-regex@npm:10.4.0"
+  checksum: 10/76bb92c5bcf0b6980d37e535156231e4a9d0aa6ab3b9f5eabf7690231d5aa5d5b8e516f36e6804cbdd0f1c23dfef2a60c40ab7bb8aedd890584281a565b97c50
   languageName: node
   linkType: hard
 
@@ -2848,16 +2859,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-fix-utils@npm:^0.2.0":
-  version: 0.2.1
-  resolution: "eslint-fix-utils@npm:0.2.1"
+"eslint-fix-utils@npm:~0.4.0":
+  version: 0.4.0
+  resolution: "eslint-fix-utils@npm:0.4.0"
   peerDependencies:
     "@types/estree": ">=1"
     eslint: ">=8"
   peerDependenciesMeta:
     "@types/estree":
       optional: true
-  checksum: 10/a466e3e4d147537bed7af7a91cc9046212a0077509f0ff37176345e2181c9a52984351d38245ac0cb10b1c0ea242a98137fa11e3e0fa8ed634b1654c58c72c2d
+  checksum: 10/2beb729623b5baca826aeed113d8b705542d6e7def83a2a1ac44b6320520086cb463a511d0e7c44806696cb61eb2bc18470f46fa7c8bdcce0db22282a7a73fab
   languageName: node
   linkType: hard
 
@@ -3011,23 +3022,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-package-json@npm:0.30.0":
-  version: 0.30.0
-  resolution: "eslint-plugin-package-json@npm:0.30.0"
+"eslint-plugin-package-json@npm:0.56.0":
+  version: 0.56.0
+  resolution: "eslint-plugin-package-json@npm:0.56.0"
   dependencies:
-    "@altano/repository-tools": "npm:^0.1.1"
-    detect-indent: "npm:6.1.0"
-    detect-newline: "npm:3.1.0"
-    eslint-fix-utils: "npm:^0.2.0"
-    package-json-validator: "npm:^0.10.0"
+    "@altano/repository-tools": "npm:^2.0.1"
+    change-case: "npm:^5.4.4"
+    detect-indent: "npm:^7.0.1"
+    detect-newline: "npm:^4.0.1"
+    eslint-fix-utils: "npm:~0.4.0"
+    package-json-validator: "npm:~0.29.1"
     semver: "npm:^7.5.4"
     sort-object-keys: "npm:^1.1.3"
-    sort-package-json: "npm:^3.0.0"
-    validate-npm-package-name: "npm:^6.0.0"
+    sort-package-json: "npm:^3.3.0"
+    validate-npm-package-name: "npm:^6.0.2"
   peerDependencies:
     eslint: ">=8.0.0"
     jsonc-eslint-parser: ^2.0.0
-  checksum: 10/c3875ee8e0d04f9a9eb4c44dd8352b2de51e55e4047192614d672994155a86303752d4b99df6490977aa5c2e00d2519647242342fa62792fc54ac88a97750e3b
+  checksum: 10/baca976b375fd393f084475e432ce604edbd7bc2b43ce9d2a9b2d5a0631f470872cfd6cfa4b0a3383b62a3147750044bce29a5b76af25aae3df24efdf8fe380b
   languageName: node
   linkType: hard
 
@@ -3532,6 +3544,13 @@ __metadata:
   version: 2.0.5
   resolution: "get-caller-file@npm:2.0.5"
   checksum: 10/b9769a836d2a98c3ee734a88ba712e62703f1df31b94b784762c433c27a386dd6029ff55c2a920c392e33657d80191edbf18c61487e198844844516f843496b9
+  languageName: node
+  linkType: hard
+
+"get-east-asian-width@npm:^1.0.0":
+  version: 1.3.0
+  resolution: "get-east-asian-width@npm:1.3.0"
+  checksum: 10/8e8e779eb28701db7fdb1c8cab879e39e6ae23f52dadd89c8aed05869671cee611a65d4f8557b83e981428623247d8bc5d0c7a4ef3ea7a41d826e73600112ad8
   languageName: node
   linkType: hard
 
@@ -4967,14 +4986,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"package-json-validator@npm:^0.10.0":
-  version: 0.10.2
-  resolution: "package-json-validator@npm:0.10.2"
+"package-json-validator@npm:~0.29.1":
+  version: 0.29.1
+  resolution: "package-json-validator@npm:0.29.1"
   dependencies:
-    yargs: "npm:~17.7.2"
+    semver: "npm:^7.7.2"
+    validate-npm-package-license: "npm:^3.0.4"
+    yargs: "npm:~18.0.0"
   bin:
-    pjv: lib/bin/pjv.mjs
-  checksum: 10/7ef7ac5e717575f7653f5143338c7d14f78538b36be7d82ef75d8384323f4b928a058e2b060c484393d5cdc42f8c7ea66c6b30304588f385909d059ea02f667f
+    pjv: lib/bin/pjv.js
+  checksum: 10/616dabece6173ee0a03ca4b41544021686d38213adeef7b97e819dafd51b8baca3151fb76d02f4e35174747029f90e6bab129365c38ad197c83b213edfc62c97
   languageName: node
   linkType: hard
 
@@ -5546,7 +5567,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sort-package-json@npm:^3.0.0":
+"sort-package-json@npm:^3.3.0":
   version: 3.4.0
   resolution: "sort-package-json@npm:3.4.0"
   dependencies:
@@ -5560,6 +5581,40 @@ __metadata:
   bin:
     sort-package-json: cli.js
   checksum: 10/f8009b037d0e1ba48819ddf498a34500f778058833b962b5f0d481943def68e2633259e679f29dbb6356fbab2bbc9ffa18524bc6decdcfd4341ab1a6aadee571
+  languageName: node
+  linkType: hard
+
+"spdx-correct@npm:^3.0.0":
+  version: 3.2.0
+  resolution: "spdx-correct@npm:3.2.0"
+  dependencies:
+    spdx-expression-parse: "npm:^3.0.0"
+    spdx-license-ids: "npm:^3.0.0"
+  checksum: 10/cc2e4dbef822f6d12142116557d63f5facf3300e92a6bd24e907e4865e17b7e1abd0ee6b67f305cae6790fc2194175a24dc394bfcc01eea84e2bdad728e9ae9a
+  languageName: node
+  linkType: hard
+
+"spdx-exceptions@npm:^2.1.0":
+  version: 2.5.0
+  resolution: "spdx-exceptions@npm:2.5.0"
+  checksum: 10/bb127d6e2532de65b912f7c99fc66097cdea7d64c10d3ec9b5e96524dbbd7d20e01cba818a6ddb2ae75e62bb0c63d5e277a7e555a85cbc8ab40044984fa4ae15
+  languageName: node
+  linkType: hard
+
+"spdx-expression-parse@npm:^3.0.0":
+  version: 3.0.1
+  resolution: "spdx-expression-parse@npm:3.0.1"
+  dependencies:
+    spdx-exceptions: "npm:^2.1.0"
+    spdx-license-ids: "npm:^3.0.0"
+  checksum: 10/a1c6e104a2cbada7a593eaa9f430bd5e148ef5290d4c0409899855ce8b1c39652bcc88a725259491a82601159d6dc790bedefc9016c7472f7de8de7361f8ccde
+  languageName: node
+  linkType: hard
+
+"spdx-license-ids@npm:^3.0.0":
+  version: 3.0.22
+  resolution: "spdx-license-ids@npm:3.0.22"
+  checksum: 10/a2f214aaf74c21a0172232367ce785157cef45d78617ee4d12aa1246350af566968e28b511e2096b707611566ac3959b85d8bf2d53a65bc6b66580735d3e1965
   languageName: node
   linkType: hard
 
@@ -5615,6 +5670,17 @@ __metadata:
     emoji-regex: "npm:^9.2.2"
     strip-ansi: "npm:^7.0.1"
   checksum: 10/7369deaa29f21dda9a438686154b62c2c5f661f8dda60449088f9f980196f7908fc39fdd1803e3e01541970287cf5deae336798337e9319a7055af89dafa7193
+  languageName: node
+  linkType: hard
+
+"string-width@npm:^7.0.0, string-width@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "string-width@npm:7.2.0"
+  dependencies:
+    emoji-regex: "npm:^10.3.0"
+    get-east-asian-width: "npm:^1.0.0"
+    strip-ansi: "npm:^7.1.0"
+  checksum: 10/42f9e82f61314904a81393f6ef75b832c39f39761797250de68c041d8ba4df2ef80db49ab6cd3a292923a6f0f409b8c9980d120f7d32c820b4a8a84a2598a295
   languageName: node
   linkType: hard
 
@@ -5707,7 +5773,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"strip-ansi@npm:^7.0.1":
+"strip-ansi@npm:^7.0.1, strip-ansi@npm:^7.1.0":
   version: 7.1.0
   resolution: "strip-ansi@npm:7.1.0"
   dependencies:
@@ -6137,7 +6203,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"validate-npm-package-name@npm:^6.0.0":
+"validate-npm-package-license@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "validate-npm-package-license@npm:3.0.4"
+  dependencies:
+    spdx-correct: "npm:^3.0.0"
+    spdx-expression-parse: "npm:^3.0.0"
+  checksum: 10/86242519b2538bb8aeb12330edebb61b4eb37fd35ef65220ab0b03a26c0592c1c8a7300d32da3cde5abd08d18d95e8dabfad684b5116336f6de9e6f207eec224
+  languageName: node
+  linkType: hard
+
+"validate-npm-package-name@npm:^6.0.2":
   version: 6.0.2
   resolution: "validate-npm-package-name@npm:6.0.2"
   checksum: 10/f0e022b0a7f11345a92b64121b059b720204cd64406a0d65d81526181dcb70aef551c7c6bf9ca37b91607a7c6ff4d62e1f63a86c8d9b7346d722a641a4bd8789
@@ -6270,6 +6346,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"wrap-ansi@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "wrap-ansi@npm:9.0.0"
+  dependencies:
+    ansi-styles: "npm:^6.2.1"
+    string-width: "npm:^7.0.0"
+    strip-ansi: "npm:^7.1.0"
+  checksum: 10/b9d91564c091cf3978a7c18ca0f3e4d4606e83549dbe59cf76f5e77feefdd5ec91443155e8102630524d10a8c275efac8a7082c0f26fa43e6b989dc150d176ce
+  languageName: node
+  linkType: hard
+
 "ws@npm:^8.17.1, ws@npm:^8.18.2, ws@npm:^8.18.3":
   version: 8.18.3
   resolution: "ws@npm:8.18.3"
@@ -6348,7 +6435,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yargs@npm:^17.7.2, yargs@npm:~17.7.2":
+"yargs-parser@npm:^22.0.0":
+  version: 22.0.0
+  resolution: "yargs-parser@npm:22.0.0"
+  checksum: 10/f13c42bad6ebed1a587a72f2db5694f5fa772bcaf409a701691d13cf74eb5adfcf61a2611de08807e319b829d3e5e6e1578b16ebe174cae8e8be3bf7b8e7a19e
+  languageName: node
+  linkType: hard
+
+"yargs@npm:^17.7.2":
   version: 17.7.2
   resolution: "yargs@npm:17.7.2"
   dependencies:
@@ -6360,6 +6454,20 @@ __metadata:
     y18n: "npm:^5.0.5"
     yargs-parser: "npm:^21.1.1"
   checksum: 10/abb3e37678d6e38ea85485ed86ebe0d1e3464c640d7d9069805ea0da12f69d5a32df8e5625e370f9c96dd1c2dc088ab2d0a4dd32af18222ef3c4224a19471576
+  languageName: node
+  linkType: hard
+
+"yargs@npm:~18.0.0":
+  version: 18.0.0
+  resolution: "yargs@npm:18.0.0"
+  dependencies:
+    cliui: "npm:^9.0.1"
+    escalade: "npm:^3.1.1"
+    get-caller-file: "npm:^2.0.5"
+    string-width: "npm:^7.2.0"
+    y18n: "npm:^5.0.5"
+    yargs-parser: "npm:^22.0.0"
+  checksum: 10/5af36234871390386b31cac99f00e79fcbc2ead858a61b30a8ca381c5fde5df8af0b407c36b000d3f774bcbe4aec5833f2f1c915f6ddc49ce97b78176b651801
   languageName: node
   linkType: hard
 
