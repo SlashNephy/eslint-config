@@ -69,7 +69,7 @@
     "concurrently": "9.2.0",
     "eslint": "9.28.0",
     "jiti": "2.5.1",
-    "tsx": "4.20.4"
+    "tsx": "4.20.5"
   },
   "peerDependencies": {
     "eslint": "^9"
