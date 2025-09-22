@@ -507,9 +507,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/config-inspector@npm:1.2.0":
-  version: 1.2.0
-  resolution: "@eslint/config-inspector@npm:1.2.0"
+"@eslint/config-inspector@npm:1.3.0":
+  version: 1.3.0
+  resolution: "@eslint/config-inspector@npm:1.3.0"
   dependencies:
     "@nodelib/fs.walk": "npm:^3.0.1"
     ansis: "npm:^4.1.0"
@@ -517,21 +517,21 @@ __metadata:
     cac: "npm:^6.7.14"
     chokidar: "npm:^4.0.3"
     debug: "npm:^4.4.1"
-    esbuild: "npm:^0.25.5"
+    esbuild: "npm:^0.25.9"
     find-up: "npm:^7.0.0"
-    get-port-please: "npm:^3.1.2"
-    h3: "npm:^1.15.3"
-    mlly: "npm:^1.7.4"
+    get-port-please: "npm:^3.2.0"
+    h3: "npm:^1.15.4"
+    mlly: "npm:^1.8.0"
     mrmime: "npm:^2.0.1"
-    open: "npm:^10.1.2"
+    open: "npm:^10.2.0"
     tinyglobby: "npm:^0.2.14"
-    ws: "npm:^8.18.2"
+    ws: "npm:^8.18.3"
   peerDependencies:
     eslint: ^8.50.0 || ^9.0.0
   bin:
     config-inspector: bin.mjs
     eslint-config-inspector: bin.mjs
-  checksum: 10/61543e7d75ac966682fba2853bcfc919cc2f9a1421fcde96a7cf0828a276cc520cca8a82d172939c960ffafaad1ad4f3d5531624c55ee733c09c5d0db1cccf13
+  checksum: 10/bbdd4bd64b78c01fe7142d43b9de6d459837b22c95c85f76920e585f350e8f14e53067e5a6d02868042a47c879f6420ab96a767be50e0998cf7a43cf23f245db
   languageName: node
   linkType: hard
 
@@ -1181,7 +1181,7 @@ __metadata:
   resolution: "@slashnephy/eslint-config@workspace:."
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:4.5.0"
-    "@eslint/config-inspector": "npm:1.2.0"
+    "@eslint/config-inspector": "npm:1.3.0"
     "@eslint/js": "npm:9.28.0"
     "@graphql-eslint/eslint-plugin": "npm:4.4.0"
     "@next/eslint-plugin-next": "npm:15.3.5"
@@ -2727,7 +2727,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.25.5, esbuild@npm:~0.25.0":
+"esbuild@npm:^0.25.9, esbuild@npm:~0.25.0":
   version: 0.25.10
   resolution: "esbuild@npm:0.25.10"
   dependencies:
@@ -3568,7 +3568,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"get-port-please@npm:^3.1.2":
+"get-port-please@npm:^3.2.0":
   version: 3.2.0
   resolution: "get-port-please@npm:3.2.0"
   checksum: 10/0bf6b28a7065a13b9ddfff5673380b508345a2a82dd6b3efc8e8f50b5fc2f0bd1f33bba57cc8ea17889fe3b6442bfb7de92f2196c2dcbb58c73709ce65033c7b
@@ -3777,7 +3777,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"h3@npm:^1.15.3":
+"h3@npm:^1.15.4":
   version: 1.15.4
   resolution: "h3@npm:1.15.4"
   dependencies:
@@ -4686,7 +4686,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mlly@npm:^1.7.4":
+"mlly@npm:^1.7.4, mlly@npm:^1.8.0":
   version: 1.8.0
   resolution: "mlly@npm:1.8.0"
   dependencies:
@@ -4888,7 +4888,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"open@npm:^10.1.2":
+"open@npm:^10.2.0":
   version: 10.2.0
   resolution: "open@npm:10.2.0"
   dependencies:
@@ -6278,7 +6278,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ws@npm:^8.17.1, ws@npm:^8.18.2, ws@npm:^8.18.3":
+"ws@npm:^8.17.1, ws@npm:^8.18.3":
   version: 8.18.3
   resolution: "ws@npm:8.18.3"
   peerDependencies:
