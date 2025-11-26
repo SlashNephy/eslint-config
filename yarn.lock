@@ -691,9 +691,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/config-inspector@npm:1.4.1":
-  version: 1.4.1
-  resolution: "@eslint/config-inspector@npm:1.4.1"
+"@eslint/config-inspector@npm:1.4.2":
+  version: 1.4.2
+  resolution: "@eslint/config-inspector@npm:1.4.2"
   dependencies:
     ansis: "npm:^4.2.0"
     bundle-require: "npm:^5.1.0"
@@ -708,7 +708,7 @@ __metadata:
   bin:
     config-inspector: bin.mjs
     eslint-config-inspector: bin.mjs
-  checksum: 10/bcca8f909303230e986ec51c6476aff579a236e60059a46cc74ccdf9afa54cd8b65941eec498beea40ab4fa14aff4ad4432419f31f393b170b9777c10c9ea105
+  checksum: 10/a1f374437d9d7ced70769709a00f12c1a45f2b862072c9186c0d05b8feb8a25e30fe06af65c77369f0244101baf1570ea292a4c8d015ee57065fbb1e4f64bfbe
   languageName: node
   linkType: hard
 
@@ -1332,7 +1332,7 @@ __metadata:
   resolution: "@slashnephy/eslint-config@workspace:."
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:4.5.0"
-    "@eslint/config-inspector": "npm:1.4.1"
+    "@eslint/config-inspector": "npm:1.4.2"
     "@eslint/js": "npm:9.28.0"
     "@graphql-eslint/eslint-plugin": "npm:4.4.0"
     "@next/eslint-plugin-next": "npm:15.3.5"
