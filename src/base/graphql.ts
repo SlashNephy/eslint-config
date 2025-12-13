@@ -10,7 +10,8 @@ export const graphql = defineConfig(
       parser: graphqlPlugin.parser,
     },
     plugins: {
-      '@graphql-eslint': graphqlPlugin.parser,
+      // @ts-expect-error -- 一時的に型定義を無視
+      '@graphql-eslint': graphqlPlugin,
     },
   },
 
