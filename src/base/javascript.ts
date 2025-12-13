@@ -2,8 +2,8 @@ import eslint from '@eslint/js'
 // @ts-expect-error 型定義ファイルがない
 import eslintCommentsConfig from '@eslint-community/eslint-plugin-eslint-comments/configs'
 import stylisticPlugin from '@stylistic/eslint-plugin'
-import { importX } from 'eslint-plugin-import-x'
 import { defineConfig } from 'eslint/config'
+import { importX } from 'eslint-plugin-import-x'
 // @ts-expect-error 型定義ファイルがない
 import promisePlugin from 'eslint-plugin-promise'
 import unusedImportsPlugin from 'eslint-plugin-unused-imports'
@@ -37,13 +37,13 @@ export const javaScript = defineConfig(
       // 関数宣言は function xxx() {} にする
       'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
       // 中括弧の省略を禁止
-      'curly': 'error',
+      curly: 'error',
       // テンプレート文字列を優先
       'prefer-template': 'error',
       // == 比較 👉 === 比較
-      'eqeqeq': 'error',
+      eqeqeq: 'error',
       // *.js で 'use strict'; を強制
-      'strict': ['error', 'global'],
+      strict: ['error', 'global'],
       // 特定の構文を禁止
       'no-restricted-syntax': [
         'error',
@@ -86,7 +86,7 @@ export const javaScript = defineConfig(
       // ペアになっていない setter を禁止
       'accessor-pairs': 'error',
       // キャメルケースに強制しない
-      'camelcase': 'off',
+      camelcase: 'off',
       // switch 文で default を強制しない
       'default-case': 'off',
       // continue 文を許可
@@ -106,7 +106,7 @@ export const javaScript = defineConfig(
       // void Promise を許可
       'no-void': 'off',
       // 1 <= x < 10 を許可
-      'yoda': [
+      yoda: [
         'error',
         'never',
         {
@@ -189,7 +189,7 @@ export const javaScript = defineConfig(
         'warn',
         {
           // 組み込み → 外部依存 → 内部依存 → object → type の順にする
-          'groups': [
+          groups: [
             'builtin',
             'external',
             ['parent', 'sibling', 'index'],
@@ -200,11 +200,11 @@ export const javaScript = defineConfig(
           // カテゴリー間に改行を入れる
           'newlines-between': 'always',
           // 大文字小文字区別なしで ABC 順にする
-          'alphabetize': {
+          alphabetize: {
             order: 'asc',
             caseInsensitive: true,
           },
-          'pathGroups': [
+          pathGroups: [
             // **.css は最後に配置する
             {
               pattern: '**.css',
@@ -213,7 +213,7 @@ export const javaScript = defineConfig(
             },
           ],
           // **.css が import 順最後ではないときに警告
-          'warnOnUnassignedImports': true,
+          warnOnUnassignedImports: true,
         },
       ],
     },
