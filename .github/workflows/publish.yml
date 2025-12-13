@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  id-token: write
 
 jobs:
   publish:
@@ -20,11 +21,9 @@ jobs:
         with:
           node-version-file: package.json
           cache: pnpm
+          registry-url: https://registry.npmjs.org
       - run: pnpm install --frozen-lockfile
 
-      - run: pnpm config set //registry.npmjs.org/:_authToken ${AUTH_TOKEN}
-        env:
-          AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
       - run: pnpm bump-version
       - run: pnpm publish --no-git-checks
         continue-on-error: true
