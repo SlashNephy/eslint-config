@@ -1,13 +1,14 @@
 import eslint from '@eslint/js'
 // @ts-expect-error 型定義ファイルがない
 import eslintCommentsConfig from '@eslint-community/eslint-plugin-eslint-comments/configs'
-import importXPlugin from 'eslint-plugin-import-x'
+import { defineConfig } from 'eslint/config'
+import { importX } from 'eslint-plugin-import-x'
 // @ts-expect-error 型定義ファイルがない
 import promisePlugin from 'eslint-plugin-promise'
 import unusedImportsPlugin from 'eslint-plugin-unused-imports'
-import tseslint, { config } from 'typescript-eslint'
+import tseslint from 'typescript-eslint'
 
-export const javaScript = config(
+export const javaScript = defineConfig(
   {
     files: ['**/*.cjs'],
     languageOptions: {
@@ -131,7 +132,10 @@ export const javaScript = config(
   {
     name: 'eslint-plugin-import-x',
     files: ['**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}'],
-    extends: [importXPlugin.flatConfigs.recommended],
+    extends: [
+      // @ts-expect-error -- languageOptions の型定義が不一致
+      importX.flatConfigs.recommended,
+    ],
     settings: {
       'import-x/resolver': {
         node: {

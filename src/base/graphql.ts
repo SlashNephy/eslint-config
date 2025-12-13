@@ -1,7 +1,7 @@
 import graphqlPlugin from '@graphql-eslint/eslint-plugin'
-import { config } from 'typescript-eslint'
+import { defineConfig } from 'eslint/config'
 
-export const graphql = config(
+export const graphql = defineConfig(
   // GraphQL を解釈できるようにする
   {
     name: '@graphql-eslint/eslint-plugin (parser)',
@@ -10,7 +10,7 @@ export const graphql = config(
       parser: graphqlPlugin.parser,
     },
     plugins: {
-      '@graphql-eslint': graphqlPlugin,
+      '@graphql-eslint': graphqlPlugin.parser,
     },
   },
 

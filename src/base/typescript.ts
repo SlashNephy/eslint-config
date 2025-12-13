@@ -1,9 +1,10 @@
 import safeTypeScriptPlugin from '@susisu/eslint-plugin-safe-typescript'
-import importXPlugin from 'eslint-plugin-import-x'
+import { defineConfig } from 'eslint/config'
+import { importX } from 'eslint-plugin-import-x'
 import tsdocPlugin from 'eslint-plugin-tsdoc'
-import tseslint, { config } from 'typescript-eslint'
+import tseslint from 'typescript-eslint'
 
-export const typeScript = config(
+export const typeScript = defineConfig(
   {
     files: ['**/*.cts'],
     languageOptions: {
@@ -202,7 +203,10 @@ export const typeScript = config(
   {
     name: 'eslint-plugin-import-x',
     files: ['**/*.{ts,cts,mts,tsx}'],
-    extends: [importXPlugin.flatConfigs.typescript],
+    extends: [
+      // @ts-expect-error -- languageOptions の型定義が不一致
+      importX.flatConfigs.typescript,
+    ],
     rules: {
       // import に拡張子を推奨
       'import-x/extensions': [

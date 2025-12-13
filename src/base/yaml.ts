@@ -1,7 +1,7 @@
+import { defineConfig } from 'eslint/config'
 import ymlPlugin from 'eslint-plugin-yml'
-import { config } from 'typescript-eslint'
 
-export const yaml = config(
+export const yaml = defineConfig(
   {
     name: 'eslint-plugin-yml',
     files: ['**/*.{yml,yaml}'],

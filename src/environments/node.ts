@@ -1,7 +1,7 @@
+import { defineConfig } from 'eslint/config'
 import nPlugin from 'eslint-plugin-n'
-import { config } from 'typescript-eslint'
 
-export const node = config(
+export const node = defineConfig(
   {
     name: 'eslint-plugin-n',
     files: [

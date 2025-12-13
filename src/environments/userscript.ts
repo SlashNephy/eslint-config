@@ -1,7 +1,7 @@
+import { defineConfig } from 'eslint/config'
 import userScriptsPlugin from 'eslint-plugin-userscripts'
-import { config } from 'typescript-eslint'
 
-export const userScript = config({
+export const userScript = defineConfig({
   name: 'eslint-plugin-userscripts',
   files: ['**/*.user.js'],
   plugins: {

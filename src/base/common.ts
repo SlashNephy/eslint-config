@@ -1,15 +1,15 @@
 import stylisticPlugin from '@stylistic/eslint-plugin'
-import { globalIgnores } from 'eslint/config'
+import { defineConfig, globalIgnores } from 'eslint/config'
 import gitignore from 'eslint-config-flat-gitignore'
-import { config } from 'typescript-eslint'
 
-export const common = config(
+export const common = defineConfig(
   globalIgnores([
     '**/.git/**',
     '**/node_modules/**',
     '**/.yarn/**',
     '**/dist/**',
     '**/.idea/**',
+    '**/pnpm-lock.yaml',
   ]),
   gitignore({ name: 'eslint-config-flat-gitignore', strict: false }),
   {
