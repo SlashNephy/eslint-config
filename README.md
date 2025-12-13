@@ -6,7 +6,7 @@
 ## Install
 
 ```console
-$ yarn add @slashnephy/eslint-config
+pnpm add @slashnephy/eslint-config
 ```
 
 ## Usage (for Flat Configs)

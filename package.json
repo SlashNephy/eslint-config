@@ -22,8 +22,7 @@
     "bump-version": "tsx bin/bump-version.ts",
     "clean": "rm -rf src/**/*.js",
     "format": "eslint --fix",
-    "lint": "eslint",
-    "publish": "yarn build && yarn npm publish"
+    "lint": "eslint"
   },
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "4.5.0",

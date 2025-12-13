@@ -27,6 +27,7 @@ jobs:
       # Trusted Publishing は npm 11.5.1 が必要
       - run: npm install -g npm@latest
 
+      - run: pnpm build
       - run: pnpm bump-version
       - run: pnpm publish --no-git-checks
         continue-on-error: true
