@@ -1,8 +1,8 @@
+import { defineConfig } from 'eslint/config'
 import storybookPlugin from 'eslint-plugin-storybook'
-import { config } from 'typescript-eslint'
 
-export const storybook = config({
-  name: 'eslint-plugin-storybook',
-  files: ['**/*.stories.{jsx,tsx}'],
-  extends: [storybookPlugin.configs['flat/recommended']],
-})
+export const storybook = defineConfig(
+  // eslint-plugin-storybook
+  // @ts-expect-error -- 型定義が不一致
+  storybookPlugin.configs['flat/recommended'],
+)

@@ -1,11 +1,12 @@
+import { defineConfig } from 'eslint/config'
 import packageJsonPlugin from 'eslint-plugin-package-json'
-import { config } from 'typescript-eslint'
 
-export const packageJson = config({
+export const packageJson = defineConfig({
   name: 'eslint-plugin-package-json',
   files: ['**/package.json'],
   extends: [packageJsonPlugin.configs.recommended],
   rules: {
+    'package-json/require-description': 'off',
     'package-json/order-properties': [
       'error',
       {

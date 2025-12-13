@@ -1,12 +1,12 @@
+import { defineConfig } from 'eslint/config'
 // @ts-expect-error 型定義ファイルがない
 import jsxA11y from 'eslint-plugin-jsx-a11y'
 import reactPlugin from 'eslint-plugin-react'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import reactRefreshPlugin from 'eslint-plugin-react-refresh'
 import globals from 'globals'
-import { config } from 'typescript-eslint'
 
-export const react = config(
+export const react = defineConfig(
   [
     {
       name: 'eslint-plugin-react',
@@ -98,7 +98,7 @@ export const react = config(
   {
     name: 'eslint-plugin-react-hooks',
     files: ['**/*.{jsx,tsx}'],
-    extends: [reactHooksPlugin.configs['recommended-latest']],
+    extends: [reactHooksPlugin.configs.flat['recommended-latest']],
     rules: {
       // https://recoiljs.org/docs/introduction/installation/#eslint
       'react-hooks/rules-of-hooks': 'error',

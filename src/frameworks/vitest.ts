@@ -1,7 +1,7 @@
 import vitestPlugin from '@vitest/eslint-plugin'
-import { config } from 'typescript-eslint'
+import { defineConfig } from 'eslint/config'
 
-export const vitest = config({
+export const vitest = defineConfig({
   name: '@vitest/eslint-plugin',
   files: [
     '**/*.test.{js,cjs,mjs,jsx,ts,cts,mts,tsx}',

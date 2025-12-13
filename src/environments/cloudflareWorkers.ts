@@ -1,6 +1,6 @@
-import { config } from 'typescript-eslint'
+import { defineConfig } from 'eslint/config'
 
-export const cloudflareWorkers = config({
+export const cloudflareWorkers = defineConfig({
   files: ['**/src/worker.{js,ts}', '**/functions/**/*.{js,ts}'],
   rules: {
     // default export を許可

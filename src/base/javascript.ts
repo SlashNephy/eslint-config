@@ -1,13 +1,15 @@
 import eslint from '@eslint/js'
 // @ts-expect-error 型定義ファイルがない
 import eslintCommentsConfig from '@eslint-community/eslint-plugin-eslint-comments/configs'
-import importXPlugin from 'eslint-plugin-import-x'
+import stylisticPlugin from '@stylistic/eslint-plugin'
+import { defineConfig } from 'eslint/config'
+import { importX } from 'eslint-plugin-import-x'
 // @ts-expect-error 型定義ファイルがない
 import promisePlugin from 'eslint-plugin-promise'
 import unusedImportsPlugin from 'eslint-plugin-unused-imports'
-import tseslint, { config } from 'typescript-eslint'
+import tseslint from 'typescript-eslint'
 
-export const javaScript = config(
+export const javaScript = defineConfig(
   {
     files: ['**/*.cjs'],
     languageOptions: {
@@ -35,13 +37,13 @@ export const javaScript = config(
       // 関数宣言は function xxx() {} にする
       'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
       // 中括弧の省略を禁止
-      'curly': 'error',
+      curly: 'error',
       // テンプレート文字列を優先
       'prefer-template': 'error',
       // == 比較 👉 === 比較
-      'eqeqeq': 'error',
+      eqeqeq: 'error',
       // *.js で 'use strict'; を強制
-      'strict': ['error', 'global'],
+      strict: ['error', 'global'],
       // 特定の構文を禁止
       'no-restricted-syntax': [
         'error',
@@ -81,12 +83,10 @@ export const javaScript = config(
       'no-unused-private-class-members': 'error',
       // スレッドセーフで安全に更新されないコードを禁止
       'require-atomic-updates': 'error',
-      // func () 👉 func()
-      'func-call-spacing': ['error', 'never'],
       // ペアになっていない setter を禁止
       'accessor-pairs': 'error',
       // キャメルケースに強制しない
-      'camelcase': 'off',
+      camelcase: 'off',
       // switch 文で default を強制しない
       'default-case': 'off',
       // continue 文を許可
@@ -103,24 +103,54 @@ export const javaScript = config(
       'no-plusplus': 'off',
       // return の省略などを許可
       'consistent-return': 'off',
+      // void Promise を許可
+      'no-void': 'off',
+      // 1 <= x < 10 を許可
+      yoda: [
+        'error',
+        'never',
+        {
+          exceptRange: true,
+        },
+      ],
+      // UTF-8 BOM を禁止
+      'unicode-bom': ['error', 'never'],
+    },
+  },
+  {
+    name: '@stylistic/eslint-plugin',
+    files: ['**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}'],
+    extends: [
+      stylisticPlugin.configs.customize({
+        indent: 2,
+        quotes: 'single',
+        semi: false,
+        jsx: true,
+        arrowParens: true,
+        blockSpacing: true,
+        quoteProps: 'as-needed',
+        commaDangle: 'always-multiline',
+        braceStyle: '1tbs',
+      }),
+    ],
+    rules: {
+      // 最終行に改行を挿入
+      '@stylistic/eol-last': ['error', 'always'],
+      // 行末のスペースを禁止
+      '@stylistic/no-trailing-spaces': ['error'],
+      // 型名の前後のスペースを揃える
+      // e.g. const foo: string = 'bar'
+      '@stylistic/type-annotation-spacing': 'error',
+      // func () 👉 func()
+      '@stylistic/function-call-spacing': ['error', 'never'],
       // 空行を挟む
-      'padding-line-between-statements': [
+      '@stylistic/padding-line-between-statements': [
         'warn',
         // return 前に空行
         { blankLine: 'always', prev: '*', next: 'return' },
         // ディレクティブ後に空行
         { blankLine: 'always', prev: 'directive', next: '*' },
         { blankLine: 'any', prev: 'directive', next: 'directive' },
-      ],
-      // void Promise を許可
-      'no-void': 'off',
-      // 1 <= x < 10 を許可
-      'yoda': [
-        'error',
-        'never',
-        {
-          exceptRange: true,
-        },
       ],
     },
   },
@@ -131,7 +161,10 @@ export const javaScript = config(
   {
     name: 'eslint-plugin-import-x',
     files: ['**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}'],
-    extends: [importXPlugin.flatConfigs.recommended],
+    extends: [
+      // @ts-expect-error -- languageOptions の型定義が不一致
+      importX.flatConfigs.recommended,
+    ],
     settings: {
       'import-x/resolver': {
         node: {
@@ -156,7 +189,7 @@ export const javaScript = config(
         'warn',
         {
           // 組み込み → 外部依存 → 内部依存 → object → type の順にする
-          'groups': [
+          groups: [
             'builtin',
             'external',
             ['parent', 'sibling', 'index'],
@@ -167,11 +200,11 @@ export const javaScript = config(
           // カテゴリー間に改行を入れる
           'newlines-between': 'always',
           // 大文字小文字区別なしで ABC 順にする
-          'alphabetize': {
+          alphabetize: {
             order: 'asc',
             caseInsensitive: true,
           },
-          'pathGroups': [
+          pathGroups: [
             // **.css は最後に配置する
             {
               pattern: '**.css',
@@ -180,7 +213,7 @@ export const javaScript = config(
             },
           ],
           // **.css が import 順最後ではないときに警告
-          'warnOnUnassignedImports': true,
+          warnOnUnassignedImports: true,
         },
       ],
     },

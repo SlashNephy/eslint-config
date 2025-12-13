@@ -1,14 +1,16 @@
-import { config } from 'typescript-eslint'
+import { defineConfig } from 'eslint/config'
+// @ts-expect-error -- 型定義がない
+import relayPlugin from 'eslint-plugin-relay'
 
-export const relay = config({
+export const relay = defineConfig({
   name: 'eslint-plugin-relay',
   files: ['**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}'],
-  // TODO: eslint-plugin-relay が Flat Configs に対応したら移行する
-  // https://github.com/relayjs/eslint-plugin-relay/issues/156
-  // extends: ['plugin:relay/recommended'],
-  // plugins: ['relay'],
-  // rules: {
-  //   // 未使用の GraphQL フィールドを禁止
-  //   'relay/unused-fields': 'error',
-  // },
+  extends: [
+    relayPlugin.configs['ts-recommended'],
+  ],
+  plugins: { relay: relayPlugin },
+  rules: {
+    // 未使用の GraphQL フィールドを禁止
+    'relay/unused-fields': 'error',
+  },
 })

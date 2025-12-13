@@ -1,8 +1,7 @@
-// @ts-expect-error 型定義ファイルがない
 import nextPlugin from '@next/eslint-plugin-next'
-import { config } from 'typescript-eslint'
+import { defineConfig } from 'eslint/config'
 
-export const nextJs = config({
+export const nextJs = defineConfig({
   name: '@next/eslint-plugin-next',
   files: [
     // Pages Router
@@ -10,9 +9,6 @@ export const nextJs = config({
     // App Router
     '**/app/**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}',
   ],
-  plugins: {
-    '@next/next': nextPlugin,
-  },
   extends: [
     nextPlugin.configs.recommended,
     nextPlugin.configs['core-web-vitals'],

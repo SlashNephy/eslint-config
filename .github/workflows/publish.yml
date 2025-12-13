@@ -1,0 +1,35 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - master
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
+      - uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
+      - uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
+        with:
+          node-version-file: package.json
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm config set //registry.npmjs.org/:_authToken ${AUTH_TOKEN}
+        env:
+          AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
+      - run: pnpm bump-version
+      - run: pnpm publish
+        continue-on-error: true
+
+      - uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5.2.0
+        with:
+          commit_message: 🔨 Bump version
+          commit_author: StarryBlueSky-bot <97773209+StarryBlueSky-bot@users.noreply.github.com>
