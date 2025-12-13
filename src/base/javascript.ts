@@ -142,7 +142,7 @@ export const javaScript = defineConfig(
       // e.g. const foo: string = 'bar'
       '@stylistic/type-annotation-spacing': 'error',
       // func () 👉 func()
-      '@stylistic/func-call-spacing': ['error', 'never'],
+      '@stylistic/function-call-spacing': ['error', 'never'],
       // 空行を挟む
       '@stylistic/padding-line-between-statements': [
         'warn',
