@@ -1,6 +1,7 @@
 import eslint from '@eslint/js'
 // @ts-expect-error 型定義ファイルがない
 import eslintCommentsConfig from '@eslint-community/eslint-plugin-eslint-comments/configs'
+import stylisticPlugin from '@stylistic/eslint-plugin'
 import { defineConfig } from 'eslint/config'
 import { importX } from 'eslint-plugin-import-x'
 // @ts-expect-error 型定義ファイルがない
@@ -82,8 +83,6 @@ export const javaScript = defineConfig(
       'no-unused-private-class-members': 'error',
       // スレッドセーフで安全に更新されないコードを禁止
       'require-atomic-updates': 'error',
-      // func () 👉 func()
-      'func-call-spacing': ['error', 'never'],
       // ペアになっていない setter を禁止
       'accessor-pairs': 'error',
       // キャメルケースに強制しない
@@ -104,15 +103,6 @@ export const javaScript = defineConfig(
       'no-plusplus': 'off',
       // return の省略などを許可
       'consistent-return': 'off',
-      // 空行を挟む
-      'padding-line-between-statements': [
-        'warn',
-        // return 前に空行
-        { blankLine: 'always', prev: '*', next: 'return' },
-        // ディレクティブ後に空行
-        { blankLine: 'always', prev: 'directive', next: '*' },
-        { blankLine: 'any', prev: 'directive', next: 'directive' },
-      ],
       // void Promise を許可
       'no-void': 'off',
       // 1 <= x < 10 を許可
@@ -122,6 +112,45 @@ export const javaScript = defineConfig(
         {
           exceptRange: true,
         },
+      ],
+      // UTF-8 BOM を禁止
+      'unicode-bom': ['error', 'never'],
+    },
+  },
+  {
+    name: '@stylistic/eslint-plugin',
+    files: ['**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}'],
+    extends: [
+      stylisticPlugin.configs.customize({
+        indent: 2,
+        quotes: 'single',
+        semi: false,
+        jsx: true,
+        arrowParens: true,
+        blockSpacing: true,
+        quoteProps: 'consistent-as-needed',
+        commaDangle: 'always-multiline',
+        braceStyle: '1tbs',
+      }),
+    ],
+    rules: {
+      // 最終行に改行を挿入
+      '@stylistic/eol-last': ['error', 'always'],
+      // 行末のスペースを禁止
+      '@stylistic/no-trailing-spaces': ['error'],
+      // 型名の前後のスペースを揃える
+      // e.g. const foo: string = 'bar'
+      '@stylistic/type-annotation-spacing': 'error',
+      // func () 👉 func()
+      '@stylistic/func-call-spacing': ['error', 'never'],
+      // 空行を挟む
+      '@stylistic/padding-line-between-statements': [
+        'warn',
+        // return 前に空行
+        { blankLine: 'always', prev: '*', next: 'return' },
+        // ディレクティブ後に空行
+        { blankLine: 'always', prev: 'directive', next: '*' },
+        { blankLine: 'any', prev: 'directive', next: 'directive' },
       ],
     },
   },
