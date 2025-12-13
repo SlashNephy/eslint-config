@@ -9,9 +9,6 @@ export const nextJs = defineConfig({
     // App Router
     '**/app/**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}',
   ],
-  plugins: {
-    '@next/next': nextPlugin,
-  },
   extends: [
     nextPlugin.configs.recommended,
     nextPlugin.configs['core-web-vitals'],
