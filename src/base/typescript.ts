@@ -1,7 +1,7 @@
 import safeTypeScriptPlugin from '@susisu/eslint-plugin-safe-typescript'
-import { defineConfig } from 'eslint/config'
 import { importX } from 'eslint-plugin-import-x'
 import tsdocPlugin from 'eslint-plugin-tsdoc'
+import { defineConfig } from 'eslint/config'
 import tseslint from 'typescript-eslint'
 
 export const typeScript = defineConfig(
@@ -214,6 +214,12 @@ export const typeScript = defineConfig(
       ],
     },
   },
+  {
+    name: 'typescript-eslint (JavaScript)',
+    files: ['**/*.{js,cjs,mjs,jsx}'],
+    extends: [tseslint.configs.disableTypeChecked],
+  },
+
   {
     name: 'eslint-plugin-import-x',
     files: ['**/*.{ts,cts,mts,tsx}'],
