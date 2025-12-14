@@ -25,7 +25,7 @@ type Options = {
 
 export function config(options?: Options, ...overrides: ConfigWithExtends[]): ConfigArray {
   return defineConfig(
-    globalIgnores(options?.ignores ?? []),
+    options?.ignores?.length ? globalIgnores(options.ignores) : [],
 
     // ベース
     [
