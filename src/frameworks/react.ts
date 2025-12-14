@@ -3,7 +3,6 @@ import { defineConfig } from 'eslint/config'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
 import reactPlugin from 'eslint-plugin-react'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
-import reactRefreshPlugin from 'eslint-plugin-react-refresh'
 import globals from 'globals'
 
 export const react = defineConfig(
@@ -125,10 +124,5 @@ export const react = defineConfig(
         },
       ],
     },
-  },
-  {
-    name: 'eslint-plugin-react-refresh',
-    files: ['**/*.{jsx,tsx}'],
-    extends: [reactRefreshPlugin.configs.recommended],
   },
 )

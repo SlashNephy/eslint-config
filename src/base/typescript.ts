@@ -198,6 +198,20 @@ export const typeScript = defineConfig(
       '@typescript-eslint/no-deprecated': 'error',
       // 関数の返り値としての void 以外を禁止
       '@typescript-eslint/no-invalid-void-type': 'error',
+      // 不要な変数を禁止
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'warn', {
+        // '_' で始まる変数を許可
+          args: 'all',
+          argsIgnorePattern: '^_',
+          caughtErrors: 'all',
+          caughtErrorsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          ignoreRestSiblings: true,
+        },
+      ],
     },
   },
   {

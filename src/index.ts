@@ -43,10 +43,10 @@ export function config(options?: Options, ...overrides: ConfigWithExtends[]): Co
     [
       // React
       react,
-      // Next.js
-      nextJs,
       // Vite
       vite,
+      // Next.js
+      nextJs,
       // Relay
       relay,
       // Storybook

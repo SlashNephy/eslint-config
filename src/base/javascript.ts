@@ -227,25 +227,16 @@ export const javaScript = defineConfig(
     rules: {
       // 不要 import 文を禁止
       'unused-imports/no-unused-imports': 'error',
-      // 不要な変数を禁止
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': 'off',
-      'unused-imports/no-unused-vars': [
-        'warn',
-        // '_' で始まる変数を許可
-        {
-          vars: 'all',
-          varsIgnorePattern: '^_',
-          args: 'after-used',
-          argsIgnorePattern: '^_',
-        },
-      ],
+      'unused-imports/no-unused-vars': 'off',
     },
   },
   {
     name: 'eslint-plugin-promise',
     files: ['**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}'],
     extends: [promisePlugin.configs['flat/recommended']],
+    rules: {
+      'promise/always-return': ['error', { ignoreLastCallback: true }],
+    },
   },
   {
     name: 'eslint-plugin-xss',
