@@ -1,4 +1,4 @@
-import { defineConfig } from 'eslint/config'
+import { defineConfig, globalIgnores } from 'eslint/config'
 
 import { common } from './base/common.js'
 import { graphql } from './base/graphql.js'
@@ -19,11 +19,14 @@ import { vitest } from './frameworks/vitest.js'
 
 import type { ConfigArray, ConfigWithExtends } from 'typescript-eslint'
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type -- 将来のために予約してある
-type Options = {}
+type Options = {
+  ignores?: string[]
+}
 
 export function config(options?: Options, ...overrides: ConfigWithExtends[]): ConfigArray {
   return defineConfig(
+    globalIgnores(options?.ignores ?? []),
+
     // ベース
     [
       common,
