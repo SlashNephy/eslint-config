@@ -9,10 +9,8 @@
     "strictNullChecks": true,
     "skipLibCheck": true,
   },
-  "include": ["./src/**/*.ts"],
-  "references": [
-    {
-      "path": "./tsconfig.bin.json"
-    }
+  "include": [
+    "./src/**/*.ts",
+    "./bin/*.ts"
   ]
 }

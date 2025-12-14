@@ -31,7 +31,7 @@ export const typeScript = defineConfig(
       parserOptions: {
         projectService: {
           allowDefaultProject: [
-            '**/*.config.{ts,cts,mts}',
+            '*.config.{ts,cts,mts}',
           ],
         },
         // tsconfigRootDir は利用側で定義する必要がある
