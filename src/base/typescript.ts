@@ -1,7 +1,7 @@
 import safeTypeScriptPlugin from '@susisu/eslint-plugin-safe-typescript'
+import { defineConfig } from 'eslint/config'
 import { importX } from 'eslint-plugin-import-x'
 import tsdocPlugin from 'eslint-plugin-tsdoc'
-import { defineConfig } from 'eslint/config'
 import tseslint from 'typescript-eslint'
 
 export const typeScript = defineConfig(
@@ -29,7 +29,11 @@ export const typeScript = defineConfig(
       ecmaVersion: 'latest',
       parser: tseslint.parser,
       parserOptions: {
-        projectService: true,
+        projectService: {
+          allowDefaultProject: [
+            '**/*.config.{ts,cts,mts}',
+          ],
+        },
         // tsconfigRootDir は利用側で定義する必要がある
         // tsconfigRootDir: import.meta.dirname,
       },
