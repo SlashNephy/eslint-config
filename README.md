@@ -6,20 +6,24 @@
 ## Install
 
 ```console
-pnpm add @slashnephy/eslint-config
+pnpm add -D @slashnephy/eslint-config
 ```
 
 ## Usage (for Flat Configs)
 
-`eslint.config.js` or `eslint.config.mjs`
+`eslint.config.ts` or `eslint.config.mts`
 
-```javascript
-import { defineConfig } from 'eslint/config'
-import config from '@slashnephy/eslint-config'
+```typescript
+import { config } from '@slashnephy/eslint-config'
 
-export default defineConfig([
-  ...config,
+export default config(
   {
+    ignores: [
+      '__generated__/**',
+    ],
+  },
+  {
+    // If tsconfig.json is not recognized, try this:
     languageOptions: {
       parserOptions: {
         tsconfigRootDir: import.meta.dirname,
@@ -27,8 +31,7 @@ export default defineConfig([
     },
   },
   {
-    // your custom config
+    // Your custom config...
   },
-])
-
+)
 ```
