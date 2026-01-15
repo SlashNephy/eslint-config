@@ -1,9 +1,8 @@
-import eslint from '@eslint/js'
-// @ts-expect-error 型定義ファイルがない
 import eslintCommentsConfig from '@eslint-community/eslint-plugin-eslint-comments/configs'
+import eslint from '@eslint/js'
 import stylisticPlugin from '@stylistic/eslint-plugin'
-import { defineConfig } from 'eslint/config'
 import { importX } from 'eslint-plugin-import-x'
+import { defineConfig } from 'eslint/config'
 // @ts-expect-error 型定義ファイルがない
 import promisePlugin from 'eslint-plugin-promise'
 import unusedImportsPlugin from 'eslint-plugin-unused-imports'
