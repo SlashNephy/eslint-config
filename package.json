@@ -63,7 +63,7 @@
   "devDependencies": {
     "@eslint/config-inspector": "1.4.2",
     "@types/eslint": "9.6.1",
-    "@types/node": "25.0.8",
+    "@types/node": "25.0.9",
     "concurrently": "9.2.1",
     "eslint": "9.39.2",
     "jiti": "2.6.1",
