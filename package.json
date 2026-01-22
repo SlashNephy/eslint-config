@@ -52,7 +52,7 @@
     "eslint-plugin-unused-imports": "4.3.0",
     "eslint-plugin-userscripts": "0.5.6",
     "eslint-plugin-xss": "0.1.12",
-    "eslint-plugin-yml": "1.19.1",
+    "eslint-plugin-yml": "2.0.1",
     "globals": "17.0.0",
     "graphql": "16.12.0",
     "jsonc-eslint-parser": "2.4.2",
