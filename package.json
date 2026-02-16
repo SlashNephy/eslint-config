@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "bump-version": "tsx bin/bump-version.ts",
+    "bump-version": "node --experimental-strip-types bin/bump-version.ts",
     "clean": "rm -rf src/**/*.js",
     "format": "eslint --fix",
     "lint": "eslint"
@@ -33,14 +33,14 @@
     "@stylistic/eslint-plugin": "5.8.0",
     "@susisu/eslint-plugin-safe-typescript": "0.10.1",
     "@typescript-eslint/utils": "8.55.0",
-    "@vitest/eslint-plugin": "1.6.7",
+    "@vitest/eslint-plugin": "1.6.9",
     "eslint-config-flat-gitignore": "2.1.0",
     "eslint-import-resolver-node": "0.3.9",
     "eslint-import-resolver-typescript": "4.4.4",
     "eslint-plugin-import-x": "4.16.1",
-    "eslint-plugin-jest": "29.14.0",
+    "eslint-plugin-jest": "29.15.0",
     "eslint-plugin-jsx-a11y": "6.10.2",
-    "eslint-plugin-n": "17.23.2",
+    "eslint-plugin-n": "17.24.0",
     "eslint-plugin-package-json": "0.88.2",
     "eslint-plugin-promise": "7.2.1",
     "eslint-plugin-react": "7.37.5",
@@ -52,7 +52,7 @@
     "eslint-plugin-unused-imports": "4.4.1",
     "eslint-plugin-userscripts": "0.5.6",
     "eslint-plugin-xss": "0.1.12",
-    "eslint-plugin-yml": "2.0.2",
+    "eslint-plugin-yml": "3.1.2",
     "globals": "17.3.0",
     "graphql": "16.12.0",
     "jsonc-eslint-parser": "2.4.2",
@@ -62,12 +62,8 @@
   },
   "devDependencies": {
     "@eslint/config-inspector": "1.4.2",
-    "@types/eslint": "9.6.1",
     "@types/node": "25.2.3",
-    "concurrently": "9.2.1",
-    "eslint": "9.39.2",
-    "jiti": "2.6.1",
-    "tsx": "4.21.0"
+    "eslint": "9.39.2"
   },
   "peerDependencies": {
     "eslint": "^9"
