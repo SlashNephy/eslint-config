@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "4.7.1",
-    "@eslint/js": "9.39.3",
+    "@eslint/js": "10.0.1",
     "@graphql-eslint/eslint-plugin": "4.4.0",
     "@microsoft/eslint-formatter-sarif": "3.1.0",
     "@next/eslint-plugin-next": "16.1.6",
@@ -63,10 +63,10 @@
   "devDependencies": {
     "@eslint/config-inspector": "1.5.0",
     "@types/node": "25.3.3",
-    "eslint": "9.39.3"
+    "eslint": "10.0.2"
   },
   "peerDependencies": {
-    "eslint": "^9"
+    "eslint": "^9 || ^10.0.0"
   },
   "packageManager": "pnpm@10.30.3+sha512.c961d1e0a2d8e354ecaa5166b822516668b7f44cb5bd95122d590dd81922f606f5473b6d23ec4a5be05e7fcd18e8488d47d978bbe981872f1145d06e9a740017",
   "engines": {
