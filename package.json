@@ -62,7 +62,7 @@
   },
   "devDependencies": {
     "@eslint/config-inspector": "1.5.0",
-    "@types/node": "25.4.0",
+    "@types/node": "25.5.0",
     "eslint": "9.39.4"
   },
   "peerDependencies": {
