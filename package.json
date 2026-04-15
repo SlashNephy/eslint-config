@@ -75,13 +75,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "pnpm": {
-    "peerDependencyRules": {
-      "allowedVersions": {
-        "@eslint-react/eslint-plugin>typescript": "6",
-        "eslint-plugin-tsdoc>@typescript-eslint/utils>typescript": "6"
-      }
-    }
   }
 }
