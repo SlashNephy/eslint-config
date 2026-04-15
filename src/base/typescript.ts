@@ -228,7 +228,6 @@ export const typeScript = defineConfig(
     name: 'eslint-plugin-import-x',
     files: ['**/*.{ts,cts,mts,tsx}'],
     extends: [
-      // @ts-expect-error -- languageOptions の型定義が不一致
       importX.flatConfigs.typescript,
     ],
     rules: {

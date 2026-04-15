@@ -7,6 +7,9 @@ export const packageJson = defineConfig({
   extends: [packageJsonConfigs.recommended],
   rules: {
     'package-json/require-description': 'off',
+    // すべてのプロジェクトで必須にするのは厳しい
+    'package-json/require-exports': 'off',
+    'package-json/require-sideEffects': 'off',
     'package-json/order-properties': [
       'error',
       {
