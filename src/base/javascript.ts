@@ -161,7 +161,6 @@ export const javaScript = defineConfig(
     name: 'eslint-plugin-import-x',
     files: ['**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}'],
     extends: [
-      // @ts-expect-error -- languageOptions の型定義が不一致
       importX.flatConfigs.recommended,
     ],
     settings: {
