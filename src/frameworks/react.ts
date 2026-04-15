@@ -1,3 +1,4 @@
+import eslintReact from '@eslint-react/eslint-plugin'
 import { defineConfig } from 'eslint/config'
 // @ts-expect-error 型定義ファイルがない
 import jsxA11y from 'eslint-plugin-jsx-a11y'
@@ -6,6 +7,20 @@ import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import globals from 'globals'
 
 export const react = defineConfig(
+  // eslint-react（型チェック付きルール + 既存プラグインとの競合回避）
+  {
+    name: '@eslint-react/eslint-plugin',
+    files: ['**/*.{jsx,tsx}'],
+    extends: [
+      eslintReact.configs['recommended-type-checked'],
+      eslintReact.configs['disable-conflict-eslint-plugin-react'],
+    ],
+    rules: {
+      // クラスコンポーネントを禁止（react/prefer-stateless-function と同じ意図）
+      '@eslint-react/no-class-component': 'error',
+    },
+  },
+  // eslint-plugin-react（スタイル/フォーマット系ルール）
   [
     {
       name: 'eslint-plugin-react',
