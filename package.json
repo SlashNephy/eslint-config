@@ -34,7 +34,7 @@
     "@stylistic/eslint-plugin": "5.10.0",
     "@susisu/eslint-plugin-safe-typescript": "0.10.1",
     "@typescript-eslint/utils": "8.58.2",
-    "@vitest/eslint-plugin": "1.6.15",
+    "@vitest/eslint-plugin": "1.6.16",
     "eslint-config-flat-gitignore": "2.3.0",
     "eslint-import-resolver-node": "0.3.10",
     "eslint-import-resolver-typescript": "4.4.4",
