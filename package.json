@@ -32,7 +32,7 @@
     "@microsoft/eslint-formatter-sarif": "3.1.0",
     "@next/eslint-plugin-next": "16.2.4",
     "@stylistic/eslint-plugin": "5.10.0",
-    "@susisu/eslint-plugin-safe-typescript": "0.10.1",
+    "@susisu/eslint-plugin-safe-typescript": "0.11.0",
     "@typescript-eslint/utils": "8.58.2",
     "@vitest/eslint-plugin": "1.6.16",
     "eslint-config-flat-gitignore": "2.3.0",
