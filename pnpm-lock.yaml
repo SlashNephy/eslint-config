@@ -93,8 +93,8 @@ importers:
         specifier: 0.1.12
         version: 0.1.12
       eslint-plugin-yml:
-        specifier: 3.3.1
-        version: 3.3.1(eslint@9.39.4(jiti@2.6.1))
+        specifier: 3.3.2
+        version: 3.3.2(eslint@9.39.4(jiti@2.6.1))
       globals:
         specifier: 17.5.0
         version: 17.5.0
@@ -500,8 +500,8 @@ packages:
     resolution: {integrity: sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@eslint/plugin-kit@0.6.1':
-    resolution: {integrity: sha512-iH1B076HoAshH1mLpHMgwdGeTs0CYwL0SPMkGuSebZrwBp16v415e9NZXg2jtrqPVQjf6IANe2Vtlr5KswtcZQ==}
+  '@eslint/plugin-kit@0.7.1':
+    resolution: {integrity: sha512-rZAP3aVgB9ds9KOeUSL+zZ21hPmo8dh6fnIFwRQj5EAZl9gzR7wxYbYXYysAM8CTqGmUGyp2S4kUdV17MnGuWQ==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
   '@fastify/busboy@3.2.0':
@@ -1688,8 +1688,8 @@ packages:
     resolution: {integrity: sha512-L5oYaD//ZE7fKNtWUfVgYTRW19jrZlvaHe2swyFLxXQ5pwVQLivi5m92rtXd/ww8yqg4Drasqyi0hlBmhf9YQg==}
     engines: {node: '>=0.10.0'}
 
-  eslint-plugin-yml@3.3.1:
-    resolution: {integrity: sha512-isntsZchaTqDMNNkD+CakrgA/pdUoJ45USWBKpuqfAW1MCuw731xX/vrXfoJFZU3tTFr24nCbDYmDfT2+g4QtQ==}
+  eslint-plugin-yml@3.3.2:
+    resolution: {integrity: sha512-XjmOB/fLBwYHqevnpclPL938V+9ExX7xw1hPaM3IPePGyMFRV1giS16RjSTNhIyCv/Oh0G0PEdmmZPATJ02YCw==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24.0.0}
     peerDependencies:
       eslint: '>=9.38.0'
@@ -3327,7 +3327,7 @@ snapshots:
       '@eslint/core': 0.17.0
       levn: 0.4.1
 
-  '@eslint/plugin-kit@0.6.1':
+  '@eslint/plugin-kit@0.7.1':
     dependencies:
       '@eslint/core': 1.2.1
       levn: 0.4.1
@@ -4845,19 +4845,16 @@ snapshots:
     dependencies:
       requireindex: 1.1.0
 
-  eslint-plugin-yml@3.3.1(eslint@9.39.4(jiti@2.6.1)):
+  eslint-plugin-yml@3.3.2(eslint@9.39.4(jiti@2.6.1)):
     dependencies:
       '@eslint/core': 1.2.1
-      '@eslint/plugin-kit': 0.6.1
+      '@eslint/plugin-kit': 0.7.1
       '@ota-meshi/ast-token-store': 0.3.0
-      debug: 4.4.3
       diff-sequences: 29.6.3
       escape-string-regexp: 5.0.0
       eslint: 9.39.4(jiti@2.6.1)
       natural-compare: 1.4.0
       yaml-eslint-parser: 2.0.0
-    transitivePeerDependencies:
-      - supports-color
 
   eslint-scope@7.2.2:
     dependencies:
