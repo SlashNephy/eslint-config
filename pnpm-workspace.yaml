@@ -3,3 +3,13 @@ onlyBuiltDependencies:
 
 ignoredBuiltDependencies:
   - unrs-resolver
+
+# ESLint v10 アップグレードに伴う peer 警告の抑制
+# eslint-plugin-react がまだ ESLint v10 に未対応
+# (jsx-eslint/eslint-plugin-react#3977 が open のままなため)
+# 上流対応までは install 時の警告のみ抑制する
+# jsx-a11y は #1083 で v10 対応の fork (jsx-a11y-x) へ移行済みのため抑制不要
+peerDependencyRules:
+  allowedVersions:
+    'eslint-plugin-react>eslint': '^10'
+    eslint: '^10'
