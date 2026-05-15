@@ -62,7 +62,7 @@
     "yaml-eslint-parser": "2.0.0"
   },
   "devDependencies": {
-    "@eslint/config-inspector": "2.0.1",
+    "@eslint/config-inspector": "3.0.0",
     "@types/node": "25.7.0",
     "eslint": "9.39.4"
   },
