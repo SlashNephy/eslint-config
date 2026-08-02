@@ -2,7 +2,8 @@ import eslint from '@eslint/js'
 import eslintCommentsConfig from '@eslint-community/eslint-plugin-eslint-comments/configs'
 import stylisticPlugin from '@stylistic/eslint-plugin'
 import { defineConfig } from 'eslint/config'
-import { importX } from 'eslint-plugin-import-x'
+import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript'
+import { createNodeResolver, importX } from 'eslint-plugin-import-x'
 // @ts-expect-error 型定義ファイルがない
 import promisePlugin from 'eslint-plugin-promise'
 import unusedImportsPlugin from 'eslint-plugin-unused-imports'
@@ -164,20 +165,23 @@ export const javaScript = defineConfig(
       importX.flatConfigs.recommended,
     ],
     settings: {
-      'import-x/resolver': {
-        node: {
-          extensions: ['.js', '.cjs', '.mjs', '.jsx', '.ts', '.cts', '.mts', '.tsx', '.json'],
-        },
-        typescript: {
-          alwaysTryTypes: true,
-        },
-      },
+      // flat config 専用の新しい resolver API。旧 'import-x/resolver' は解決チェーンごとに
+      // resolver を作り直すためキャッシュが効かず、TypeScript の exports condition も評価できない
+      // (ESM import が CJS の型定義に解決され、tsc と ESLint で見えるモジュール形状がずれる)。
+      // resolver-next が設定されている場合、import-x は旧 'import-x/resolver' を一切参照しない。
+      'import-x/resolver-next': [
+        // alwaysTryTypes は v4 以降デフォルトで有効なため指定しない
+        createTypeScriptImportResolver(),
+        // tsconfig を持たないプロジェクト向けのフォールバック
+        createNodeResolver(),
+      ],
     },
     rules: {
       'import-x/no-import-module-exports': 'off',
       'import-x/no-extraneous-dependencies': 'off',
-      // 循環 import を禁止
-      'import-x/no-cycle': 'error',
+      // 循環 import を禁止する。node_modules 側の循環は利用者が修正できず、
+      // 依存グラフを外部モジュールまで展開するコストだけが大きいため対象外にする
+      'import-x/no-cycle': ['error', { ignoreExternal: true }],
       // default export を優先しない
       'import-x/prefer-default-export': 'off',
       // default export を禁止
