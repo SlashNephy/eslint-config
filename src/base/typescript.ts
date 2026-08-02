@@ -239,6 +239,13 @@ export const typeScript = defineConfig(
           ignorePackages: true,
         },
       ],
+      // 以下は tsc が同等以上の検査をする一方、import-x 側は対象モジュールを再パースして
+      // export 表を組み立てるため高価。importX.flatConfigs.typescript が同じ理由で
+      // 'import-x/named' を無効化しているのに倣い、TypeScript では残りも無効化する。
+      // namespace は TS2339、default は TS1192/TS2613、export は TS2323/TS2308 で検出される
+      'import-x/namespace': 'off',
+      'import-x/default': 'off',
+      'import-x/export': 'off',
     },
   },
   {
