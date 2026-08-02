@@ -1,7 +1,6 @@
 import eslintReact from '@eslint-react/eslint-plugin'
 import { defineConfig } from 'eslint/config'
-// @ts-expect-error 型定義ファイルがない
-import jsxA11y from 'eslint-plugin-jsx-a11y'
+import jsxA11yX from 'eslint-plugin-jsx-a11y-x'
 import reactPlugin from 'eslint-plugin-react'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import globals from 'globals'
@@ -124,12 +123,18 @@ export const react = defineConfig(
       ],
     },
   },
+  // eslint-plugin-jsx-a11y-x（本家 eslint-plugin-jsx-a11y のフォーク）
+  // 本家は 2024-10 の 6.10.2 を最後にリリースが止まっており、ESLint v10 で削除された
+  // context.getFilename() を内部で使っているため v10 ではロード時にクラッシュする。
+  // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/issues/1075
+  // フォーク側は当該 API を排除済みで recommended のルール構成は本家と一致する。
+  // 本家が v10 対応をリリースしたら戻せるよう、ルール名の変更以外は同じ設定を保つ。
   {
-    name: 'eslint-plugin-jsx-a11y',
+    name: 'eslint-plugin-jsx-a11y-x',
     files: ['**/*.{jsx,tsx}'],
-    extends: [jsxA11y.flatConfigs.recommended],
+    extends: [jsxA11yX.configs.recommended],
     rules: {
-      'jsx-a11y/alt-text': [
+      'jsx-a11y-x/alt-text': [
         'warn',
         {
           elements: ['img', 'object', 'area'],
