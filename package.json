@@ -53,7 +53,7 @@
     "eslint-plugin-userscripts": "0.5.6",
     "eslint-plugin-xss": "0.1.12",
     "eslint-plugin-yml": "3.7.0",
-    "globals": "17.6.0",
+    "globals": "17.9.0",
     "graphql": "16.14.2",
     "jsonc-eslint-parser": "3.1.0",
     "typescript": "6.0.3",
