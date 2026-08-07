@@ -112,8 +112,8 @@ importers:
         version: 2.1.0
     devDependencies:
       '@eslint/config-inspector':
-        specifier: 3.1.1
-        version: 3.1.1(eslint@9.39.5(jiti@2.7.0))(srvx@0.12.5)(typescript@6.0.3)
+        specifier: 3.2.0
+        version: 3.2.0(eslint@9.39.5(jiti@2.7.0))(srvx@0.12.5)
       '@types/node':
         specifier: 25.9.5
         version: 25.9.5
@@ -465,8 +465,8 @@ packages:
     resolution: {integrity: sha512-gBrxN88gOIf3R7ja5K9slwNayVcZgK6SOUORm2uBzTeIEfeVaIhOpCtTox3P6R7o2jLFwLFTLnC7kU/RGcYEgw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@eslint/config-inspector@3.1.1':
-    resolution: {integrity: sha512-q315YC60RKDoJHpxDlmSn6kkXw2/Pmw2Je3DDFcK9scmvC6BPDHyR39+0vV3zfrRt6SjjGD4aBYzH4SLshHaJg==}
+  '@eslint/config-inspector@3.2.0':
+    resolution: {integrity: sha512-kylJhcii8eDOiRFPANNUHOyDebBIOt+nqYXt8q6W9FbhYzFJAXjLzJz6KFNzY0WvIyOBKdbSQdwdPNrkMh05tg==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
     hasBin: true
     peerDependencies:
@@ -972,6 +972,9 @@ packages:
   '@repeaterjs/repeater@3.0.6':
     resolution: {integrity: sha512-Javneu5lsuhwNCryN+pXH93VPQ8g0dBX7wItHFgYiwQmzE1sVdg5tWHiOgHywzL2W21XQopa7IwIEnNbmeUJYA==}
 
+  '@standard-schema/spec@1.1.0':
+    resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
+
   '@storybook/global@5.0.0':
     resolution: {integrity: sha512-FcOqPAXACP0I3oJ/ws6/rrPT9WGhu915Cg8D02a9YxLo0DE9zI+a9A5gRGvmQ09fiWPukqI8ZAEoQEdWUKMQdQ==}
 
@@ -1291,11 +1294,6 @@ packages:
     resolution: {integrity: sha512-lrW200hZdbfRtztbygyaq/6jP6AKE8qQN2KvPcJ+x7wiD038YtnYtZ82IMNJ69GJibV7bwL3y9FgK+5w/pYt6g==}
     cpu: [x64]
     os: [win32]
-
-  '@valibot/to-json-schema@1.7.1':
-    resolution: {integrity: sha512-3qkmU6KXWh8GIThEAW3kuRHPQBMjWkKy+Ppz3WkUucx53DTpOa6siMn4xDGSOhlVyMrDaJTCTMLYPZVAIk1P0A==}
-    peerDependencies:
-      valibot: ^1.4.0
 
   '@vitest/eslint-plugin@1.6.26':
     resolution: {integrity: sha512-2eawZk4MZvkEtMZFdScmCE0R1Rti85uRZpmbe9eAv5Q3blDZ5OxlrC9IHlSnxhDCqOO2xKNaD3oufl9BUlI0yA==}
@@ -1655,13 +1653,17 @@ packages:
     resolution: {integrity: sha512-qE3Veg1YXzGHQhlA6jzebZN2qVf6NX+A7m7qlhCGG30dJixrAQhYOsJjsnBjJkCSmuOPpCk30145fr8FV0bzog==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  devframe@0.7.16:
-    resolution: {integrity: sha512-U4vqEPgjYfovFEyOAmUlNG5DVGnb6Sx0Tgy9QiQAbtGieC5zTraOBL7GUyXGqdc53SCx/DhFfwjJcebt85T/Bw==}
+  devframe@0.8.2:
+    resolution: {integrity: sha512-oodQXEQnrvufA1so/E058Z3SG3bk9AlUE5+NIAsyx5ZJH9P/oX6WMxjC0bs5PPwtKbS7pBHjxja2AD8EwGE8/Q==}
+    hasBin: true
     peerDependencies:
-      '@modelcontextprotocol/sdk': ^1.0.0
+      '@modelcontextprotocol/client': ^2.0.0
+      '@modelcontextprotocol/server': ^2.0.0
       cac: ^7.0.0
     peerDependenciesMeta:
-      '@modelcontextprotocol/sdk':
+      '@modelcontextprotocol/client':
+        optional: true
+      '@modelcontextprotocol/server':
         optional: true
       cac:
         optional: true
@@ -3141,14 +3143,6 @@ packages:
   utf8@3.0.0:
     resolution: {integrity: sha512-E8VjFIQ/TyQgp+TZfS6l8yp/xWppSAHzidGiRrqe4bK4XP9pTRyKFgGJpO3SN7zdX4DeomTrwaseCHovfpFcqQ==}
 
-  valibot@1.4.2:
-    resolution: {integrity: sha512-gjdCvJ6d3RyHAneqxMYMW9QMCwYMb3jpOO0IyHZV1bnRHFBHrX3VkIILt5XYR0WhwHiH7Mty8ovuPZ/O3gamrg==}
-    peerDependencies:
-      typescript: '>=5'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-
   validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
 
@@ -3580,19 +3574,19 @@ snapshots:
     dependencies:
       '@eslint/core': 0.17.0
 
-  '@eslint/config-inspector@3.1.1(eslint@9.39.5(jiti@2.7.0))(srvx@0.12.5)(typescript@6.0.3)':
+  '@eslint/config-inspector@3.2.0(eslint@9.39.5(jiti@2.7.0))(srvx@0.12.5)':
     dependencies:
       ansis: 4.3.1
       cac: 7.0.0
       chokidar: 5.0.0
-      devframe: 0.7.16(cac@7.0.0)(srvx@0.12.5)(typescript@6.0.3)
+      devframe: 0.8.2(cac@7.0.0)(srvx@0.12.5)
       eslint: 9.39.5(jiti@2.7.0)
       jiti: 2.7.0
       tinyglobby: 0.2.17
     transitivePeerDependencies:
-      - '@modelcontextprotocol/sdk'
+      - '@modelcontextprotocol/client'
+      - '@modelcontextprotocol/server'
       - srvx
-      - typescript
 
   '@eslint/core@0.17.0':
     dependencies:
@@ -4106,6 +4100,8 @@ snapshots:
 
   '@repeaterjs/repeater@3.0.6': {}
 
+  '@standard-schema/spec@1.1.0': {}
+
   '@storybook/global@5.0.0': {}
 
   '@storybook/icons@2.0.2(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
@@ -4322,7 +4318,7 @@ snapshots:
       debug: 4.4.3
       minimatch: 10.2.5
       semver: 7.8.0
-      tinyglobby: 0.2.16
+      tinyglobby: 0.2.17
       ts-api-utils: 2.5.0(typescript@6.0.3)
       typescript: 6.0.3
     transitivePeerDependencies:
@@ -4337,7 +4333,7 @@ snapshots:
       debug: 4.4.3
       minimatch: 10.2.5
       semver: 7.8.0
-      tinyglobby: 0.2.16
+      tinyglobby: 0.2.17
       ts-api-utils: 2.5.0(typescript@6.0.3)
       typescript: 6.0.3
     transitivePeerDependencies:
@@ -4466,10 +4462,6 @@ snapshots:
 
   '@unrs/resolver-binding-win32-x64-msvc@1.11.1':
     optional: true
-
-  '@valibot/to-json-schema@1.7.1(valibot@1.4.2(typescript@6.0.3))':
-    dependencies:
-      valibot: 1.4.2(typescript@6.0.3)
 
   '@vitest/eslint-plugin@1.6.26(@typescript-eslint/eslint-plugin@8.65.0(@typescript-eslint/parser@8.59.3(eslint@9.39.5(jiti@2.7.0))(typescript@6.0.3))(eslint@9.39.5(jiti@2.7.0))(typescript@6.0.3))(eslint@9.39.5(jiti@2.7.0))(typescript@6.0.3)':
     dependencies:
@@ -4826,9 +4818,9 @@ snapshots:
 
   detect-newline@4.0.1: {}
 
-  devframe@0.7.16(cac@7.0.0)(srvx@0.12.5)(typescript@6.0.3):
+  devframe@0.8.2(cac@7.0.0)(srvx@0.12.5):
     dependencies:
-      '@valibot/to-json-schema': 1.7.1(valibot@1.4.2(typescript@6.0.3))
+      '@standard-schema/spec': 1.1.0
       birpc: 4.0.0
       crossws: 0.4.10(srvx@0.12.5)
       destr: 2.0.5
@@ -4837,12 +4829,10 @@ snapshots:
       nostics: 1.2.0
       pathe: 2.0.3
       ufo: 1.6.4
-      valibot: 1.4.2(typescript@6.0.3)
     optionalDependencies:
       cac: 7.0.0
     transitivePeerDependencies:
       - srvx
-      - typescript
 
   diff-sequences@29.6.3: {}
 
@@ -6403,7 +6393,7 @@ snapshots:
       is-plain-obj: 4.1.0
       semver: 7.8.0
       sort-object-keys: 2.1.0
-      tinyglobby: 0.2.16
+      tinyglobby: 0.2.17
 
   source-map@0.6.1: {}
 
@@ -6673,10 +6663,6 @@ snapshots:
       react: 19.2.6
 
   utf8@3.0.0: {}
-
-  valibot@1.4.2(typescript@6.0.3):
-    optionalDependencies:
-      typescript: 6.0.3
 
   validate-npm-package-license@3.0.4:
     dependencies:
