@@ -58,7 +58,7 @@ importers:
         version: 18.2.2(eslint@9.39.5(jiti@2.7.0))(ts-declaration-location@1.0.7(typescript@6.0.3))(typescript@6.0.3)
       eslint-plugin-package-json:
         specifier: 0.91.2
-        version: 0.91.2(@types/estree@1.0.9)(eslint@9.39.5(jiti@2.7.0))(jsonc-eslint-parser@3.2.0)
+        version: 0.91.2(@types/estree@1.0.9)(eslint@9.39.5(jiti@2.7.0))(jsonc-eslint-parser@3.3.0)
       eslint-plugin-promise:
         specifier: 7.3.0
         version: 7.3.0(eslint@9.39.5(jiti@2.7.0))
@@ -99,8 +99,8 @@ importers:
         specifier: 16.14.2
         version: 16.14.2
       jsonc-eslint-parser:
-        specifier: 3.2.0
-        version: 3.2.0
+        specifier: 3.3.0
+        version: 3.3.0
       typescript:
         specifier: 6.0.3
         version: 6.0.3
@@ -2466,8 +2466,8 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
 
-  jsonc-eslint-parser@3.2.0:
-    resolution: {integrity: sha512-fjACeZ2chy9tiBakt5nU5SZhzk385pkSSfmhVvS13o4gqGiHVCNJXTNve8kqMeKv7A0L50mdaNUb7T8s+Egrnw==}
+  jsonc-eslint-parser@3.3.0:
+    resolution: {integrity: sha512-hYTGkHGNRZnXOFZ1urhINADoqDrGfpy53cjw+dxk84QE0pUDujQzeUeamNs6Mz44/TKD49z2x6/GVSu4ZrtA+Q==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
   jsonc-parser@3.3.1:
@@ -5019,7 +5019,7 @@ snapshots:
       ts-declaration-location: 1.0.7(typescript@6.0.3)
       typescript: 6.0.3
 
-  eslint-plugin-package-json@0.91.2(@types/estree@1.0.9)(eslint@9.39.5(jiti@2.7.0))(jsonc-eslint-parser@3.2.0):
+  eslint-plugin-package-json@0.91.2(@types/estree@1.0.9)(eslint@9.39.5(jiti@2.7.0))(jsonc-eslint-parser@3.3.0):
     dependencies:
       '@altano/repository-tools': 2.0.5
       change-case: 5.4.4
@@ -5027,7 +5027,7 @@ snapshots:
       detect-newline: 4.0.1
       eslint: 9.39.5(jiti@2.7.0)
       eslint-fix-utils: 0.4.3(@types/estree@1.0.9)(eslint@9.39.5(jiti@2.7.0))
-      jsonc-eslint-parser: 3.2.0
+      jsonc-eslint-parser: 3.3.0
       package-json-validator: 1.6.0
       semver: 7.8.5
       sort-object-keys: 2.1.0
@@ -5823,7 +5823,7 @@ snapshots:
 
   json5@2.2.3: {}
 
-  jsonc-eslint-parser@3.2.0:
+  jsonc-eslint-parser@3.3.0:
     dependencies:
       acorn: 8.18.0
       eslint-visitor-keys: 5.0.1
