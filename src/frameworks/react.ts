@@ -110,7 +110,14 @@ export const react = defineConfig(
   ],
   {
     name: 'eslint-plugin-react-hooks',
-    files: ['**/*.{jsx,tsx}'],
+    // JSX を含むファイルに限定しない。カスタムフックは JSX を返さないので `.ts` / `.js` に
+    // 置かれることが多く、`{jsx,tsx}` だけだとそれらが一切検査されない。
+    // eslint-plugin-react-hooks v7 のルールは React Compiler の診断そのもの
+    // (refs / immutability / preserve-manual-memoization など) であり、
+    // 適用漏れは「Compiler がコンパイルを諦めているのに lint は緑」という状態を生む。
+    // JSX 前提の eslint-plugin-react や jsx-a11y-x と違い、このプラグインは
+    // JSX の有無と無関係に効くべきなので、スクリプト全体を対象にする。
+    files: ['**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}'],
     extends: [reactHooksPlugin.configs.flat['recommended-latest']],
     rules: {
       // https://recoiljs.org/docs/introduction/installation/#eslint
