@@ -72,8 +72,8 @@ importers:
         specifier: 0.5.4
         version: 0.5.4(eslint@9.39.5(jiti@2.7.0))
       eslint-plugin-relay:
-        specifier: 2.0.0
-        version: 2.0.0
+        specifier: 2.1.0
+        version: 2.1.0
       eslint-plugin-storybook:
         specifier: 10.5.9
         version: 10.5.9(eslint@9.39.5(jiti@2.7.0))(storybook@10.5.8(react@19.2.8))(typescript@6.0.3)
@@ -1907,8 +1907,9 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9.7
 
-  eslint-plugin-relay@2.0.0:
-    resolution: {integrity: sha512-H52u+YM72VhBwhKrGSSdsjbeAWbLIgmph3z4Hgfyqm8Jt5pP5g9PbFmBp8kk10D4vZldrbNwa0esHxDRoczprg==}
+  eslint-plugin-relay@2.1.0:
+    resolution: {integrity: sha512-MEDnTfVhWycsIt6FmzgVmfYmpkipN1K1z54MozOB0t/x8XPPbPTbHM17Kh6qUBGWk4G16oTC66PpufqcSOwC7A==}
+    engines: {node: '>=22'}
 
   eslint-plugin-storybook@10.5.9:
     resolution: {integrity: sha512-4Hrqccy/zttV0S/32TSUbqtizzj4sbkgYvv7UzHveH58v96PhrO+fSpOFAqYvzNDzdOU6smKwObFtzX+RZqj4w==}
@@ -5209,7 +5210,7 @@ snapshots:
       string.prototype.matchall: 4.0.12
       string.prototype.repeat: 1.0.0
 
-  eslint-plugin-relay@2.0.0:
+  eslint-plugin-relay@2.1.0:
     dependencies:
       graphql: 16.14.2
 
