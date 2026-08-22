@@ -112,8 +112,8 @@ importers:
         version: 2.1.0
     devDependencies:
       '@eslint/config-inspector':
-        specifier: 3.2.0
-        version: 3.2.0(eslint@9.39.5(jiti@2.7.0))(srvx@0.12.5)
+        specifier: 3.3.0
+        version: 3.3.0(eslint@9.39.5(jiti@2.7.0))(srvx@0.12.5)
       '@types/node':
         specifier: 25.9.5
         version: 25.9.5
@@ -480,8 +480,8 @@ packages:
     resolution: {integrity: sha512-gBrxN88gOIf3R7ja5K9slwNayVcZgK6SOUORm2uBzTeIEfeVaIhOpCtTox3P6R7o2jLFwLFTLnC7kU/RGcYEgw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@eslint/config-inspector@3.2.0':
-    resolution: {integrity: sha512-kylJhcii8eDOiRFPANNUHOyDebBIOt+nqYXt8q6W9FbhYzFJAXjLzJz6KFNzY0WvIyOBKdbSQdwdPNrkMh05tg==}
+  '@eslint/config-inspector@3.3.0':
+    resolution: {integrity: sha512-ud44BKgqP3DW/H64LOhrtRftS5BWe3W40NWaXW1hIv1xZLh2p2dMCOIABMQmAJNJI7hMTH5AX9KzLz4ecyYShg==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
     hasBin: true
     peerDependencies:
@@ -1612,9 +1612,6 @@ packages:
     resolution: {integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==}
     engines: {node: '>=6'}
 
-  destr@2.0.5:
-    resolution: {integrity: sha512-ugFTXCtDZunbzasqBxrK93Ik/DRYsO6S/fedkWEMKqt04xZ4csmnmwGDBAb07QWNaGMAmnTIemsYZCksjATwsA==}
-
   detect-indent@7.0.2:
     resolution: {integrity: sha512-y+8xyqdGLL+6sh0tVeHcfP/QDd8gUgbasolJJpY7NgeQGSZ739bDtSiaiDgtoicy+mtYB81dKLxO9xRhCyIB3A==}
     engines: {node: '>=12.20'}
@@ -1623,8 +1620,8 @@ packages:
     resolution: {integrity: sha512-qE3Veg1YXzGHQhlA6jzebZN2qVf6NX+A7m7qlhCGG30dJixrAQhYOsJjsnBjJkCSmuOPpCk30145fr8FV0bzog==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  devframe@0.8.2:
-    resolution: {integrity: sha512-oodQXEQnrvufA1so/E058Z3SG3bk9AlUE5+NIAsyx5ZJH9P/oX6WMxjC0bs5PPwtKbS7pBHjxja2AD8EwGE8/Q==}
+  devframe@0.9.5:
+    resolution: {integrity: sha512-pinflhnmZPQQTZodQQWsj4QpAaYeRB8RPoSz8dTL8RpnyG5r9l5JGlGT+9G5YW1Uw2d8KG4pr0yjAAxJq3J5lQ==}
     hasBin: true
     peerDependencies:
       '@modelcontextprotocol/client': ^2.0.0
@@ -3577,12 +3574,12 @@ snapshots:
     dependencies:
       '@eslint/core': 0.17.0
 
-  '@eslint/config-inspector@3.2.0(eslint@9.39.5(jiti@2.7.0))(srvx@0.12.5)':
+  '@eslint/config-inspector@3.3.0(eslint@9.39.5(jiti@2.7.0))(srvx@0.12.5)':
     dependencies:
       ansis: 4.3.1
       cac: 7.0.0
       chokidar: 5.0.0
-      devframe: 0.8.2(cac@7.0.0)(srvx@0.12.5)
+      devframe: 0.9.5(cac@7.0.0)(srvx@0.12.5)
       eslint: 9.39.5(jiti@2.7.0)
       jiti: 2.7.0
       tinyglobby: 0.2.17
@@ -4747,18 +4744,15 @@ snapshots:
 
   dequal@2.0.3: {}
 
-  destr@2.0.5: {}
-
   detect-indent@7.0.2: {}
 
   detect-newline@4.0.1: {}
 
-  devframe@0.8.2(cac@7.0.0)(srvx@0.12.5):
+  devframe@0.9.5(cac@7.0.0)(srvx@0.12.5):
     dependencies:
       '@standard-schema/spec': 1.1.0
       birpc: 4.1.0
       crossws: 0.4.10(srvx@0.12.5)
-      destr: 2.0.5
       h3: 2.0.1-rc.26(crossws@0.4.10(srvx@0.12.5))
       mrmime: 2.0.1
       nostics: 1.2.0
