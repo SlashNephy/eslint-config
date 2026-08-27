@@ -1,6 +1,6 @@
 {
   "name": "@slashnephy/eslint-config",
-  "version": "3.0.418",
+  "version": "3.0.419",
   "keywords": [
     "eslint",
     "eslintconfig"
@@ -26,8 +26,8 @@
   },
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "4.7.2",
-    "@eslint-react/eslint-plugin": "2.13.0",
-    "@eslint/js": "9.39.5",
+    "@eslint-react/eslint-plugin": "5.7.8",
+    "@eslint/js": "10.0.1",
     "@graphql-eslint/eslint-plugin": "4.4.1",
     "@microsoft/eslint-formatter-sarif": "3.1.0",
     "@next/eslint-plugin-next": "16.3.2",
@@ -43,7 +43,6 @@
     "eslint-plugin-n": "18.3.0",
     "eslint-plugin-package-json": "1.7.1",
     "eslint-plugin-promise": "7.3.0",
-    "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "7.1.1",
     "eslint-plugin-react-refresh": "0.5.4",
     "eslint-plugin-relay": "2.0.0",
@@ -63,10 +62,10 @@
   "devDependencies": {
     "@eslint/config-inspector": "3.3.0",
     "@types/node": "25.9.5",
-    "eslint": "9.39.5"
+    "eslint": "10.3.0"
   },
   "peerDependencies": {
-    "eslint": "^9"
+    "eslint": "^10"
   },
   "packageManager": "pnpm@10.34.5+sha512.a4ee05f2f73658255bd6a89859c065a45c28a57daefae2c893a168ee2b73168c37b91e83e57ea67654ad03f03031746430e8bce38e362e042605fb8abc80192e",
   "engines": {

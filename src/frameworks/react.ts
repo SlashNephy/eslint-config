@@ -1,113 +1,65 @@
 import eslintReact from '@eslint-react/eslint-plugin'
+import stylisticPlugin from '@stylistic/eslint-plugin'
 import { defineConfig } from 'eslint/config'
 import jsxA11yX from 'eslint-plugin-jsx-a11y-x'
-import reactPlugin from 'eslint-plugin-react'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import globals from 'globals'
 
 export const react = defineConfig(
-  // eslint-react（型チェック付きルール + 既存プラグインとの競合回避）
+  // eslint-react（型チェック付きルール）
+  // eslint-plugin-react は ESLint v10 で削除された context.getFilename() を呼ぶため
+  // ロード時にクラッシュする (jsx-eslint/eslint-plugin-react#3977 が open のまま)。
+  // correctness 系のルールは eslint-react が、JSX の書式系は @stylistic が肩代わりする。
   {
     name: '@eslint-react/eslint-plugin',
     files: ['**/*.{jsx,tsx}'],
-    extends: [
-      eslintReact.configs['recommended-type-checked'],
-      eslintReact.configs['disable-conflict-eslint-plugin-react'],
-    ],
+    extends: [eslintReact.configs['recommended-type-checked']],
+    languageOptions: {
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+        lib: ['dom'],
+      },
+      globals: globals.browser,
+    },
     rules: {
       // クラスコンポーネントを禁止（react/prefer-stateless-function と同じ意図）
       '@eslint-react/no-class-component': 'error',
     },
   },
-  // eslint-plugin-react（スタイル/フォーマット系ルール）
-  [
-    {
-      name: 'eslint-plugin-react',
-      files: ['**/*.{jsx,tsx}'],
-      extends: [
-        reactPlugin.configs.flat.recommended,
-        reactPlugin.configs.flat['jsx-runtime'],
+  // JSX の書式ルール（eslint-plugin-react から移行）
+  // @stylistic は base/javascript.ts でも登録しているが、この設定単体でも解決できるように
+  // ここでも明示する。同じモジュールを import しているためインスタンスは共有される。
+  {
+    name: '@stylistic/eslint-plugin (jsx)',
+    files: ['**/*.{jsx,tsx}'],
+    plugins: {
+      '@stylistic': stylisticPlugin,
+    },
+    rules: {
+      // <div></div> 👉 <div />
+      '@stylistic/jsx-self-closing-comp': [
+        'error',
+        {
+          component: true,
+          html: true,
+        },
       ],
-      languageOptions: {
-        parserOptions: {
-          ecmaFeatures: {
-            jsx: true,
-          },
-          lib: ['dom'],
+      // コンポーネント名を PascalCase に強制
+      '@stylistic/jsx-pascal-case': 'error',
+      // props を並び替える
+      '@stylistic/jsx-sort-props': [
+        'error',
+        {
+          callbacksLast: true,
+          shorthandFirst: true,
+          multiline: 'last',
+          reservedFirst: true,
         },
-        globals: globals.browser,
-      },
-      settings: {
-        react: {
-          version: 'detect',
-        },
-      },
-      rules: {
-        // <div flag={true} /> 👉 <div flag />
-        'react/jsx-boolean-value': 'error',
-        // <div value={'test'} /> 👉 <div value='test' />
-        'react/jsx-curly-brace-presence': 'error',
-        // <div></div> 👉 <div />
-        'react/self-closing-comp': [
-          'error',
-          {
-            component: true,
-            html: true,
-          },
-        ],
-        // コンポーネント名を PascalCase に強制
-        'react/jsx-pascal-case': 'error',
-        // ハンドラーの名前規則
-        'react/jsx-handler-names': 'error',
-        // useState の分解宣言 & setXXX という名前を強制
-        'react/hook-use-state': 'error',
-        // <React.Fragment /> 👉 </>
-        'react/jsx-fragments': 'error',
-        // ステートレス関数を優先
-        'react/prefer-stateless-function': 'error',
-        // props を並び替える
-        'react/jsx-sort-props': [
-          'error',
-          {
-            callbacksLast: true,
-            shorthandFirst: true,
-            multiline: 'last',
-            reservedFirst: true,
-          },
-        ],
-        // JSX を .tsx でも使えるように
-        'react/jsx-filename-extension': [
-          'error',
-          {
-            extensions: ['.jsx', '.tsx'],
-          },
-        ],
-        // props に対してスプレッド演算子を使えるように
-        'react/jsx-props-no-spreading': 'off',
-        // <></> を使えるように
-        'react/jsx-no-useless-fragment': 'off',
-        // defaultProps を使わない
-        'react/require-default-props': 'off',
-        // useCallback でコールバックを宣言させる
-        'react/jsx-no-bind': 'warn',
-        // コンポーネントの宣言を function Component() {} に強制
-        'react/function-component-definition': [
-          'error',
-          {
-            namedComponents: 'function-declaration',
-            unnamedComponents: 'arrow-function',
-          },
-        ],
-      },
+      ],
     },
-    {
-      name: 'eslint-plugin-react',
-      files: ['**/*.jsx'],
-      rules: {
-        'react/prop-types': 'error',
-      },
-    },
-  ],
+  },
   {
     name: 'eslint-plugin-react-hooks',
     // JSX を含むファイルに限定しない。カスタムフックは JSX を返さないので `.ts` / `.js` に
@@ -115,8 +67,8 @@ export const react = defineConfig(
     // eslint-plugin-react-hooks v7 のルールは React Compiler の診断そのもの
     // (refs / immutability / preserve-manual-memoization など) であり、
     // 適用漏れは「Compiler がコンパイルを諦めているのに lint は緑」という状態を生む。
-    // JSX 前提の eslint-plugin-react や jsx-a11y-x と違い、このプラグインは
-    // JSX の有無と無関係に効くべきなので、スクリプト全体を対象にする。
+    // JSX 前提の jsx-a11y-x と違い、このプラグインは JSX の有無と無関係に効くべきなので、
+    // スクリプト全体を対象にする。
     files: ['**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}'],
     extends: [reactHooksPlugin.configs.flat['recommended-latest']],
     rules: {
