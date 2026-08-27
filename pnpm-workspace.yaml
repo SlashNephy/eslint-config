@@ -1,5 +1,5 @@
-onlyBuiltDependencies:
-  - esbuild
-
-ignoredBuiltDependencies:
-  - unrs-resolver
+# pnpm v11 でビルドスクリプトの許可設定が allowBuilds に統合された。
+# v10 までの onlyBuiltDependencies / ignoredBuiltDependencies は廃止されている。
+allowBuilds:
+  esbuild: true
+  unrs-resolver: false
