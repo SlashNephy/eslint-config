@@ -69,8 +69,8 @@ importers:
         specifier: 0.5.4
         version: 0.5.4(eslint@10.9.0(jiti@2.7.0))
       eslint-plugin-relay:
-        specifier: 2.0.0
-        version: 2.0.0
+        specifier: 2.1.0
+        version: 2.1.0
       eslint-plugin-storybook:
         specifier: 10.5.10
         version: 10.5.10(eslint@10.9.0(jiti@2.7.0))(typescript@6.0.3)
@@ -1278,8 +1278,9 @@ packages:
       eslint: '*'
       typescript: '*'
 
-  eslint-plugin-relay@2.0.0:
-    resolution: {integrity: sha512-H52u+YM72VhBwhKrGSSdsjbeAWbLIgmph3z4Hgfyqm8Jt5pP5g9PbFmBp8kk10D4vZldrbNwa0esHxDRoczprg==}
+  eslint-plugin-relay@2.1.0:
+    resolution: {integrity: sha512-MEDnTfVhWycsIt6FmzgVmfYmpkipN1K1z54MozOB0t/x8XPPbPTbHM17Kh6qUBGWk4G16oTC66PpufqcSOwC7A==}
+    engines: {node: '>=22'}
 
   eslint-plugin-storybook@10.5.10:
     resolution: {integrity: sha512-NeOu3axmhNZfRuHRciFH0a/OVgvtAJLRHAwiJjcGkPAcElNmwEPp+pqoiwxytx7kHInz7mVVoBfPwVc8kPmOLw==}
@@ -3483,7 +3484,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-relay@2.0.0:
+  eslint-plugin-relay@2.1.0:
     dependencies:
       graphql: 16.14.2
 
