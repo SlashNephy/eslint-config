@@ -1,5 +1,5 @@
 import { defineConfig } from 'eslint/config'
-import userScriptsPlugin from 'eslint-plugin-userscripts'
+import userScriptsPlugin, { configs as userScriptsConfigs } from 'eslint-plugin-userscripts'
 
 export const userScript = defineConfig({
   name: 'eslint-plugin-userscripts',
@@ -8,7 +8,7 @@ export const userScript = defineConfig({
     userScripts: userScriptsPlugin,
   },
   rules: {
-    ...userScriptsPlugin.configs.recommended.rules,
+    ...userScriptsConfigs.recommended.rules,
     'no-undef': 'off',
     'xss/no-mixed-html': 'off',
     'xss/no-location-href-assign': 'off',

@@ -1,5 +1,5 @@
 import eslint from '@eslint/js'
-import eslintCommentsConfig from '@eslint-community/eslint-plugin-eslint-comments/configs'
+import { recommended as eslintCommentsRecommended } from '@eslint-community/eslint-plugin-eslint-comments/configs'
 import stylisticPlugin from '@stylistic/eslint-plugin'
 import { defineConfig } from 'eslint/config'
 import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript'
@@ -7,7 +7,7 @@ import { createNodeResolver, importX } from 'eslint-plugin-import-x'
 // @ts-expect-error 型定義ファイルがない
 import promisePlugin from 'eslint-plugin-promise'
 import unusedImportsPlugin from 'eslint-plugin-unused-imports'
-import tseslint from 'typescript-eslint'
+import { parser as tsParser } from 'typescript-eslint'
 
 export const javaScript = defineConfig(
   {
@@ -29,7 +29,7 @@ export const javaScript = defineConfig(
     extends: [eslint.configs.recommended],
     languageOptions: {
       ecmaVersion: 'latest',
-      parser: tseslint.parser,
+      parser: tsParser,
     },
     rules: {
       // アロー関数を優先
@@ -156,7 +156,7 @@ export const javaScript = defineConfig(
   },
   {
     name: '@eslint-community/eslint-plugin-eslint-comments',
-    extends: [eslintCommentsConfig.recommended],
+    extends: [eslintCommentsRecommended],
   },
   {
     name: 'eslint-plugin-import-x',

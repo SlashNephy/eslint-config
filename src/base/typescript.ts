@@ -2,7 +2,7 @@ import safeTypeScriptPlugin from '@susisu/eslint-plugin-safe-typescript'
 import { defineConfig } from 'eslint/config'
 import { importX } from 'eslint-plugin-import-x'
 import tsdocPlugin from 'eslint-plugin-tsdoc'
-import tseslint from 'typescript-eslint'
+import { configs as tsConfigs, parser as tsParser } from 'typescript-eslint'
 
 export const typeScript = defineConfig(
   {
@@ -22,12 +22,12 @@ export const typeScript = defineConfig(
     name: 'typescript-eslint',
     files: ['**/*.{ts,cts,mts,tsx}'],
     extends: [
-      tseslint.configs.recommendedTypeChecked,
-      tseslint.configs.stylisticTypeChecked,
+      tsConfigs.recommendedTypeChecked,
+      tsConfigs.stylisticTypeChecked,
     ],
     languageOptions: {
       ecmaVersion: 'latest',
-      parser: tseslint.parser,
+      parser: tsParser,
       parserOptions: {
         projectService: {
           allowDefaultProject: [
@@ -221,7 +221,7 @@ export const typeScript = defineConfig(
   {
     name: 'typescript-eslint (JavaScript)',
     files: ['**/*.{js,cjs,mjs,jsx}'],
-    extends: [tseslint.configs.disableTypeChecked],
+    extends: [tsConfigs.disableTypeChecked],
   },
 
   {
