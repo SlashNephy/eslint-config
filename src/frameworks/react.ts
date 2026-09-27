@@ -2,6 +2,7 @@ import eslintReact from '@eslint-react/eslint-plugin'
 import stylisticPlugin from '@stylistic/eslint-plugin'
 import { defineConfig } from 'eslint/config'
 import jsxA11yX from 'eslint-plugin-jsx-a11y-x'
+import perfectionistPlugin from 'eslint-plugin-perfectionist'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import globals from 'globals'
 
@@ -9,7 +10,7 @@ export const react = defineConfig(
   // eslint-react（型チェック付きルール）
   // eslint-plugin-react は ESLint v10 で削除された context.getFilename() を呼ぶため
   // ロード時にクラッシュする (jsx-eslint/eslint-plugin-react#3977 が open のまま)。
-  // correctness 系のルールは eslint-react が、JSX の書式系は @stylistic が肩代わりする。
+  // correctness 系のルールは eslint-react が、JSX の書式系は @stylistic が、props の並び替えは perfectionist が肩代わりする。
   {
     name: '@eslint-react/eslint-plugin',
     files: ['**/*.{jsx,tsx}'],
@@ -48,14 +49,56 @@ export const react = defineConfig(
       ],
       // コンポーネント名を PascalCase に強制
       '@stylistic/jsx-pascal-case': 'error',
-      // props を並び替える
-      '@stylistic/jsx-sort-props': [
+    },
+  },
+  // props の並び替え
+  // @stylistic/jsx-sort-props は deprecated になり、移行先として perfectionist の sort-jsx-props が案内されている。
+  // 旧設定 (reservedFirst / shorthandFirst / multiline: 'last' / callbacksLast) と同じ並びをグループで再現する。
+  {
+    name: 'eslint-plugin-perfectionist (jsx)',
+    files: ['**/*.{jsx,tsx}'],
+    plugins: {
+      perfectionist: perfectionistPlugin,
+    },
+    rules: {
+      'perfectionist/sort-jsx-props': [
         'error',
         {
-          callbacksLast: true,
-          shorthandFirst: true,
-          multiline: 'last',
-          reservedFirst: true,
+          // 旧ルールは文字コード順 (`<` 比較) で並べていたため、localeCompare (大文字小文字を辞書順に混ぜる) ではなく
+          // ASCII を文字コード順に並べた alphabet で比較する
+          type: 'custom',
+          alphabet: String.fromCharCode(...Array.from({ length: 128 }, (_, i) => i)),
+          ignoreCase: false,
+          customGroups: [
+            {
+              groupName: 'reserved',
+              elementNamePattern: '^(children|dangerouslySetInnerHTML|key|ref)$',
+            },
+            // 先に一致したカスタムグループが採用されるため、修飾子付きのコールバックを先に置く
+            {
+              groupName: 'shorthand-callback',
+              elementNamePattern: '^on[A-Z]',
+              modifiers: ['shorthand'],
+            },
+            {
+              groupName: 'multiline-callback',
+              elementNamePattern: '^on[A-Z]',
+              modifiers: ['multiline'],
+            },
+            {
+              groupName: 'callback',
+              elementNamePattern: '^on[A-Z]',
+            },
+          ],
+          groups: [
+            'reserved',
+            'shorthand-prop',
+            'prop',
+            'multiline-prop',
+            'shorthand-callback',
+            'callback',
+            'multiline-callback',
+          ],
         },
       ],
     },
