@@ -28,7 +28,7 @@
     "@eslint-community/eslint-plugin-eslint-comments": "4.8.1",
     "@eslint-react/eslint-plugin": "5.30.6",
     "@eslint/js": "10.0.1",
-    "@graphql-eslint/eslint-plugin": "4.4.2",
+    "@graphql-eslint/eslint-plugin": "5.0.0",
     "@microsoft/eslint-formatter-sarif": "3.1.0",
     "@next/eslint-plugin-next": "16.4.6",
     "@stylistic/eslint-plugin": "5.10.0",
